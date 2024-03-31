@@ -1,12 +1,12 @@
 jQuery(document).ready(function () {
-  var $right = $(".right"),
+  // 슬라이드 좌우 버튼 선언
+  let $right = $(".right"),
     $left = $(".left"),
     $slider = $(".slider").find("li"),
     a = 0,
     b = 0,
-    c = 0,
     i = 0;
-
+  // 헤더 내비게이션
   ($nav = $(".gnb_li")),
     ($depth = $(".depth_wrap")),
     $depth.eq(0).css({ "z-index": "2" });
@@ -60,23 +60,24 @@ jQuery(document).ready(function () {
   $nav.eq(6).mouseout(function () {
     $depth.eq(6).css({ "z-index": "1" });
   });
-
+  // 자동 우측
   function auto2() {
     $right.click();
   }
-
+  // 자동
   let autoSlide = setInterval(auto2, 3000);
   let stop = 1;
 
   $slider.mouseover(function () {
     if (stop == 1) {
-      clearInterval(autoSlide);
       stop = 0;
+      clearInterval(autoSlide);
     } else {
-      autoSlide = setInterval(auto2, 3000);
       stop = 1;
+      autoSlide = setInterval(auto2, 3000);
     }
   });
+  // 하단 슬라이드 리스트
   $slide_btn = $(".slide_btn").find("li");
 
   $slide_btn.eq(0).click(function () {
@@ -300,6 +301,7 @@ jQuery(document).ready(function () {
     $menu.eq(4).fadeIn();
   });
 
+  // 구데타마 애니메이션
   $(".gudetama2").fadeOut();
   $(".store_wrap").mouseover(function () {
     $(".delivery").css({ left: "750px", "transition-duration": "2s" });
