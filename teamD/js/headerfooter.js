@@ -10,9 +10,9 @@ head.innerHTML = `
     <!-- nav-menu -->
     <ul class="nav-links">
       
-      <li><a href="/html/allCategories.html">전체 카테고리</a></li>
+      <li><a href="../html/allCategories.html">전체 카테고리</a></li>
       <li><a href="#">마이 페이지</a></li>
-      <li><a href="login.html">로그인/회원가입</a></li>
+      <li><a href="../html/login.html">로그인/회원가입</a></li>
 
     </ul>
   </nav>
@@ -74,13 +74,13 @@ const searchBtn2 = document.querySelector('#search-btn');
 searchBtn2.addEventListener('click', () => {
   const keyword = document.querySelector('input').value;
   // -------나중에 search입력값을 쿼리스트링으로 보내 이동 @@지우지 마세요@@
-  window.location.href = `search.html?keyword=${keyword}`;
+  window.location.href = `./search.html?keyword=${keyword}`;
 });
 
 const foot = document.querySelector('footer');
 
 foot.innerHTML = `  <div class="footer-container">
-<div class="footer-logo"><a href="../index.html"><img src="../img/logo/logotype03_c1green.svg" alt="logo" height="26px" /></a></div>
+<div class="footer-logo"><a href="./index.html"><img src="../img/logo/logotype03_c1green.svg" alt="logo" height="26px" /></a></div>
 </div>
 <!-- footer top -->
 <div class="footer-row">

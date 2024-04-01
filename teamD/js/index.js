@@ -112,7 +112,7 @@ createDuplicateFloatElements();
 
 // JSON 데이터를 불러오는 함수
 function fetchRecipes() {
-  return fetch('/js/recipe_data.json')
+  return fetch('./js/recipe_data.json')
     .then((response) => response.json())
     .then((data) => data);
 }
@@ -330,7 +330,7 @@ function addOverlay(dish, recipe) {
 
 //새창 주소
 function redirectToDetailPage(id) {
-  window.open(`/html/detailpage.html?id=${id}`, '_blank');
+  window.open(`./html/detailpage.html?id=${id}`, '_blank');
 }
 
 // 마우스 호버 시 오버레이 표시 및 숨김
@@ -363,7 +363,7 @@ const searchIconIndex = document.getElementById('searchIconIndex');
 
 const showSearchResult = () => {
   let searchWord = searchInput.value;
-  window.location.href = `/html/search.html?keyword=${searchWord}`;
+  window.location.href = `./html/search.html?keyword=${searchWord}`;
   searchInput.value = ''; // 입력 필드의 값을 비워줍니다.
 };
 

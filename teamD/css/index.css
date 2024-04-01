@@ -167,7 +167,7 @@ body {
   height: 180px;
 
   background-color: rgba(0, 0, 0, 0.2);
-  background-image: url(/img//logo/logotype04_c1green.svg);
+  background-image: url(../img//logo/logotype04_c1green.svg);
   background-position: center center;
   border-radius: 12px;
   display: relative;
