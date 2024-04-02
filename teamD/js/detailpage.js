@@ -3,13 +3,13 @@ const recipeId = urlParam.get('id');
 let recipeData;
 
 function fetchRecipe() {
-  fetch('/js/recipe_data.json')
+  fetch('../js/recipe_data.json')
     .then((response) => response.json())
     .then((data) => {
       const recipeData = data.find((recipe) => {
         return recipe.id == recipeId;
       });
-      console.log(recipeData);
+
       renderRecipe(recipeData);
     })
     .catch((err) => console.log('상품 데이터를 불러오는데 실패했습니다.'));
@@ -41,9 +41,9 @@ document.querySelector('.hearticon').addEventListener('click', (e) => {
   const srcArr = e.target.src.split('/');
   const src = srcArr[srcArr.length - 1];
   if (src === 'heart.png') {
-    e.target.src = '/img/heart-fill.png';
+    e.target.src = '../img/heart-fill.png';
   } else {
-    e.target.src = '/img/heart.png';
+    e.target.src = '../img/heart.png';
   }
 });
 
