@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
-body {
-  font-family: "Noto Serif KR", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -116,6 +109,9 @@ section {
 }
 body {
   line-height: 1;
+  font-family: "Baskervville", "Noto Serif KR", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 ol,
 ul {
@@ -135,4 +131,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
 }
