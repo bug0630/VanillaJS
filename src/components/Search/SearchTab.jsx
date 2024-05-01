@@ -7,6 +7,7 @@ export default function SearchTab() {
         <li>1</li>
         <li>1</li>
         <li>1</li>
+        <li>100</li>
         <li>abcde ABCDE</li>
       </ul>
     </div>
