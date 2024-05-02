@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "artist_name": "Emma Thompson",
+        "birthdate": "1990-06-15",
+        "art": [
+            {
+                "id": 1,
+                "title": "Sunset on the Hill",
+                "art_img": "../assets/sunset_on_the_hill.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Ocean Symphony",
+                "art_img": "../assets/ocean_symphony.jpg"
+            },
+            {
+                "id": 3,
+                "title": "Dreams of Tomorrow",
+                "art_img": "../assets/dreams_of_tomorrow.jpg"
+            }
+        ],
+        "description": "Emma Thompson is a visionary artist...",
+        "email": "emma.thompson@example.com",
+        "insta_link": "https://www.instagram.com/emmathompson_art/",
+        "profile_img": "../assets/emmathompson_profile.jpg"
+    },
+    {
+        "id": 2,
+        "artist_name": "Alexander Rodriguez",
+        "birthdate": "1985-09-21",
+        "art": [
+            {
+                "id": 4,
+                "title": "City Lights",
+                "art_img": "../assets/city_lights.jpg"
+            },
+            {
+                "id": 5,
+                "title": "Mountain Majesty",
+                "art_img": "../assets/mountain_majesty.jpg"
+            },
+            {
+                "id": 6,
+                "title": "Mystic Forest",
+                "art_img": "../assets/mystic_forest.jpg"
+            }
+        ],
+        "description": "Alexander Rodriguez captures the essence of...",
+        "email": "alex.rodriguez@example.com",
+        "insta_link": "https://www.instagram.com/alexrodriguez_art/",
+        "profile_img": "../assets/alexrodriguez_profile.jpg"
+    }
+]
