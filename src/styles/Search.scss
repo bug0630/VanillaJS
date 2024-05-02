@@ -2,12 +2,29 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
   height: 2000px;
-  background-color: gray;
 }
 .searchTab {
   width: 100%;
   max-width: 1200px;
+  height: 100px;
+  align-items: center;
   display: flex;
   justify-content: space-between;
+}
+.selectBox {
+  select {
+    font-family: "Baskervville", "Noto Serif KR", serif;
+    font-weight: 400;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid rgb(204, 204, 204);
+  }
+  option {
+    font-family: "Baskervville", "Noto Serif KR", serif;
+    font-size: 16px;
+  }
 }

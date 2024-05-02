@@ -1,15 +1,14 @@
+import SelectBox from "./SelectBox";
+const artSolt = [
+  { value: "new", name: "신작품" },
+  { value: "low", name: "낮은가격" },
+  { value: "high", name: "높은가격" },
+];
 export default function SearchTab() {
   return (
     <div className="searchTab">
-      <p>검색 결과</p>
-      <p>최신 작품</p>
-      <ul>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>100</li>
-        <li>abcde ABCDE</li>
-      </ul>
+      <p>~검색 결과</p>
+      <SelectBox options={artSolt}></SelectBox>
     </div>
   );
 }
