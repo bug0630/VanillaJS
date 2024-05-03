@@ -1,9 +1,9 @@
-import { Route, Routes } from "react-router";
-import Main from "./pages/Main";
-import NotFound from "./pages/NotFound";
-import "./styles/reset.css";
-import Search from "./pages/Search";
-import LoginRegister from "./pages/LoginRegister";
+import { Route, Routes } from 'react-router';
+import Main from './pages/Main';
+import NotFound from './pages/NotFound';
+import './styles/reset.css';
+import Search from './pages/Search';
+import LoginRegister from './pages/LoginRegister';
 function App() {
   return (
     <div className="App">

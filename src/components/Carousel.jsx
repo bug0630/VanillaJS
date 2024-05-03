@@ -1,18 +1,41 @@
-export default function Carousel() {
-  const moveLeft = () => {
-    return {
-      transform: `translateX(-100%)`,
-    };
+import React, { useState } from 'react';
+
+const Carousel = ({ images }) => {
+  // 현재 슬라이드의 인덱스를 관리하는 상태
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // 다음 슬라이드로 이동하는 함수
+  const goToNextSlide = () => {
+    // 다음 슬라이드의 인덱스 계산
+    const newIndex = (currentIndex + 1) % images.length;
+    // 상태 업데이트
+    setCurrentIndex(newIndex);
+  };
+
+  // 이전 슬라이드로 이동하는 함수
+  const goToPrevSlide = () => {
+    // 이전 슬라이드의 인덱스 계산
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    // 상태 업데이트
+    setCurrentIndex(newIndex);
   };
 
   return (
-    <div>
-      <ul className="carousel">
-        <li style={moveLeft()}>1</li>
-        <li style={moveLeft()}>2</li>
-        <li style={moveLeft()}>3</li>
-        <li style={moveLeft()}>4</li>
-      </ul>
+    <div className="carousel-container">
+      {/* 현재 슬라이드를 보여주는 영역 */}
+      <div className="slide">
+        <img src={images[currentIndex]} alt="slide" />
+      </div>
+      {/* 이전 슬라이드로 이동하는 버튼 */}
+      <button className="prev" onClick={goToPrevSlide}>
+        Previous
+      </button>
+      {/* 다음 슬라이드로 이동하는 버튼 */}
+      <button className="next" onClick={goToNextSlide}>
+        Next
+      </button>
     </div>
   );
-}
+};
+
+export default Carousel;

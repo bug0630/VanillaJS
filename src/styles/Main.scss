@@ -6,26 +6,60 @@ $main-color: #aa8453;
   padding: 0 20px;
   height: 2000px;
 }
-.carousel {
-  display: flex;
+// .carousel {
+//   display: flex;
+//   width: 100%;
+//   max-width: 1160px;
+//   overflow: hidden;
+//   li {
+//     flex-shrink: 0;
+//     width: 100%;
+//     min-height: 800px;
+//   }
+//   li:nth-of-type(1) {
+//     background: url(../img/news_4.jpg);
+//     background-size: cover;
+//   }
+//   li:nth-of-type(2) {
+//     background: url(../img/news_5.jpg);
+//     background-size: cover;
+//   }
+//   li:nth-of-type(3) {
+//     background: url(../img/news_6.jpg);
+//     background-size: cover;
+//   }
+// }
+.carousel-container {
+  position: relative;
+  max-width: 500px; /* 캐러셀의 최대 너비 */
+  margin: 0 auto; /* 가운데 정렬을 위해 */
+}
+
+.slide {
+  overflow: hidden; /* 넘치는 이미지 숨기기 */
+}
+
+img {
   width: 100%;
-  max-width: 1160px;
-  // overflow: hidden;
-  li {
-    flex-shrink: 0;
-    width: 100%;
-    min-height: 800px;
-  }
-  li:nth-of-type(1) {
-    background: url(../img/news_4.jpg);
-    background-size: cover;
-  }
-  li:nth-of-type(2) {
-    background: url(../img/news_5.jpg);
-    background-size: cover;
-  }
-  li:nth-of-type(3) {
-    background: url(../img/news_6.jpg);
-    background-size: cover;
-  }
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* 배경색 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
