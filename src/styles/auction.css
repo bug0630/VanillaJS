@@ -1,0 +1,65 @@
+.auction-page {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the cross axis (top) */
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.artwork-container {
+  margin-right: 20px; /* Add margin to create space between artwork and details */
+}
+
+.artwork-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.artwork-image {
+  width: 300px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.artwork-info {
+  display: flex; /* Use flexbox to align artwork details horizontally */
+  flex-direction: column; /* Stack artwork details vertically */
+  align-items: flex-start; /* Align items at the start of the cross axis (left) */
+}
+
+/* Style for ArtworkDetails component */
+.artwork-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+}
+
+/* Style for individual artwork details */
+.artwork-details p {
+  margin: 0;
+}
+
+.artwork-details h2 {
+  margin-top: 0
+  
+  ;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.5); /* Dark transparent border */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  color: rgba(0, 0, 0, 0.7); /* Dark transparent text color */
+  cursor: pointer;
+}
+
+.buttons-container button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly opaque on hover */
+}
+
+
