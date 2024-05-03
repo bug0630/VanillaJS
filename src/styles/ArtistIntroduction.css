@@ -28,17 +28,26 @@
     margin-bottom: 100px; /* profile_img와 artworks 사이 간격 설정 */
     position: relative;
   }
-  
+
   .profile {
     margin-right: 20px;
   }
   
   .details {
     text-align: left;
+    width: 50%; /* 부모 요소의 너비의 절반만 사용 */
+  position: relative; /* 상대적 위치 설정 */
   }
-  
+  .details-right {
+    text-align: right;
+    position: absolute; /* 절대적 위치 설정 */
+    top: 0; /* 부모 요소의 상단에 정렬 */
+    right: 0; /* 부모 요소의 오른쪽에 정렬 */
+    margin-top: -20px; /* 원하는 만큼 위로 올림 */
+
+  }
   .details h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .details p {
@@ -47,10 +56,11 @@
   
   .artworks {
     text-align: center;
-    display: flex;
+    display: table-column;
     justify-content: center;
     position: absolute;
     top: calc(100% + 20px);
+    padding: 20px;
   }
   
   .artworks ul {

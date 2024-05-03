@@ -17,13 +17,19 @@ const ArtistIntroduction = () => {
 
           <div className='details'>
             <h1>{artistData[0].artist_name}</h1>
-            <p>Birthdate: {artistData[0].birthdate}</p>
+            <p>{artistData[0].birthdate}</p>
+            <br />
             <p>{artistData[0].description}</p>
-            <p>Email: {artistData[0].email}</p>
-            <p>Instagram: <a href={artistData[0].insta_link} target="_blank" rel="noopener noreferrer">{artistData[0].artist_name}</a></p>
+            <div className='details-right'>
+              <p>Email: {artistData[0].email}</p>
+              <p>Instagram: <a href={artistData[0].insta_link} 
+              target="_blank" rel="noopener noreferrer">
+              {artistData[0].artist_name}</a></p>
+            </div>
           </div>
           <div className='artworks'>
             <h2>Artworks</h2>
+            <br />
             <ul>
             {artistData[0].art.map(artwork => (
               <li key={artwork.id}>
