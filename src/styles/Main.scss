@@ -1,0 +1,31 @@
+$main-color: #aa8453;
+.mainLab {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  height: 2000px;
+}
+.carousel {
+  display: flex;
+  width: 100%;
+  max-width: 1160px;
+  // overflow: hidden;
+  li {
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 800px;
+  }
+  li:nth-of-type(1) {
+    background: url(../img/news_4.jpg);
+    background-size: cover;
+  }
+  li:nth-of-type(2) {
+    background: url(../img/news_5.jpg);
+    background-size: cover;
+  }
+  li:nth-of-type(3) {
+    background: url(../img/news_6.jpg);
+    background-size: cover;
+  }
+}
