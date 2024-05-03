@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import jsonData from '../../data/artist.json'
+import '../../styles/ArtistIntroduction.css'
+
 
 const ArtistIntroduction = () => {
   const [artistData, setArtistData] = useState(jsonData);
 
   return (
-    <div>
+    <div >
       {artistData && (
-        <div>
+        <div className='art-style'>
           <h1>{artistData[0].artist_name}</h1>
           <p>{artistData[0].description}</p>
           <img src={artistData[0].profile_img} alt="Artist Profile" />
