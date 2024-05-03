@@ -1,3 +1,4 @@
+$main-color: #aa8453;
 .searchLab {
   width: 100%;
   max-width: 1200px;
@@ -26,5 +27,42 @@
   option {
     font-family: "Baskervville", "Noto Serif KR", serif;
     font-size: 16px;
+  }
+}
+.available {
+  display: flex;
+  justify-content: center;
+  li {
+    font-size: 24px;
+    margin: 20px;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .searchTab {
+    width: 100%;
+    max-width: 1200px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .selectBox {
+    select {
+      font-family: "Baskervville", "Noto Serif KR", serif;
+      font-weight: 400;
+      width: calc(100vw - 40px);
+      height: 40px;
+      font-size: 16px;
+      text-align: center;
+      border: 1px solid rgb(204, 204, 204);
+    }
+    option {
+      font-family: "Baskervville", "Noto Serif KR", serif;
+      font-size: 16px;
+    }
   }
 }
