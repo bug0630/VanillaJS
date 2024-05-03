@@ -1,28 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #aa8453;
-}
-
 .wrapper {
   position: relative;
   width: 420px;
   height: 450px;
-  background: #800020;
+  background: #aa8453;
   color: #fff;
   border-radius: 40px;
   display: flex;
   align-items: center;
   overflow: hidden;
   transition: height 0.2s ease;
+  left: 35%;
+  top: 130px;
 }
 
 .wrapper.active {
