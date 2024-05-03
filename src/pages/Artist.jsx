@@ -1,3 +1,6 @@
 export default function Artist() {
-  return <div></div>;
+  return
+   <div>
+    
+   </div>;
 }
