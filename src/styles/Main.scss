@@ -1,0 +1,66 @@
+$main-color: #aa8453;
+.mainLab {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 2000px;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  margin: 0 auto; /* 가운데 정렬을 위해 */
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 1920px;
+}
+.comment {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.prev,
+.next {
+  font-family: 'Baskervville', 'Noto Serif KR', serif;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $main-color; /* 배경색 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+@media screen and (max-width: 720px) {
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .slide img {
+    width: 1200px;
+  }
+}

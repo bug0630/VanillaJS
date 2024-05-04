@@ -1,19 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import "../styles/reset.css";
-import "../styles/LoginRegister.css";
-import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
-import DaumPostcode from "react-daum-postcode";
+import '../styles/reset.css';
+import '../styles/LoginRegister.css';
+import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function LoginRegister() {
-  const [action, setAction] = useState("");
+  const [action, setAction] = useState('');
   const registerLink = () => {
-    setAction("active");
+    setAction('active');
   };
 
   const loginLink = () => {
-    setAction("");
+    setAction('');
   };
 
   return (
@@ -39,7 +38,7 @@ export default function LoginRegister() {
           <button type="submit">로그인</button>
           <div className="register-link">
             <p>
-              계정이 없으신가요?{" "}
+              계정이 없으신가요?{' '}
               <a href="#" onClick={registerLink}>
                 가입하기
               </a>
@@ -78,12 +77,12 @@ export default function LoginRegister() {
             </label>
           </div>
           <button type="submit" className="reg-btn">
-            {" "}
+            {' '}
             가입하기
           </button>
           <div className="register-link">
             <p>
-              이미 계정 있으신가요?{" "}
+              이미 계정 있으신가요?{' '}
               <a href="#" onClick={loginLink}>
                 로그인하기
               </a>
