@@ -17,16 +17,16 @@
 
 .artist-introduction {
     display: flex;
-    justify-content: center;
+    justify-content: c;
     align-items: center;
     padding: 20px;
   }
   
   .artist-info {
     display: flex;
-    align-items: center;
     margin-bottom: 100px; /* profile_img와 artworks 사이 간격 설정 */
     position: relative;
+    justify-content: space-evenly;
   }
 
   .profile {
@@ -45,9 +45,6 @@
     right: 0; /* 부모 요소의 오른쪽에 정렬 */
     margin-top: -20px; /* 원하는 만큼 위로 올림 */
 
-  }
-  .details h1 {
-    margin-bottom: 20px;
   }
   
   .details p {
@@ -77,4 +74,20 @@
     width: 400px; 
     height: 450px;
   }
+  .artist-name {
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .instagram-link {
+    display: flex;
+    align-items: center;
+  }
+  .Email {
+    display: flex;
+    align-items: center;
+  }
   
+  
+ 
