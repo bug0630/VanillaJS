@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Carousel = ({ images, intervalTime = 10000 }) => {
+const Carousel = ({ images, comments, intervalTime = 10000 }) => {
   // 현재 슬라이드의 인덱스를 관리하는 상태
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,15 +19,20 @@ const Carousel = ({ images, intervalTime = 10000 }) => {
     // 상태 업데이트
     setCurrentIndex(newIndex);
   };
+
+  // 자동 슬라이드 전환을 위한 useEffect
   useEffect(() => {
+    // interval 설정하여 자동으로 다음 슬라이드로 전환
     const interval = setInterval(goToNextSlide, intervalTime);
-    return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 interval 정리
+    // 컴포넌트가 언마운트될 때 interval 정리
+    return () => clearInterval(interval);
   }, [currentIndex]); // currentIndex가 변경될 때마다 interval을 재설정
 
   return (
     <div className="carousel-container">
-      {/* 현재 슬라이드를 보여주는 영역 */}
+      {/* 슬라이드 영역 */}
       <div className="slide">
+        {/* 현재 슬라이드 이미지 표시 */}
         <img src={images[currentIndex]} alt="slide" />
       </div>
       {/* 이전 슬라이드로 이동하는 버튼 */}
@@ -38,6 +43,8 @@ const Carousel = ({ images, intervalTime = 10000 }) => {
       <button className="next" onClick={goToNextSlide}>
         Next
       </button>
+      {/* 바뀌는 텍스트 표시 */}
+      <div className="comment">{comments[currentIndex]}</div>
     </div>
   );
 };
