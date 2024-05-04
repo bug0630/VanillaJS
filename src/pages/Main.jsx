@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <div className="mainLab">
       <Carousel images={images} comments={comments}></Carousel>
-      <h2>this is Artist</h2>
+      <h2>이 달의 작가</h2>
       <h2>Best Art</h2>
       <h2>this is News</h2>
       <h2>this is Exhibition</h2>
