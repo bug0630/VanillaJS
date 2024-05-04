@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images, intervalTime = 10000 }) => {
   // 현재 슬라이드의 인덱스를 관리하는 상태
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,6 +19,10 @@ const Carousel = ({ images }) => {
     // 상태 업데이트
     setCurrentIndex(newIndex);
   };
+  useEffect(() => {
+    const interval = setInterval(goToNextSlide, intervalTime);
+    return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 interval 정리
+  }, [currentIndex]); // currentIndex가 변경될 때마다 interval을 재설정
 
   return (
     <div className="carousel-container">

@@ -3,9 +3,10 @@ import '../styles/Main.scss';
 
 export default function Main() {
   const images = [
-    require('../img/news_4.jpg'),
-    require('../img/news_5.jpg'),
-    require('../img/news_6.jpg'),
+    require('../img/am-24-04-pc-3.jpg'),
+    require('../img/am-24-05-pc.jpg'),
+    require('../img/ai-24-05-pc.jpg'),
+    require('../img/mona_lisa.webp'),
   ];
   return (
     <div className="mainLab">
