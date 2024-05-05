@@ -9,9 +9,14 @@ export default function Main() {
     require('../img/mona_lisa.webp'),
   ];
   const comments = ['이달의 작가', '특별초청', '테마', '전시회'];
+  const pageLinks = ['/artist', '/auction', '', ''];
   return (
     <div className="mainLab">
-      <Carousel images={images} comments={comments}></Carousel>
+      <Carousel
+        images={images}
+        comments={comments}
+        pageLinks={pageLinks}
+      ></Carousel>
       <h2>이 달의 작가</h2>
       <h2>Best Art</h2>
       <h2>this is News</h2>
