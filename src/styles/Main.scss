@@ -1,16 +1,17 @@
 $main-color: #aa8453;
+// 메인 랩
 .mainLab {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   height: 2000px;
 }
+// 캐러셀
 .carousel-container {
   position: relative;
   width: 100%;
   height: auto;
   max-height: 700px;
-  margin: 0 auto; /* 가운데 정렬을 위해 */
   overflow: hidden;
 }
 
@@ -52,6 +53,60 @@ $main-color: #aa8453;
 .next {
   right: 0;
 }
+// 이 달의 작가
+.artMonth {
+  padding-top: 200px;
+  overflow: hidden;
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  img {
+    width: 120%;
+  }
+  .artistInfo {
+    margin-top: 100px;
+    display: flex;
+  }
+  .artistComment {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      width: 100%;
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: 5px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      ul {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          display: flex;
+          align-items: center;
+          width: 200px;
+          height: 150px;
+          overflow: hidden;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 720px) {
   .carousel-container {
     position: relative;
@@ -62,5 +117,13 @@ $main-color: #aa8453;
   }
   .slide img {
     width: 1200px;
+  }
+  .artistInfo {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .artistPhoto {
+    height: 500px;
   }
 }

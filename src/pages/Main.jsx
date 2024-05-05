@@ -1,4 +1,5 @@
 import Carousel from '../components/Carousel';
+import MonthArtist from '../components/Main/MonthArtist';
 import '../styles/Main.scss';
 
 export default function Main() {
@@ -8,7 +9,7 @@ export default function Main() {
     require('../img/ai-24-05-pc.jpg'),
     require('../img/mona_lisa.webp'),
   ];
-  const comments = ['이달의 작가', '특별초청', '테마', '전시회'];
+  const comments = ['이달의 작가', '경매', '테마', '전시회'];
   const pageLinks = ['/artist', '/auction', '', ''];
   return (
     <div className="mainLab">
@@ -17,7 +18,7 @@ export default function Main() {
         comments={comments}
         pageLinks={pageLinks}
       ></Carousel>
-      <h2>이 달의 작가</h2>
+      <MonthArtist images={images}></MonthArtist>
       <h2>Best Art</h2>
       <h2>this is News</h2>
       <h2>this is Exhibition</h2>
