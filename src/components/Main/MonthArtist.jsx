@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export default function MonthArtist() {
   return (
     <div className="artMonth">
@@ -21,13 +21,19 @@ export default function MonthArtist() {
           </p>
           <ul className="artMonthList">
             <li>
-              <img src="images/art_img/img4.webp"></img>
+              <Link to="/">
+                <img src="images/art_img/img4.webp"></img>
+              </Link>
             </li>
             <li>
-              <img src="images/art_img/img5.webp"></img>
-            </li>
+              <Link to="/">
+                <img src="images/art_img/img5.webp"></img>
+              </Link>
+            </li>{' '}
             <li>
-              <img src="images/art_img/img6.webp"></img>
+              <Link to="/">
+                <img src="images/art_img/img6.webp"></img>
+              </Link>
             </li>
           </ul>
         </div>

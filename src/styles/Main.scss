@@ -61,15 +61,18 @@ $main-color: #aa8453;
     font-size: 24px;
     text-align: center;
   }
-  img {
-    width: 120%;
-  }
+
   .artistInfo {
     margin-top: 100px;
     display: flex;
+    img {
+      width: 120%;
+    }
   }
+
   .artistComment {
     padding: 20px 20px 0 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,31 +81,13 @@ $main-color: #aa8453;
       margin-top: 100px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       li {
         display: flex;
         align-items: center;
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        aspect-ratio: 1/1;
         overflow: hidden;
         margin: 5px;
-      }
-    }
-    @media screen and (max-width: 900px) {
-      ul {
-        width: 100%;
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        li {
-          display: flex;
-          align-items: center;
-          width: 200px;
-          height: 150px;
-          overflow: hidden;
-          margin: 5px;
-        }
       }
     }
   }
@@ -124,6 +109,6 @@ $main-color: #aa8453;
     flex-direction: column;
   }
   .artistPhoto {
-    height: 500px;
+    aspect-ratio: 1/1;
   }
 }
