@@ -1,7 +1,7 @@
 import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import '../styles/Main.scss';
-
+import '../styles/Carousel.scss';
 export default function Main() {
   const images = [
     require('../img/am-24-04-pc-3.jpg'),

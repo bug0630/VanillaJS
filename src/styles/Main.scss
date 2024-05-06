@@ -6,53 +6,6 @@ $main-color: #aa8453;
   margin: auto;
   height: 2000px;
 }
-// 캐러셀
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-height: 700px;
-  overflow: hidden;
-}
-
-.slide {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide img {
-  max-width: 1920px;
-}
-.comment {
-  font-size: 24px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-}
-.prev,
-.next {
-  font-family: 'Baskervville', 'Noto Serif KR', serif;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: $main-color; /* 배경색 */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
 // 이 달의 작가
 .artMonth {
   padding-top: 200px;
@@ -93,16 +46,6 @@ $main-color: #aa8453;
   }
 }
 @media screen and (max-width: 720px) {
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .slide img {
-    width: 1200px;
-  }
   .artistInfo {
     margin-top: 100px;
     display: flex;
