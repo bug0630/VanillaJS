@@ -7,12 +7,17 @@ $main-color: #aa8453;
   overflow: hidden;
 }
 // 이 달의 작가
+.artMonth.show {
+  opacity: 1; /* 나타나는 중에는 투명도를 1로 설정 */
+}
 .artMonth {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   padding-top: 200px;
   overflow: hidden;
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: opacity 1s ease;
   h2 {
     font-size: 24px;
     text-align: center;
