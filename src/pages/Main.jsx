@@ -2,6 +2,9 @@ import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import '../styles/Main.scss';
 import '../styles/Carousel.scss';
+import BestArt from '../components/Main/BestArt';
+import '../styles/BestArt.scss';
+
 export default function Main() {
   const images = [
     require('../img/am-24-04-pc-3.jpg'),
@@ -19,7 +22,7 @@ export default function Main() {
         pageLinks={pageLinks}
       ></Carousel>
       <MonthArtist images={images}></MonthArtist>
-      <h2>Best Art</h2>
+      <BestArt></BestArt>
       <h2>this is News</h2>
       <h2>this is Exhibition</h2>
     </div>

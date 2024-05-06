@@ -2,12 +2,15 @@ $main-color: #aa8453;
 // 메인 랩
 .mainLab {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: auto;
-  height: 2000px;
+  overflow: hidden;
 }
 // 이 달의 작가
 .artMonth {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   padding-top: 200px;
   overflow: hidden;
   h2 {
