@@ -7,7 +7,7 @@ export default function Main() {
     require('../img/am-24-04-pc-3.jpg'),
     require('../img/am-24-05-pc.jpg'),
     require('../img/ai-24-05-pc.jpg'),
-    require('../img/starry_night.webp'),
+    require('../img/pc-mb-4.jpg'),
   ];
   const comments = ['이달의 작가', '경매', '테마', '전시회'];
   const pageLinks = ['/artist', '/auction', '', ''];

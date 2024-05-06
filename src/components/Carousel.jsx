@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
+const Carousel = ({ images, comments, pageLinks, intervalTime = 20000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -24,7 +24,13 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
       <Link to={pageLinks[currentIndex]}>
         {' '}
         <div className="slide">
-          <img src={images[currentIndex]} alt="slide" />
+          {[0, 1, 2].map((offset) => (
+            <img
+              key={currentIndex + offset}
+              src={images[(currentIndex + offset) % images.length]}
+              alt="slide"
+            />
+          ))}
         </div>
       </Link>
       <button className="prev" onClick={goToPrevSlide}>
