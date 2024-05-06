@@ -14,7 +14,7 @@
 }
 
 .wrapper.active {
-  height: 620px;
+  height: 520px;
 }
 
 .wrapper .form-box {
@@ -46,7 +46,15 @@ form .input-box {
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
-  padding: 20px 45px 20px 20px;
+  padding: 20px 45px 20px 30px;
+  &:hover {
+    border-color: #fff;
+  }
+
+  &:focus {
+    border-color: #fff;
+    transition: top 150ms ease-out, left 150ms ease-out, font-size 200ms ease;
+  }
 }
 
 .input-box input::placeholder {
@@ -55,7 +63,7 @@ form .input-box {
 
 .input-box .icon {
   position: absolute;
-  right: 10px;
+  right: 14px;
   top: 50%;
   translate: 0 -50%;
   font-size: 16px;
@@ -64,7 +72,7 @@ form .remember-forget {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin: 120px 0 20px;
+  margin: 35px 0 10px;
 }
 .remember-forget label input {
   accent-color: #fff;
@@ -124,17 +132,14 @@ form .register-link {
 
 .addr input {
   background: transparent;
-
   border: 4px solid rgba(255, 255, 255, 0.1);
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
   padding: 10px 45px 10px 10px;
-}
-#addr-btn {
-  width: 100%;
-  height: 30px;
-  font-size: 12px;
   display: flex;
   justify-content: space-between;
+}
+.addr button {
+  width: 50px;
 }
