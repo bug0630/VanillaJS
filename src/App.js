@@ -6,6 +6,7 @@ import Auction from './pages/Auction';
 import Search from './pages/Search';
 import ArtistInfo from './pages/ArtistInfo';
 import LoginRegister from './pages/LoginRegister';
+import MyPage from './pages/MyPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<LoginRegister />} />
+        <Route path="/mypage" element={<MyPage />} />
         <Route path="/artDetail/:artId" element={<Main />} />
         <Route path="*" element={<NotFound />} />
         <Route path="auction" element={<Auction />} />
