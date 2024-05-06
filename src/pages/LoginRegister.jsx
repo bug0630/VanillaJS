@@ -9,11 +9,14 @@ import Main from '../pages/Main';
 
 export default function LoginRegister() {
   const [action, setAction] = useState('');
+  const [action, setAction] = useState('');
   const registerLink = () => {
+    setAction('active');
     setAction('active');
   };
 
   const loginLink = () => {
+    setAction('');
     setAction('');
   };
   const navigation = useNavigate();
@@ -88,7 +91,7 @@ export default function LoginRegister() {
           </button>
           <div className="register-link">
             <p>
-              계정이 없으신가요?{' '}
+              계정이 없으신가요? 계정이 없으신가요?{' '}
               <a href="#" onClick={registerLink}>
                 가입하기
               </a>
@@ -135,7 +138,7 @@ export default function LoginRegister() {
           </button>
           <div className="register-link">
             <p>
-              이미 계정 있으신가요?{' '}
+              이미 계정 있으신가요? 이미 계정 있으신가요?{' '}
               <a href="#" onClick={loginLink}>
                 로그인하기
               </a>

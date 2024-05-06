@@ -1,0 +1,57 @@
+$main-color: #aa8453;
+// 메인 랩
+.mainLab {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 2000px;
+}
+// 이 달의 작가
+.artMonth {
+  padding-top: 200px;
+  overflow: hidden;
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .artistInfo {
+    margin-top: 100px;
+    display: flex;
+    img {
+      width: 120%;
+    }
+  }
+
+  .artistComment {
+    padding: 20px 20px 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      width: 100%;
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        margin: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .artistInfo {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .artistPhoto {
+    aspect-ratio: 1/1;
+  }
+}
