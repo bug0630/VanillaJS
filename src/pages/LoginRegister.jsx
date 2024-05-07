@@ -9,7 +9,6 @@ import Main from '../pages/Main';
 
 export default function LoginRegister() {
   const [action, setAction] = useState('');
-  // const [action, setAction] = useState('');
   const registerLink = () => {
     setAction('active');
     setAction('active');
