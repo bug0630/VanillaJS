@@ -124,6 +124,7 @@ form .register-link {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  padding-inline: 10px;
 }
 .register-link p a:hover {
   text-decoration: underline;
