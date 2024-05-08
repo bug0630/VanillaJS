@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import jsonData from '../../data/artist.json';
-import '../../styles/ArtistIntroduction.css';
-import { FaMailBulk, FaInstagram } from 'react-icons/fa';
-
+import jsonData from '../../data/artist.json'
+import '../../styles/ArtistIntroduction.css'
+import { FaMailBulk, FaInstagram } from "react-icons/fa";
+import Header from '../header/Header';
+import { SiGmail } from "react-icons/si";
+import '../../index.js'
 const ArtistIntroduction = () => {
   const [artistData, setArtistData] = useState(jsonData);
 
   return (
-    <div className="artist-introduction">
+<>
+<Header/>
+    <div className='artist-introduction'>
+      <h1 className='artist'>Artist</h1>
       {artistData && (
-        <div className="artist-info">
-          <h1 className="artist">Artist</h1>
-          <div className="profile">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/artist_img/${artistData[0].profile_img}`}
-              alt="Artist Profile"
-              style={{ width: '300px', height: '350px', borderRadius: '15px' }}
-            />
+        <div className='artist-info'>
+          <div className='profile'>
+            <div className='container'>
+              <div className='card card0'>
+                <div className='border'>
+                  <h2>김세동</h2>
+                </div>
+              </div>
+            </div>
+          {/* <img src={`${process.env.PUBLIC_URL}/images/artist_img/${artistData[0].profile_img}`} alt="Artist Profile"/> */}
           </div>
 
           <div className="details">
@@ -24,12 +31,11 @@ const ArtistIntroduction = () => {
             <p>{artistData[0].birthdate}</p>
             <br />
             <p>{artistData[0].description}</p>
-            <div className="details-right">
-              <div className="Email">
-                <FaMailBulk className="icon" />
-                <p>{artistData[0].email}</p>
-              </div>
-              <div className="instagram-link">
+            <div className='details-right'>
+              <div className='Email'>
+                <SiGmail className="icon" />
+                <p>{artistData[0].email}</p></div>
+              <div className='instagram-link'>
                 <FaInstagram className="icon" />
                 <p>
                   <a
@@ -89,99 +95,56 @@ const ArtistIntroduction = () => {
             ))}
             </ul> */}
           </div>
-          <h1 className="critique">Critique</h1>
-          <div className="cards">
+          <h1 className='critique'>Critique</h1>
+
+          <div className='cards'>
             <div className="card-1">
-              <img
-                className="review-img-1"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img15.webp`}
-                alt="15"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
+              <img className='review-img-1' src={`${process.env.PUBLIC_URL}/images/art_img/img15.webp`} alt="15" />
+                <div className="card-body">
+                  <h5 className="card-title">Art title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Instagram</a>
+                </div>
             </div>
 
             <div className="card-2">
-              <img
-                className="review-img-2"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img14.webp`}
-                alt="14"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
+              <img className='review-img-2' src={`${process.env.PUBLIC_URL}/images/art_img/img14.webp`} alt="14" />
+                <div className="card-body">
+                  <h5 className="card-title">Art title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Instagram</a>
+                </div>
             </div>
 
             <div className="card-3">
-              <img
-                className="review-img-3"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img13.webp`}
-                alt="13"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
+              <img className='review-img-3' src={`${process.env.PUBLIC_URL}/images/art_img/img13.webp`} alt="13" />
+                <div className="card-body">
+                  <h5 className="card-title">Art title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Instagram</a>
+                </div>
             </div>
             <div className="card-4">
-              <img
-                className="review-img-4"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img12.webp`}
-                alt="12"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
+              <img className='review-img-4' src={`${process.env.PUBLIC_URL}/images/art_img/img12.webp`} alt="12" />
+                <div className="card-body">
+                  <h5 className="card-title">Art title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Instagram</a>
+                </div>
             </div>
             <div className="card-5">
-              <img
-                className="review-img-5"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img11.webp`}
-                alt="11"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
+              <img className='review-img-5' src={`${process.env.PUBLIC_URL}/images/art_img/img11.webp`} alt="11" />
+                <div className="card-body">
+                  <h5 className="card-title">Art title</h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Instagram</a>
+                </div>
             </div>
           </div>
         </div>
       )}
     </div>
+    </>
   );
 };
 

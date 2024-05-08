@@ -26,6 +26,7 @@ class Carousel {
       el.classList.add(`gallery-item-${i+1}`);
     });
   }
+  
   setCurrentState(direction) {
     if (direction.className == 'gallery-controls-previous') {
       this.carouselArray.unshift(this.carouselArray.pop());
