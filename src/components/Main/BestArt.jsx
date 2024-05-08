@@ -6,7 +6,7 @@ export default function BestArt() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1500 && !showBoardSection) {
-        setShowBoardSection(true); // 스크롤 위치가 1000px 이상이고, 요소가 아직 나타나지 않았을 때만 보이기
+        setShowBoardSection(true);
       }
     };
 
