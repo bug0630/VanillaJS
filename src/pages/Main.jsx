@@ -4,6 +4,7 @@ import '../styles/Main.scss';
 import '../styles/Carousel.scss';
 import BestArt from '../components/Main/BestArt';
 import '../styles/BestArt.scss';
+import Header from '../components/header/Header';
 
 export default function Main() {
   const images = [
