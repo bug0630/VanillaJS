@@ -1,10 +1,9 @@
 import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import '../styles/Main.scss';
-import '../styles/Carousel.scss';
 import BestArt from '../components/Main/BestArt';
 import '../styles/BestArt.scss';
-import Header from '../components/header/Header';
+import '../styles/Carousel.scss';
 
 export default function Main() {
   const images = [
@@ -17,11 +16,15 @@ export default function Main() {
   const pageLinks = ['/artist', '/auction', '', ''];
   return (
     <div className="mainLab">
-      <Carousel
-        images={images}
-        comments={comments}
-        pageLinks={pageLinks}
-      ></Carousel>
+      <div className="mainCarousel">
+        {' '}
+        <Carousel
+          images={images}
+          comments={comments}
+          pageLinks={pageLinks}
+        ></Carousel>
+      </div>
+
       <MonthArtist images={images}></MonthArtist>
       <BestArt></BestArt>
       <h2>this is News</h2>

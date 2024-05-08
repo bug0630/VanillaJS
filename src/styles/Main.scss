@@ -2,8 +2,13 @@ $main-color: #aa8453;
 // 메인 랩
 .mainLab {
   width: 100%;
-  // max-width: 1920px;
   margin: auto;
+}
+.mainCarousel {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
   // overflow: hidden;
 }
 // 이 달의 작가
