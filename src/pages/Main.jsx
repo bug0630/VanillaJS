@@ -3,7 +3,7 @@ import MonthArtist from '../components/Main/MonthArtist';
 import '../styles/Main.scss';
 import BestArt from '../components/Main/BestArt';
 import '../styles/BestArt.scss';
-import '../styles/Carousel.scss';
+// import '../styles/Carousel.scss';
 
 export default function Main() {
   const images = [
