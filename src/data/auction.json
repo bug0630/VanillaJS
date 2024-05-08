@@ -8,7 +8,7 @@
     "bid_starting_price": 500,
     "bid_estimate_price": 1500,
     "bid_code": "A001",
-    "bid_date": "2024-05-17"
+    "bid_date": "2024-05-17T10:00:00"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "bid_starting_price": 1000,
     "bid_estimate_price": 5000,
     "bid_code": "A002",
-    "bid_date": "2024-05-17"
+    "bid_date": "2024-05-17T10:00:00"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "bid_starting_price": 2000,
     "bid_estimate_price": 10000,
     "bid_code": "A003",
-    "bid_date": "2024-05-17"
+    "bid_date": "2024-05-17T10:00:00"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "bid_starting_price": 1500,
     "bid_estimate_price": 7000,
     "bid_code": "A004",
-    "bid_date": "2024-05-16"
+    "bid_date": "2024-05-16T10:00:00"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "bid_starting_price": 1800,
     "bid_estimate_price": 8000,
     "bid_code": "A005",
-    "bid_date": "2024-05-16"
+    "bid_date": "2024-05-16T10:00:00"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "bid_starting_price": 2200,
     "bid_estimate_price": 9000,
     "bid_code": "A006",
-    "bid_date": "2024-05-16"
+    "bid_date": "2024-05-16T10:00:00"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "bid_starting_price": 2500,
     "bid_estimate_price": 12000,
     "bid_code": "A007",
-    "bid_date": "2024-05-18"
+    "bid_date": "2024-05-18T10:00:00"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "bid_starting_price": 2000,
     "bid_estimate_price": 4000,
     "bid_code": "A008",
-    "bid_date": "2024-05-18"
+    "bid_date": "2024-05-18T10:00:00"
   },
   {
     "id": 9,
@@ -96,6 +96,6 @@
     "bid_starting_price": 3000,
     "bid_estimate_price": 6000,
     "bid_code": "A009",
-    "bid_date": "2024-05-18"
+    "bid_date": "2024-05-18T10:00:00"
   }
 ]
