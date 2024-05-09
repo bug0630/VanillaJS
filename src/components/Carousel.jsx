@@ -2,7 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Carousel.scss';
 
-const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
+const Carousel = ({
+  images,
+  comments,
+  pageLinks,
+  intervalTime = 5000,
+  className,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -21,11 +27,11 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   }, [currentIndex]);
 
   return (
-    <div className="carousel-container">
+    <div className="carouselContainer ">
       <Link to={pageLinks[currentIndex]}>
         {' '}
         <div className="slide">
-          {[0, 1, 2].map((offset) => (
+          {[0, 1, 2, 3, 4].map((offset) => (
             <img
               key={currentIndex + offset}
               src={images[(currentIndex + offset) % images.length]}

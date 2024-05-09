@@ -28,7 +28,7 @@ export default function MonthArtist() {
           alt="artist"
         ></img>
         <div className="artistComment">
-          <h2>작가 comment</h2>
+          <h3>작가명</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
             architecto illum minus ratione tenetur corrupti ipsa, dolore

@@ -8,8 +8,8 @@ $main-color: #aa8453;
   margin: auto;
   width: 100%;
   max-width: 1200px;
-  height: 700px;
-  // overflow: hidden;
+  aspect-ratio: 12/5;
+  overflow: hidden;
 }
 // 이 달의 작가
 .artMonth.show {
@@ -26,6 +26,7 @@ $main-color: #aa8453;
   h2 {
     font-size: 24px;
     text-align: center;
+    color: $main-color;
   }
 
   .artistInfo {
