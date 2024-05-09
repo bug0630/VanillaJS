@@ -53,6 +53,10 @@
     width: 80%;
     height: 80%;
     opacity: 0.2;
+    transition: transform 0.3s ease;
+  }
+  .slide img:hover {
+    transform: scale(1.05);
   }
   .slide img:nth-of-type(3) {
     width: 100%;
