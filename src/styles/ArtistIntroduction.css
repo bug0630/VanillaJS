@@ -1,57 +1,56 @@
 .artist-introduction {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 50px;
-  }
-  
-  .artist-info {
-    display: flex;
-    margin-bottom: 100px; /* profile_img와 artworks 사이 간격 설정 */
-    position: relative;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+}
 
-  .profile {
-    margin-right: 20px;
-  }
-  
-  .details {
-    text-align: left;
-    width: 50%; /* 부모 요소의 너비의 절반만 사용 */
-    position: relative; /* 상대적 위치 설정 */
-  }
-  .details-right {
-    text-align: right;
-    position: absolute; /* 절대적 위치 설정 */
-    top: 0; /* 부모 요소의 상단에 정렬 */
-    right: 0; /* 부모 요소의 오른쪽에 정렬 */
-    margin-top: -20px; /* 원하는 만큼 위로 올림 */
+.artist-info {
+  display: flex;
+  margin-bottom: 100px; /* profile_img와 artworks 사이 간격 설정 */
+  position: relative;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-  }
+.profile {
+  margin-right: 20px;
+}
 
-  .details p {
-    margin: 5px 0;
-  }
-  .artist-name {
-    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    font-size: large;
-  }
+.details {
+  text-align: left;
+  width: 50%; /* 부모 요소의 너비의 절반만 사용 */
+  position: relative; /* 상대적 위치 설정 */
+}
+.details-right {
+  text-align: right;
+  position: absolute; /* 절대적 위치 설정 */
+  top: 0; /* 부모 요소의 상단에 정렬 */
+  right: 0; /* 부모 요소의 오른쪽에 정렬 */
+  margin-top: -20px; /* 원하는 만큼 위로 올림 */
+}
 
-  .instagram-link {
-    display: flex;
-    align-items: center;
-  }
-  .Email {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* .artworks {
+.details p {
+  margin: 5px 0;
+}
+.artist-name {
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: large;
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+}
+.Email {
+  display: flex;
+  align-items: center;
+}
+
+/* .artworks {
     text-align: center;
     display: table-column;
     justify-content: center;
@@ -71,210 +70,204 @@
   .artworks li {
     margin-right: 20px;
   } */
-  .artworks img {
-    width: 400px; 
-    height: 450px;
-  }
+.artworks img {
+  width: 400px;
+  height: 450px;
+}
 
+.gallery {
+  margin-top: 10%;
+  width: 100%;
+  height: 400px;
+}
 
+.gallery-container {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
 
-  
- 
-  .gallery {
-    margin-top: 10%;
-    width: 100%;
-  }
+.gallery-item {
+  height: 250px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 330px;
+  z-index: 0;
+  border-radius: 15px;
+  background-size: contain;
+}
 
-  .gallery-container {
-    align-items: center;
-    display: flex;
-    height: 100px;
-    margin: 0 auto;
-    max-width: 1000px;
-    position: relative;
-  }
+.gallery-item-1 {
+  left: 5%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+.gallery-item-2,
+.gallery-item-4 {
+  height: 300px;
+  opacity: 0.8;
+  width: 380px;
+  z-index: 1;
+}
+.gallery-item-2 {
+  left: 25%;
+  transform: translateX(-50%);
+}
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 350px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  z-index: 2;
+}
+.gallery-item-4 {
+  left: 75%;
+  transform: translateX(-50%);
+}
+.gallery-item-5 {
+  left: 95%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+.gallery-controls-button:focus {
+  outline: none;
+}
+.gallery-controls-previous {
+  position: relative;
+}
+.gallery-controls-previous::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+.gallery-controls-previous:hover::before {
+  left: -40px;
+}
+.gallery-controls-next {
+  position: relative;
+}
+.gallery-controls-next::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  padding: 10px;
+  position: absolute;
+  right: -30px;
+  top: 45;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.15s ease-in-out;
+  width: 5px;
+}
 
-  .gallery-item {
-    height: 250px;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    width: 330px;
-    z-index: 0;
-    border-radius: 15px;
-    background-size: contain;
-  }
+.gallery-controls-next:hover::before {
+  right: -40px;
+}
+.gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.gallery nav li {
+  background: #ccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 10px;
+}
+.gallery-nav li.gallery-item-selected {
+  background: #555;
+}
+.artworks {
+  text-align: center;
+  font-size: x-large;
+  padding: 25px;
+}
+.artist {
+  text-align: center;
+  font-size: x-large;
+}
 
-  .gallery-item-1 {
-    left: 5%;
-    opacity: .4;
-    transform: translateX(-50%);
-  }
-  .gallery-item-2, .gallery-item-4 {
-    height: 300px;
-    opacity: 0.8;
-    width: 380px;
-    z-index: 1;
-  }
-  .gallery-item-2 {
-    left: 25%;
-    transform: translateX(-50%);
-  }
-  .gallery-item-3 {
-    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    height: 350px;
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 430px;
-    z-index: 2;
-  }
-  .gallery-item-4 {
-    left: 75%;
-    transform: translateX(-50%);
-  }
-  .gallery-item-5 {
-    left: 95%;
-    opacity: .4;
-    transform: translateX(-50%);
-  }
-  .gallery-controls {
-    display: flex;
-    justify-content: center;
-    margin: 25px 0;
-    height: 100px;
-  }
-  .gallery-controls button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 0 12px;
-    text-transform: capitalize;
-  }
-  .gallery-controls-button:focus {
-    outline: none;
-  }
-  .gallery-controls-previous {
-    position: relative;
-  }
-  .gallery-controls-previous::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    top: 25%;
-    transform: rotate(135deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-  }
-  .gallery-controls-previous:hover::before {
-    left: -40px;
-  }
-  .gallery-controls-next {
-    position: relative;
-  }
-  .gallery-controls-next::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    padding: 10px;
-    position: absolute;
-    right: -30px;
-    top: 45;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: right 0.15s ease-in-out;
-    width: 5px;
-  }
-
-  .gallery-controls-next:hover::before {
-    right: -40px;
-  }
-  .gallery-nav {
-    bottom: -15px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
-  .gallery nav li {
-    background: #ccc;
-    border-radius: 50%;
-    height: 10px;
-    margin: 0 16px;
-    width: 10px;
-  }
-  .gallery-nav li.gallery-item-selected {
-    background: #555;
-  }
-  .artworks {
-    text-align: center;
-    font-size: x-large;
-    padding: 25px;
-  }
-  .artist {
-    text-align: center;
-    font-size: x-large;
-    
-  }
-
-  .critique {
-    text-align: center;
-    font-size: x-large;
-  }
-  .cards {
-    display: flex;
-    margin-top: 400px;
-   
-  }
-  .card-1 {
-    width: 200px;
-    height: 3500px;
-    
-  }
-  .review-img-1 {
-    width: 200px;
-    height: 300px;
-    
-  }
-  .card-2 {
-    width: 200px;
-    height: 300px;
-  }
-  .review-img-2 {
-    width: 200px;
-    height: 300px;
-  }
-  .card-3 {
-    width: 200px;
-    height: 300px;
-  }
-  .review-img-3 {
-    width: 200px;
-    height: 300px;
-  }
-  .card-4 {
-    width: 200px;
-    height: 300px;
-  }
-  .review-img-4 {
-    width: 200px;
-    height: 300px;
-  }
-  .card-5 {
-    width: 200px;
-    height: 300px;
-  }
-  .review-img-5 {
-    width: 200px;
-    height: 300px;
-  }
+.critique {
+  text-align: center;
+  font-size: x-large;
+}
+.cards {
+  display: flex;
+  margin-top: 400px;
+}
+.card-1 {
+  width: 200px;
+  height: 3500px;
+}
+.review-img-1 {
+  width: 200px;
+  height: 300px;
+}
+.card-2 {
+  width: 200px;
+  height: 300px;
+}
+.review-img-2 {
+  width: 200px;
+  height: 300px;
+}
+.card-3 {
+  width: 200px;
+  height: 300px;
+}
+.review-img-3 {
+  width: 200px;
+  height: 300px;
+}
+.card-4 {
+  width: 200px;
+  height: 300px;
+}
+.review-img-4 {
+  width: 200px;
+  height: 300px;
+}
+.card-5 {
+  width: 200px;
+  height: 300px;
+}
+.review-img-5 {
+  width: 200px;
+  height: 300px;
+}
