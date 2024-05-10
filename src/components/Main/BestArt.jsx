@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from '../Carousel';
-// import '../bestArtCarousel.scss';
+
 export default function BestArt() {
   const images = [
     require('./img/ai-24-05-pc.jpg'),
@@ -8,13 +8,13 @@ export default function BestArt() {
     require('./img/am-24-05-pc.jpg'),
     require('./img/am-24-04-pc-3.jpg'),
   ];
-  const comments = ['.', '', '', ''];
+  const comments = ['작품1', '작품2', '작품3', '작품4'];
   const pageLinks = ['/artist', '/auction', '', ''];
   const [showBoardSection, setShowBoardSection] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1500 && !showBoardSection) {
+      if (window.scrollY > 1200 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };
@@ -24,19 +24,19 @@ export default function BestArt() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [showBoardSection]); // showBoardSection 상태가 변경될 때마다 useEffect 재실행
+  }, [showBoardSection]);
 
   return (
     <div className="bestWrap">
-      <div className="whiteBoard">
+      <div className="dark">
         <div className={`boardSection ${showBoardSection ? 'show' : ''}`}>
-          <div className="bestArtCrousel">
-            {' '}
+          <h2>Auction</h2>
+          <div className="bestCarousel">
             <Carousel
               images={images}
               comments={comments}
               pageLinks={pageLinks}
-            ></Carousel>
+            />
           </div>
         </div>
       </div>
