@@ -6,43 +6,37 @@ import { SiKakaotalk, SiFacebook, SiInstagram } from 'react-icons/si';
 export default function Footer() {
   return (
     <>
-      <footer id="footer">
-        <div className="container">
-          <div>
-            <img src={logo} className="logo" />
-          </div>
+      <footer>
+        <div className="container-footer">
+          <img src={logo} className="footerlogo" />
+
           <div className="row">
-            <div>
-              <div className="useful-link">
-                <h2>Useful Links</h2>
-                <div class="use-links">
-                  <Link to={'auction'}>경매 리스트</Link>
-                  <Link to={'auctionlist'}>경매 상품</Link>
-                  <Link to={'artist'}>이달의 작가</Link>
-                  <Link to={'artdetail'}>작품 상세</Link>
-                </div>
+            <div className="useful-link">
+              <h2>Useful Links</h2>
+              <div className="use-links">
+                <Link to={'auction'}>경매 리스트</Link>
+                <Link to={'auctionlist'}>경매 상품</Link>
+                <Link to={'artist'}>이달의 작가</Link>
+                <Link to={'artdetail'}>작품 상세</Link>
               </div>
             </div>
-            <div>
-              <div className="social-links">
-                <h2>Social</h2>
-                <div className="social-icons">
-                  <SiKakaotalk />
-                  KakaoTalk
-                  <SiFacebook /> Facebook
-                  <SiInstagram /> Instagram
-                </div>
+
+            <div className="social-links">
+              <h2>Social</h2>
+              <div className="social-icons">
+                <SiKakaotalk /> KakaoTalk
+                <SiFacebook /> Facebook
+                <SiInstagram /> Instagram
               </div>
             </div>
-            <div>
-              <div className="address">
-                <h2>Contact</h2>
-                <div className="address-links">
-                  <li className="address1">서울 강동구 고덕로 429 5층</li>
-                  <li>문의전화: 1577-8888</li>
-                  <li>carte@gmail.com</li>
-                </div>
-              </div>
+          </div>
+
+          <div className="address">
+            <h2>Contact Us</h2>
+            <div className="address-links">
+              <li className="address1">주소: 서울 강동구 고덕로 429 5층</li>
+              <li>문의전화: 1577-8888</li>
+              <li>이메일: carte@gmail.com</li>
             </div>
           </div>
         </div>

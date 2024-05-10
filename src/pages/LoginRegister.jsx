@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 
 export default function LoginRegister() {
   const [action, setAction] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const registerLink = () => {
     setAction('active');
   };
@@ -71,7 +72,7 @@ export default function LoginRegister() {
 
   return (
     <>
-      <Header> </Header>
+      <Header isLoggedIn={isLoggedIn}> </Header>
       <div className="login-wrapper">
         <div className={`wrapper ${action}`}>
           <div className="form-box login">

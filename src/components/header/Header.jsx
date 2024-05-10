@@ -2,13 +2,20 @@ import { Link } from 'react-router-dom';
 import '../../styles/header.css';
 import React, { useState } from 'react';
 import logo from '../../assets/logo.svg';
-import { FaSearch, FaRegWindowClose } from 'react-icons/fa';
+import { FaSearch, FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import DropDownProfile from '../dropdownProfile/DropDownProfile';
 
-export default function Header() {
+export default function Header(isLoggedIn) {
   //Search Toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
+  const [isShow, setIsShow] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
+
+  const handleClick = () => {
+    setIsShow(!isShow);
+  };
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -16,7 +23,6 @@ export default function Header() {
   };
 
   const toggleSearch = () => {
-    console.log('aa');
     setIsSearchOpen(!isSearchOpen);
     setIsNavOpen(false); // Close nav when opening search
   };
@@ -30,46 +36,64 @@ export default function Header() {
             <img src={logo} alt="" className="logo" />
           </Link>
           {/* MenuList */}
-          <ul className="text" style={{ display: isSearchOpen ? 'none' : '' }}>
-            <li>
-              <Link to={'/auction'} className="link">
-                경매 리스트
-              </Link>
-            </li>
-            <li>
-              <Link to={'/auctionlist'} className="link">
-                경매 상품
-              </Link>
-            </li>
-            <li>
-              <Link to={'/artist'} className="link">
-                이달의 작가
-              </Link>
-            </li>
-            <li>
-              <Link to={'/artdetail'} className="link">
-                작품 상세
-              </Link>
-            </li>
-          </ul>
+          {handleClick ? (
+            <ul id="text" style={{ display: isSearchOpen ? 'none' : '' }}>
+              <li>
+                <Link to={'/auction'} className="link">
+                  경매 리스트
+                </Link>
+              </li>
+              <li>
+                <Link to={'/auctionlist'} className="link">
+                  경매 상품
+                </Link>
+              </li>
+              <li>
+                <Link to={'/artist'} className="link">
+                  이달의 작가
+                </Link>
+              </li>
+              <li>
+                <Link to={'/artdetail'} className="link">
+                  작품 상세
+                </Link>
+              </li>
+            </ul>
+          ) : (
+            ''
+          )}
           <div className="search-login">
             {isSearchOpen && (
               <input
                 className="input"
                 type="text"
-                placeholder="검색.."
+                placeholder="검색..."
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
               />
             )}
-
             <div className="search-icon" onClick={toggleSearch}>
               {/* Search icon goes here */}
               <FaSearch />
             </div>
-            <Link className="lab-btn" to={'/login'}>
-              로그인
-            </Link>
+            {isLoggedIn ? (
+              <FaUser
+                className="profileImage"
+                onClick={() => setOpenProfile((prev) => !prev)}
+              />
+            ) : (
+              <Link className="lab-btn" to={'/login'}>
+                로그인
+              </Link>
+            )}
+            {openProfile && <DropDownProfile />}
+          </div>
+          <div id="mobile" onClick={handleClick}>
+            {isShow ? (
+              <FaTimes className="mobileicon" />
+            ) : (
+              <FaBars className="mobileicon" />
+            )}
           </div>
         </div>
       </header>

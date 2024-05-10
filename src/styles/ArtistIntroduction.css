@@ -1,93 +1,98 @@
+/* 작가 소개 */
 .artist-introduction {
+  width: 100%;
+  max-width: 1200px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   margin-top: 50px;
+  position: relative;
+  top: 200px;
+  margin: auto;
+}
+.artist-introduction .artist {
+  position: absolute;
+
+  top: -200px;
+  font-size: 70px;
+  color: #000;
 }
 
 .artist-info {
+  height: 800px;
   display: flex;
-  margin-bottom: 100px; /* profile_img와 artworks 사이 간격 설정 */
-  position: relative;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.profile {
-  margin-right: 20px;
+  margin-bottom: 200px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .details {
   text-align: left;
-  width: 50%; /* 부모 요소의 너비의 절반만 사용 */
-  position: relative; /* 상대적 위치 설정 */
-}
-.details-right {
-  text-align: right;
-  position: absolute; /* 절대적 위치 설정 */
-  top: 0; /* 부모 요소의 상단에 정렬 */
-  right: 0; /* 부모 요소의 오른쪽에 정렬 */
-  margin-top: -20px; /* 원하는 만큼 위로 올림 */
+  width: 50%;
+  position: relative;
+  line-height: 30px;
 }
 
-.details p {
-  margin: 5px 0;
+.detailsContent {
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .artist-name {
   text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  font-size: large;
+  font-size: 35px;
+  color: #000;
+  margin-left: 25px;
 }
 
-.instagram-link {
+.instagram-link > p {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 15px;
+    color: #000;
+  }
+}
+
+.Email > p {
   display: flex;
   align-items: center;
 }
-.Email {
-  display: flex;
-  align-items: center;
+.iconEmail {
+  margin-right: 15px;
+}
+.Email-text {
+  margin-left: 5px;
 }
 
-/* .artworks {
-    text-align: center;
-    display: table-column;
-    justify-content: center;
-    position: absolute;
-    top: calc(100% + 20px);
-    padding: 20px;
-  }
-  
-  .artworks ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    
-  }
-  
-  .artworks li {
-    margin-right: 20px;
-  } */
-.artworks img {
-  width: 400px;
-  height: 450px;
+.artistIntroTitle {
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.artistDescription p {
+  width: 100%;
 }
 
 .gallery {
   margin-top: 10%;
   width: 100%;
-  height: 400px;
 }
 
 .gallery-container {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
-  height: 100px;
+  height: 400px;
   margin: 0 auto;
   max-width: 1000px;
   position: relative;
+  justify-content: space-evenly;
 }
 
 .gallery-item {
@@ -214,60 +219,219 @@
   background: #555;
 }
 .artworks {
+  margin: 40px;
   text-align: center;
-  font-size: x-large;
+  font-size: 50px;
   padding: 25px;
-}
-.artist {
-  text-align: center;
-  font-size: x-large;
+  color: #000;
 }
 
-.critique {
-  text-align: center;
-  font-size: x-large;
-}
-.cards {
+.container {
+  height: 100vh;
+  width: 100vw;
+  max-height: 800px;
+  max-width: 1280px;
+  min-height: 600px;
+  min-width: 1000px;
   display: flex;
-  margin-top: 400px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
 }
-.card-1 {
-  width: 200px;
-  height: 3500px;
+
+.border {
+  height: 675px;
+  width: 498px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
 }
-.review-img-1 {
-  width: 200px;
+.border:hover {
+  border: 3px solid white;
+}
+
+.card {
+  height: 685px;
+  width: 508px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card0 {
+  background: url(../../public/images/artist_img/artist1.webp) center center
+    no-repeat;
+  background-size: 600px;
+}
+.card0:hover {
+  background: url(../../public/images/artist_img/artist1.webp) top center
+    no-repeat;
+  background-size: 1000px;
+  opacity: 1;
+}
+.card0:hover h2 {
+  opacity: 1;
+}
+.border h2 {
+  font-size: 24px;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.artworksCarousel {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
   height: 300px;
 }
-.card-2 {
-  width: 200px;
-  height: 300px;
+
+body {
+  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  min-height: 1000px;
 }
-.review-img-2 {
-  width: 200px;
-  height: 300px;
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
 }
-.card-3 {
-  width: 200px;
-  height: 300px;
+
+div#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: opacity 0.4s ease-in-out;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
 }
-.review-img-3 {
-  width: 200px;
-  height: 300px;
+
+div#columns figure img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
 }
-.card-4 {
-  width: 200px;
-  height: 300px;
+
+div#columns figure figcaption {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.5;
 }
-.review-img-4 {
-  width: 200px;
-  height: 300px;
+
+div#columns small {
+  font-size: 1rem;
+  float: right;
+  text-transform: uppercase;
+  color: #aaa;
 }
-.card-5 {
-  width: 200px;
-  height: 300px;
+
+div#columns small a {
+  color: #666;
+  text-decoration: none;
+  transition: 0.4s color;
 }
-.review-img-5 {
-  width: 200px;
-  height: 300px;
+
+div#columns:hover figure:not(:hover) {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) {
+  #columns {
+    column-gap: 0px;
+  }
+  #columns figure {
+    width: 100%;
+  }
+}
+
+.otherArtistRecommend {
+  color: #000;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.item {
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  &:hover > .overflow > .content-art {
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+.overflow {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content-art {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  color: #fff;
+  font-weight: 700 !important;
+  text-align: center;
+  text-shadow: 0 1px 1px #000;
+  padding: 10px 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+  transform: translateY(100%) translateZ(0);
+  transition: transform 450ms ease-out;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  background: #1f253d;
+}
+
+.container-fluid {
+  background-color: red;
+  color: red;
 }
