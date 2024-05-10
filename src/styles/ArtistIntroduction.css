@@ -2,7 +2,7 @@
 .artist-introduction {
   width: 100%;
   max-width: 1200px;
-  height: 1000px ;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,233 +12,233 @@
   top: 200px;
   margin: auto;
 }
-  .artist-introduction .artist{
-    position: absolute;
-    
-    top: -200px;
-    font-size: 70px;
-    color: #000;
-  }
-  
-  .artist-info {
-    height: 800px;
-    display: flex;
-    margin-bottom: 200px; 
-    justify-content: space-around;
-    align-items: center;
-  }
+.artist-introduction .artist {
+  position: absolute;
 
-  .details {
-    text-align: left;
-    width: 50%; 
-    position: relative; 
-    line-height: 30px;
-    
-  }
-
-  .detailsContent {
-    padding: 20px 20px 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .artist-name {
-    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    font-size: 35px;
-    color: #000;
-    margin-left: 25px;
-  }
-
-  .instagram-link > p {
-    display: flex;
-    align-items: center;
-
-    a {
-      margin-left: 15px;
-      color: #000;
-    }
-  }
-
-  .Email > p {
-    display: flex;
-    align-items: center;
-  }
-  .iconEmail {
-    margin-right: 15px;
-  }
-  .Email-text {
-    margin-left: 5px;
-  }
-
-  .artistIntroTitle {
-    font-size: 30px;
-    margin-left: 20px;
-    font-weight: bold;
-  }
-  .artistDescription p {
-    width:100%;
-  }
-  
-  .gallery {
-    margin-top: 10%;
-    width: 100%;
-  }
-
-  .gallery-container {
-    align-items: flex-start;
-    display: flex;
-    height: 400px;
-    margin: 0 auto;
-    max-width: 1000px;
-    position: relative;
-    justify-content: space-evenly;
-  }
-
-  .gallery-item {
-    height: 250px;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    width: 330px;
-    z-index: 0;
-    border-radius: 15px;
-    background-size: contain;
-  }
-
-  .gallery-item-1 {
-    left: 5%;
-    opacity: .4;
-    transform: translateX(-50%);
-  }
-  .gallery-item-2, .gallery-item-4 {
-    height: 300px;
-    opacity: 0.8;
-    width: 380px;
-    z-index: 1;
-  }
-  .gallery-item-2 {
-    left: 25%;
-    transform: translateX(-50%);
-  }
-  .gallery-item-3 {
-    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    height: 350px;
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 430px;
-    z-index: 2;
-  }
-  .gallery-item-4 {
-    left: 75%;
-    transform: translateX(-50%);
-  }
-  .gallery-item-5 {
-    left: 95%;
-    opacity: .4;
-    transform: translateX(-50%);
-  }
-  .gallery-controls {
-    display: flex;
-    justify-content: center;
-    margin: 25px 0;
-    height: 100px;
-  }
-  .gallery-controls button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 0 12px;
-    text-transform: capitalize;
-  }
-  .gallery-controls-button:focus {
-    outline: none;
-  }
-  .gallery-controls-previous {
-    position: relative;
-  }
-  .gallery-controls-previous::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    top: 25%;
-    transform: rotate(135deg) translateY(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-  }
-  .gallery-controls-previous:hover::before {
-    left: -40px;
-  }
-  .gallery-controls-next {
-    position: relative;
-  }
-  .gallery-controls-next::before {
-    border: solid #000;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    padding: 10px;
-    position: absolute;
-    right: -30px;
-    top: 45;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: right 0.15s ease-in-out;
-    width: 5px;
-  }
-
-  .gallery-controls-next:hover::before {
-    right: -40px;
-  }
-  .gallery-nav {
-    bottom: -15px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
-  .gallery nav li {
-    background: #ccc;
-    border-radius: 50%;
-    height: 10px;
-    margin: 0 16px;
-    width: 10px;
-  }
-  .gallery-nav li.gallery-item-selected {
-    background: #555;
-  }
-  .artworks {
-    margin: 40px;
-    text-align: center;
-    font-size: 50px;
-    padding: 25px;
-    color: #000;
-  }
-
-  .container {
-    height: 100vh;
-    width: 100vw;
-    max-height: 800px;
-    max-width: 1280px;
-    min-height: 600px;
-    min-width: 1000px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
+  top: -200px;
+  font-size: 70px;
+  color: #000;
 }
-  
+
+.artist-info {
+  height: 800px;
+  display: flex;
+  margin-bottom: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details {
+  text-align: left;
+  width: 50%;
+  position: relative;
+  line-height: 30px;
+}
+
+.detailsContent {
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.artist-name {
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 35px;
+  color: #000;
+  margin-left: 25px;
+}
+
+.instagram-link > p {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 15px;
+    color: #000;
+  }
+}
+
+.Email > p {
+  display: flex;
+  align-items: center;
+}
+.iconEmail {
+  margin-right: 15px;
+}
+.Email-text {
+  margin-left: 5px;
+}
+
+.artistIntroTitle {
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.artistDescription p {
+  width: 100%;
+}
+
+.gallery {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.gallery-container {
+  align-items: flex-start;
+  display: flex;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.gallery-item {
+  height: 250px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 330px;
+  z-index: 0;
+  border-radius: 15px;
+  background-size: contain;
+}
+
+.gallery-item-1 {
+  left: 5%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+.gallery-item-2,
+.gallery-item-4 {
+  height: 300px;
+  opacity: 0.8;
+  width: 380px;
+  z-index: 1;
+}
+.gallery-item-2 {
+  left: 25%;
+  transform: translateX(-50%);
+}
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 350px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  z-index: 2;
+}
+.gallery-item-4 {
+  left: 75%;
+  transform: translateX(-50%);
+}
+.gallery-item-5 {
+  left: 95%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+.gallery-controls-button:focus {
+  outline: none;
+}
+.gallery-controls-previous {
+  position: relative;
+}
+.gallery-controls-previous::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+.gallery-controls-previous:hover::before {
+  left: -40px;
+}
+.gallery-controls-next {
+  position: relative;
+}
+.gallery-controls-next::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  padding: 10px;
+  position: absolute;
+  right: -30px;
+  top: 45;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-controls-next:hover::before {
+  right: -40px;
+}
+.gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.gallery nav li {
+  background: #ccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 10px;
+}
+.gallery-nav li.gallery-item-selected {
+  background: #555;
+}
+.artworks {
+  margin: 40px;
+  text-align: center;
+  font-size: 50px;
+  padding: 25px;
+  color: #000;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  max-height: 800px;
+  max-width: 1280px;
+  min-height: 600px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .border {
   height: 675px;
   width: 498px;
@@ -247,9 +247,9 @@
   transition: border 1s;
   position: relative;
 }
-  .border:hover{
-    border: 3px solid white;
-  }
+.border:hover {
+  border: 3px solid white;
+}
 
 .card {
   height: 685px;
@@ -263,108 +263,109 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative
+  position: relative;
 }
 
 .card0 {
-  background: url(../../public/images/artist_img/artist1.webp) center center no-repeat;
+  background: url(../../public/images/artist_img/artist1.webp) center center
+    no-repeat;
   background-size: 600px;
 }
-  .card0:hover{
-    background: url(../../public/images/artist_img/artist1.webp) top center no-repeat;
-    background-size: 1000px;
-    opacity: 1;
-    }
-  .card0:hover h2 {
-    opacity: 1;
-  }
-  .border h2 {
-    font-size: 24px;
-    color: white;
-    margin: 20px;
-    opacity: 0;
-    transition: opacity 1s;
+.card0:hover {
+  background: url(../../public/images/artist_img/artist1.webp) top center
+    no-repeat;
+  background-size: 1000px;
+  opacity: 1;
 }
-  
+.card0:hover h2 {
+  opacity: 1;
+}
+.border h2 {
+  font-size: 24px;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
 
-    
-  .artworksCarousel{
-    width:100%;
-    max-width:600px;
-    margin:auto;
-    height: 300px;
+.artworksCarousel {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  height: 300px;
+}
+
+body {
+  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  min-height: 1000px;
+}
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+div#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: opacity 0.4s ease-in-out;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+}
+
+div#columns figure img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.5;
+}
+
+div#columns small {
+  font-size: 1rem;
+  float: right;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+div#columns small a {
+  color: #666;
+  text-decoration: none;
+  transition: 0.4s color;
+}
+
+div#columns:hover figure:not(:hover) {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) {
+  #columns {
+    column-gap: 0px;
   }
+  #columns figure {
+    width: 100%;
+  }
+}
 
-
-
-  
-   body {
-     background: url(//subtlepatterns.com/patterns/scribble_light.png);
-     min-height: 1000px;
-   }
-   #columns {
-     column-width: 320px;
-     column-gap: 15px;
-     width: 90%;
-     max-width: 1100px;
-     margin: 50px auto;
-   }
-   
-   div#columns figure {
-     background: #fefefe;
-     border: 2px solid #fcfcfc;
-     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-     margin: 0 2px 15px;
-     padding: 15px;
-     padding-bottom: 10px;
-     transition: opacity .4s ease-in-out;
-     display: inline-block;
-     -webkit-column-break-inside: avoid;
-   }
-   
-   div#columns figure img {
-     width: 100%; height: auto;
-     border-bottom: 1px solid #ccc;
-     padding-bottom: 15px;
-     margin-bottom: 5px;
-   }
-   
-   div#columns figure figcaption {
-     font-size: .9rem;
-     font-weight: bold;
-     color: #444;
-     line-height: 1.5;
-   }
-   
-   div#columns small { 
-     font-size: 1rem;
-     float: right; 
-     text-transform: uppercase;
-     color: #aaa;
-   } 
-   
-   div#columns small a { 
-     color: #666; 
-     text-decoration: none; 
-     transition: .4s color;
-   }
-   
-   div#columns:hover figure:not(:hover) {
-     opacity: 0.4;
-   }
-   
-   @media screen and (max-width: 750px) { 
-     #columns { column-gap: 0px; }
-     #columns figure { width: 100%; }
-   }
-
-   .otherArtistRecommend {
-    color: #000;
-    text-align: center;
-    margin-top: 100px;
-    font-size: 50px;
-   }
-
+.otherArtistRecommend {
+  color: #000;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
 
 .item {
   cursor: pointer;
@@ -382,7 +383,11 @@
 }
 
 .content-art {
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   color: #fff;
   font-weight: 700 !important;
   text-align: center;
@@ -400,8 +405,8 @@
 }
 
 .nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 *,
@@ -425,7 +430,6 @@ html {
 body {
   background: #1f253d;
 }
-
 
 .container-fluid {
   background-color: red;

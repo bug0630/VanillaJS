@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@coreui/icons": "^3.0.1",
-    "@coreui/icons-react": "^2.2.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@reduxjs/toolkit": "^2.2.3",
@@ -25,6 +23,7 @@
     "sass": "^1.76.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.9",
+    "swiper": "^11.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
