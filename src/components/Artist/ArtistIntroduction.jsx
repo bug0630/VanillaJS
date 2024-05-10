@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import '../../styles/reset.css';
 import jsonData from '../../data/artist.json';
+import '../../styles/Artist.scss'
 import '../../styles/ArtistIntroduction.css';
 import { FaMailBulk, FaInstagram } from 'react-icons/fa';
 import Carousel from '../Carousel';
@@ -14,190 +16,155 @@ const ArtistIntroduction = () => {
   const comments = ['', '', '', ''];
   const pageLinks = ['/artist', '/auction', '', ''];
   return (
+    <>
+{/* 배너 */}
+  <div className='heroEffects'>
+    <div className="bg">  
+        <div className="arrow bouncy">  
+            <svg height="25" width="50">
+                <polygon points="0,0 25,10 50,0 25,25" fill="rgba(255,255,255,.5)" strokeWidth="0" stroke="rgba(255,255,255,.3)"/>
+            </svg>
+        </div>  
+        <div className="title centerV"> 
+            <div>
+                <div className="text"> 
+                    <h1>이달의 작가</h1>
+                    <p>There is no must in art because art is free</p>
+                </div>
+            </div>
+        </div> 
+    </div> 
+    <div className="shade"></div>
+</div>
+<div className='content'>
+
     <div className="artist-introduction">
-      {artistData && (
-        <div className="artist-info">
-          <h1 className="artist">Artist</h1>
-          <div className="profile">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/artist_img/${artistData[0].profile_img}`}
-              alt="Artist Profile"
-              style={{ width: '300px', height: '350px', borderRadius: '15px' }}
-            />
+      <h1 className="artist">Artist</h1>
+      {artistData && ( 
+        <div className='artist-info'>
+          <div className='card card0'>
+            <div className='border'>
+              <h2 className="artist-name">{artistData[0].artist_name}</h2>
+              <h2>{artistData[0].birthdate}</h2>
+            </div>
           </div>
-          <div className="details">
-            <h1 className="artist-name">{artistData[0].artist_name}</h1>
-            <p>{artistData[0].birthdate}</p>
-            <br />
-            <p>{artistData[0].description}</p>
-            <div className="details-right">
-              <div className="Email">
-                <FaMailBulk className="icon" />
-                <p>{artistData[0].email}</p>
-              </div>
-              <div className="instagram-link">
-                <FaInstagram className="icon" />
-                <p>
-                  <a
+          <div className='details'>
+            <div className='detailsContent'>
+              <div className='detailsHeading'>
+                <div className='detailsHeadingContent'>
+                   <h1 className='artist-name'>{artistData[0].artist_name}</h1>
+                   <br />
+                   <div className='Email'>
+                    <p><FaMailBulk className="iconEmail" />{artistData[0].email}</p>
+                   </div>
+                   <div className='instagram-link'>
+                    <p> <FaInstagram className="icon" />
+                    <a
                     href={artistData[0].insta_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </a>
-                </p>
+                    >Instagram
+                    </a>
+                    </p>
+                   </div>
+                </div>
+              </div>
+              <br />
+
+              <div className='artistIntro'>
+                <h2 className='artistIntroTitle'>Introduction</h2>
+                <br />
+                <div className='artistDescription'>
+                  <p>{artistData[0].description}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="gallery">
-            <h1 className="artworks">Artworks</h1>
-            <div className='artworksCarousel'><Carousel
-              images={images}
-              comments={comments}
-              pageLinks={pageLinks}
-            ></Carousel></div>
-          
-            {/* <ul>
-              <div className="gallery-container">
-                <li>
-                  <img
-                    className="gallery-item gallery-item-1"
-                    src={`${process.env.PUBLIC_URL}/images/art_img/img1.webp`}
-                    alt="1"
-                  />
-                  <img
-                    className="gallery-item gallery-item-2"
-                    src={`${process.env.PUBLIC_URL}/images/art_img/img2.webp`}
-                    alt="2"
-                  />
-                  <img
-                    className="gallery-item gallery-item-3"
-                    src={`${process.env.PUBLIC_URL}/images/art_img/img3.webp`}
-                    alt="3"
-                  />
-                  <img
-                    className="gallery-item gallery-item-4"
-                    src={`${process.env.PUBLIC_URL}/images/art_img/img4.webp`}
-                    alt="4"
-                  />
-                  <img
-                    className="gallery-item gallery-item-5"
-                    src={`${process.env.PUBLIC_URL}/images/art_img/img5.webp`}
-                    alt="5"
-                  />
-                </li>
-              </div>
-            </ul> */}
-            <div className="gallery-controls"></div>
-            {/* <h2>Artworks</h2>
-            <br />
-            <ul>
-            {artistData[0].art.map(artwork => (
-              <li key={artwork.id}>
-                <img src={`/images/art_img/${artwork.art_img}`} alt={artwork.title} />
-                <p>{artwork.title}</p>
-              </li>
-            ))}
-            </ul> */}
-          </div>
-          <h1 className="critique">Critique</h1>
-          <div className="cards">
-            <div className="card-1">
-              <img
-                className="review-img-1"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img15.webp`}
-                alt="15"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="card-2">
-              <img
-                className="review-img-2"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img14.webp`}
-                alt="14"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="card-3">
-              <img
-                className="review-img-3"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img13.webp`}
-                alt="13"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="card-4">
-              <img
-                className="review-img-4"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img12.webp`}
-                alt="12"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div className="card-5">
-              <img
-                className="review-img-5"
-                src={`${process.env.PUBLIC_URL}/images/art_img/img11.webp`}
-                alt="11"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Art title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">
-                  Instagram
-                </a>
-              </div>
-            </div>
+
           </div>
         </div>
       )}
+  </div> 
+
+ {/* 카로셀 */}
+  <div className='gallery'>
+   <h1 className='artworks'>Art Works</h1>
+   <br />
+   <br />
+   <div className='artworksCarousel'><Carousel
+   images={images}
+   comments={comments}
+   pageLinks={pageLinks}
+   ></Carousel></div>
+   </div>
+   
+   <div className="container-fluid">
+  <div id="content" className="row"></div>
+</div>
+<script id="template" type="text/x-handlebars-template">
+    <div className="col-md-4 col-lg-3 col-xs-6 item nopadding">
+      <div className="overflow">
+        <div className="content-art">
+        </div>
+        <img src="{{img}}" alt="{{alt}}" className="img-responsive"/>
+      </div>
     </div>
-  );
-};
-export default ArtistIntroduction;
+</script>
 
+  <div className='otherArtist'>
+    <h1 className='otherArtistRecommend'>Recommend</h1>
+    <br />
+    <br />
+    <div id="columns">
+      <figure>
+        <img src="/images/art_img/img7.webp" alt="" />
+        <figcaption>청록색으로 물든 아름다운 정원을 담은 작품</figcaption>
+      </figure>
+	
+	    <figure>
+      <img src="/images/art_img/img8.webp" alt="" />
+	      <figcaption>밤하늘을 묘사한 걸작</figcaption>
+	    </figure>
+	
+      <figure>
+      <img src="/images/art_img/img9.webp" alt="" />
+	      <figcaption>레오나르도 다 빈치에 의한 상징적인 초상화</figcaption>
+	   </figure>
+  
+	    <figure>
+      <img src="/images/art_img/img10.webp" alt="" />
+	      <figcaption>살바도르 달리의 초현실주의적 걸작</figcaption>
+	    </figure>
+	
+      <figure>
+      <img src="/images/art_img/img11.webp" alt="" />
+	     <figcaption>바로크 예술의 대표적인 작품 중 하나</figcaption>
+	    </figure>
+	
+      <figure>
+      <img src="/images/art_img/img12.webp" alt="" />
+	      <figcaption>일상적인 장면을 사실적으로 묘사한 작품</figcaption>
+	    </figure>
+  
+	    <figure>
+      <img src="/images/art_img/img13.webp" alt="" />
+	      <figcaption>전쟁 후 고향으로 돌아오는 장병의 모습을 묘사한 작품</figcaption>
+	    </figure>	
+  
+      <figure>
+      <img src="/images/art_img/img14.webp" alt="" />
+	      <figcaption>푸른 정글 속에서 동물들의 생동감 넘치는 모습을 담은 작품</figcaption>
+	    </figure>
+  
+     <figure>
+     <img src="/images/art_img/img15.webp" alt="" />
+        <figcaption>햇살이 드는 창가에서의 한 소녀의 모습을 담은 작품</figcaption>
+	  </figure>	
+    
+	  </div>
+  </div>
+</div>
 
-
-
-
-
-
+    </>
+    );
+  };
+  export default ArtistIntroduction;
