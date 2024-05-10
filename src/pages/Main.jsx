@@ -1,7 +1,7 @@
 import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import BestArt from '../components/Main/BestArt';
-import News from '../components/Main/News';
+import New from '../components/Main/New';
 import '../styles/Main.scss';
 import '../styles/BestArt.scss';
 // import '../styles/Carousel.scss';
@@ -28,8 +28,8 @@ export default function Main() {
       </div>
       <MonthArtist images={images}></MonthArtist>
       <BestArt></BestArt>
-      <News></News>
-      <h2>this is Exhibition</h2>
+      <New></New>
+      <h2>Exhibition</h2>
     </div>
   );
 }
