@@ -10,6 +10,7 @@ import MyPage from './pages/MyPage';
 import Header from '../src/components/header/Header';
 import ArtDetail from './pages/ArtDetail';
 import AuctionList from './pages/AuctionList';
+import Artist from './pages/Artist';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/artist" element={<ArtistInfo />}></Route>
         <Route path="/artdetail" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
+        <Route path='/artist1' element={<Artist/>}></Route>
       </Routes>
     </div>
   );
