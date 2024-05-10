@@ -26,17 +26,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
   margin: auto;
   height: 100%;
   opacity: 0; /* 초기에는 투명하게 설정 */
   transition: opacity 3s ease;
   overflow: hidden;
   h2 {
-    font-size: 24px;
-    height: 100px;
-    color: $main-color;
+    @include h2();
   }
 }
 .boardSection.show {
@@ -48,6 +46,11 @@
   width: 100%;
   max-width: 400px;
   height: 250px;
+  @media screen and (max-width: 720px) {
+    max-width: 720px;
+    height: auto;
+    aspect-ratio: 8/5;
+  }
 
   .slide img {
     width: 80%;
@@ -67,5 +70,8 @@
   .prev,
   .next {
     display: none;
+    @media screen and (max-width: 720px) {
+      display: block;
+    }
   }
 }

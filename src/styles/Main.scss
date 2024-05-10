@@ -1,8 +1,20 @@
 $main-color: #aa8453;
+@mixin h2 {
+  font-size: 24px;
+  text-align: center;
+  color: $main-color;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $main-color;
+  width: 100%;
+  max-width: 1200px;
+}
 // 메인 랩
 .mainLab {
   width: 100%;
   margin: auto;
+  h2 {
+    @include h2();
+  }
 }
 .mainCarousel {
   margin: auto;
@@ -23,26 +35,30 @@ $main-color: #aa8453;
   overflow: hidden;
   opacity: 0; /* 초기에는 투명하게 설정 */
   transition: opacity 1s ease;
-  h2 {
-    font-size: 24px;
-    text-align: center;
-    color: $main-color;
-  }
 
   .artistInfo {
+    width: 100%;
     margin-top: 100px;
+    // height: 600px;
     display: flex;
+  }
+  .picture {
+    width: 100%;
+
     img {
-      width: 120%;
+      width: 100%;
     }
   }
-
   .artistComment {
     padding: 20px 20px 0 20px;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    h3 {
+      text-align: center;
+      margin-bottom: 100px;
+    }
     ul {
       width: 100%;
       margin-top: 100px;
@@ -55,17 +71,35 @@ $main-color: #aa8453;
         aspect-ratio: 1/1;
         overflow: hidden;
         margin: 5px;
+        img {
+          width: 120%;
+          transition: transform 0.3s ease;
+        }
+        img:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
 }
+// News
+.newsWrap {
+  margin-top: 200px;
+  width: 100%;
+  height: 500px;
+  padding: 0 20px;
+}
 @media screen and (max-width: 720px) {
+  .artMonth {
+    padding-top: 100px;
+  }
   .artistInfo {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-  }
-  .artistPhoto {
-    aspect-ratio: 1/1;
+    .picture {
+      height: 400px;
+      overflow: hidden;
+    }
   }
 }

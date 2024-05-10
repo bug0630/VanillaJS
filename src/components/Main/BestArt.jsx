@@ -14,7 +14,7 @@ export default function BestArt() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1500 && !showBoardSection) {
+      if (window.scrollY > 1200 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };

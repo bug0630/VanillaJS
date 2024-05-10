@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Carousel.scss';
 
-const Carousel = ({
-  images,
-  comments,
-  pageLinks,
-  intervalTime = 5000,
-  className,
-}) => {
+const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -24,7 +18,7 @@ const Carousel = ({
   useEffect(() => {
     const interval = setInterval(goToNextSlide, intervalTime);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, goToNextSlide, intervalTime]);
 
   return (
     <div className="carouselContainer ">
@@ -41,10 +35,10 @@ const Carousel = ({
         </div>
       </Link>
       <button className="prev" onClick={goToPrevSlide}>
-        Previous
+        <img src="images/arrow_icon.svg"></img>
       </button>
       <button className="next" onClick={goToNextSlide}>
-        Next
+        <img src="images/arrow_icon.svg"></img>
       </button>
       <div className="comment">{comments[currentIndex]}</div>
     </div>
