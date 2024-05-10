@@ -1,19 +1,36 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-
+import React, { useEffect, useState } from 'react';
 export default function MonthArtist() {
+  const [showBoardSection, setShowBoardSection] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300 && !showBoardSection) {
+        setShowBoardSection(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [showBoardSection]); // showBoardSection 상태가 변경될 때마다 useEffect 재실행
+
   return (
-    <div className="artMonth">
-      <h2>이 달의 작가</h2>
+    <div className={`artMonth ${showBoardSection ? 'show' : ''}`}>
+      <h2>Artist of the Month</h2>
       <div className="artistInfo">
         {' '}
-        <img
-          className="artistPhoto"
-          src="images/artist_img/artist1.webp"
-          alt="artist"
-        ></img>
+        <div className="picture">
+          <img
+            className="artistPhoto"
+            src="images/artist_img/artist1.webp"
+            alt="artist"
+          ></img>
+        </div>
         <div className="artistComment">
-          <h2>작가 comment</h2>
+          <h3>작가명</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
             architecto illum minus ratione tenetur corrupti ipsa, dolore

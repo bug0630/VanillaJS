@@ -1,7 +1,12 @@
 import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
+import BestArt from '../components/Main/BestArt';
+import News from '../components/Main/News';
 import '../styles/Main.scss';
-import '../styles/Carousel.scss';
+import '../styles/BestArt.scss';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+// import '../styles/Carousel.scss';
 
 export default function Main() {
   const images = [
@@ -9,22 +14,28 @@ export default function Main() {
     require('../img/am-24-05-pc.jpg'),
     require('../img/ai-24-05-pc.jpg'),
     require('../img/pc-mb-4.jpg'),
+    require('../img/ai-24-05-pc.jpg'),
   ];
-  const comments = ['이달의 작가', '경매', '테마', '전시회'];
-  const pageLinks = ['/artist', '/auction', '', ''];
+  const comments = ['이달의 작가', '경매', '테마', '전시회', ''];
+  const pageLinks = ['/artist', '/auction', '', '', ''];
   return (
     <>
+      <Header />
       <div className="mainLab">
-        <Carousel
-          images={images}
-          comments={comments}
-          pageLinks={pageLinks}
-        ></Carousel>
+        <div className="mainCarousel">
+          {' '}
+          <Carousel
+            images={images}
+            comments={comments}
+            pageLinks={pageLinks}
+          ></Carousel>
+        </div>
         <MonthArtist images={images}></MonthArtist>
-        <h2>Best Art</h2>
-        <h2>this is News</h2>
+        <BestArt></BestArt>
+        <News></News>
         <h2>this is Exhibition</h2>
       </div>
+      <Footer />
     </>
   );
 }

@@ -7,13 +7,13 @@ export default function Footer() {
   return (
     <>
       <footer id="footer">
-        <div class="container">
+        <div className="container">
           <div>
             <img src={logo} className="logo" />
           </div>
-          <div class="row">
+          <div className="row">
             <div>
-              <div class="useful-link">
+              <div className="useful-link">
                 <h2>Useful Links</h2>
                 <div class="use-links">
                   <Link to={'auction'}>경매 리스트</Link>
@@ -24,9 +24,9 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <div class="social-links">
+              <div className="social-links">
                 <h2>Social</h2>
-                <div class="social-icons">
+                <div className="social-icons">
                   <SiKakaotalk />
                   KakaoTalk
                   <SiFacebook /> Facebook
@@ -35,10 +35,10 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <div class="address">
+              <div className="address">
                 <h2>Contact</h2>
-                <div class="address-links">
-                  <li class="address1">서울 강동구 고덕로 429 5층</li>
+                <div className="address-links">
+                  <li className="address1">서울 강동구 고덕로 429 5층</li>
                   <li>문의전화: 1577-8888</li>
                   <li>carte@gmail.com</li>
                 </div>
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div class="copy-right-sec">©Copyright C'Arte Corp</div>
+        <div className="copy-right-sec">©Copyright C'Arte Corp</div>
       </footer>
     </>
   );

@@ -8,6 +8,7 @@ export default function Header() {
   //Search Toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -20,70 +21,56 @@ export default function Header() {
     setIsNavOpen(false); // Close nav when opening search
   };
 
-  const closeNav = () => {
-    setIsNavOpen(false);
-  };
-
   return (
     <>
       <header>
         <div className={`nav ${isNavOpen ? 'openNav' : ''}`}>
-          <FaSearch
-            className={`uil uil-bars navOpenBtn ${isNavOpen ? 'hidden' : ''}`}
-            onClick={toggleNav}
-          />
-
           {/* logo */}
           <Link to={'/'}>
-            <div className="box">
-              <img src={logo} alt="" className="logo" />
-            </div>
+            <img src={logo} alt="" className="logo" />
           </Link>
           {/* MenuList */}
-          <ul className={`text ${isNavOpen ? 'showNav' : ''}`}>
-            <FaRegWindowClose
-              className="uil uil-times navCloseBtn"
-              onClick={closeNav}
-            />
+          <ul className="text" style={{ display: isSearchOpen ? 'none' : '' }}>
             <li>
-              <Link to={'auction'} className="link">
+              <Link to={'/auction'} className="link">
                 경매 리스트
               </Link>
             </li>
             <li>
-              <Link to={'auctionlist'} className="link">
+              <Link to={'/auctionlist'} className="link">
                 경매 상품
               </Link>
             </li>
             <li>
-              <Link to={'artist'} className="link">
+              <Link to={'/artist'} className="link">
                 이달의 작가
               </Link>
             </li>
             <li>
-              <Link to={'artdetail'} className="link">
+              <Link to={'/artdetail'} className="link">
                 작품 상세
               </Link>
             </li>
           </ul>
-          {/* SearchBar */}
-          <FaSearch
-            className={`uil uil-search search-icon ${
-              isSearchOpen ? 'hidden' : ''
-            }`}
-            id="searchIcon"
-            onClick={toggleSearch}
-          />
-          {isSearchOpen && (
-            <div className={`search-box `}>
-              <input type="text" placeholder="검색" />
-            </div>
-          )}
+          <div className="search-login">
+            {isSearchOpen && (
+              <input
+                className="input"
+                type="text"
+                placeholder="검색.."
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+              />
+            )}
 
-          {/* Login Button */}
-          <Link className="lab-btn" to={'/login'}>
-            로그인
-          </Link>
+            <div className="search-icon" onClick={toggleSearch}>
+              {/* Search icon goes here */}
+              <FaSearch />
+            </div>
+            <Link className="lab-btn" to={'/login'}>
+              로그인
+            </Link>
+          </div>
         </div>
       </header>
     </>

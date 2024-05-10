@@ -1,14 +1,13 @@
 .container {
-  width: 98%;
   height: 200px;
   display: flex;
   text-align: center;
   background: transparent;
   border: 2px solid black;
-  border-top-left-radius: 125px;
-  border-top-right-radius: 125px;
+  max-width: 1200px;
   font-size: 16px;
   line-height: 20px;
+  margin: auto;
 }
 
 .row {
@@ -41,7 +40,6 @@
   background: #82074a;
   color: #fff;
   text-align: center;
-  width: 98%;
 }
 .copy-right-sec a {
   color: #fcd462;
