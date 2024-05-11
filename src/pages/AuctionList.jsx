@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import AuctionCountdown from '../components/Auction/AuctionCountdown';
 import AuctionItemList from '../components/Auction/AuctionItemList';
 import auctionData from '../data/auction.json';
@@ -35,7 +36,9 @@ export default function AuctionList() {
         <div>오늘의 특별한 작품들을 만나보세요.</div>
         <AuctionItemList data={auctionData} type="bid" />
         <div className="auction-button">
-          <button>Place your bid</button>
+          <Link to={'/auction'}>
+            <button>Place your bid</button>
+          </Link>
         </div>
       </div>
       <Footer />
