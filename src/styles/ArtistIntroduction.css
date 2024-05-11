@@ -82,6 +82,7 @@
   }
   
   .gallery {
+    background-color: white;
     margin-top: 10%;
     width: 100%;
   }
@@ -358,6 +359,9 @@
      #columns figure { width: 100%; }
    }
 
+   .otherArtist {
+    background-color: white;
+   }
    .otherArtistRecommend {
     color: #000;
     text-align: center;

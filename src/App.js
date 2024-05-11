@@ -24,10 +24,10 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="auction" element={<Auction />} />
         <Route path="/search" element={<Search></Search>}></Route>
-        <Route path="/artist" element={<ArtistInfo />}></Route>
+        <Route path="/artistinfo" element={<ArtistInfo />}></Route>
         <Route path="/artdetail" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
-        <Route path='/artist1' element={<Artist/>}></Route>
+        <Route path='/artist' element={<Artist/>}></Route>
       </Routes>
     </div>
   );

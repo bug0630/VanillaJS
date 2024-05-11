@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../../styles/reset.css';
 import jsonData from '../../data/artist.json';
 import '../../styles/Artist.scss'
@@ -6,7 +6,7 @@ import '../../styles/ArtistIntroduction.css';
 import { FaMailBulk, FaInstagram } from 'react-icons/fa';
 import Carousel from '../Carousel';
 const ArtistIntroduction = () => {
-  const [artistData, setArtistData] = useState(jsonData);
+  const [artistData] = useState(jsonData);
   const images = [
     require('../Main/img/ai-24-05-pc.jpg'),
     require('../Main/img/am-24-04-pc-3.jpg'),
@@ -96,19 +96,6 @@ const ArtistIntroduction = () => {
    pageLinks={pageLinks}
    ></Carousel></div>
    </div>
-   
-   <div className="container-fluid">
-  <div id="content" className="row"></div>
-</div>
-<script id="template" type="text/x-handlebars-template">
-    <div className="col-md-4 col-lg-3 col-xs-6 item nopadding">
-      <div className="overflow">
-        <div className="content-art">
-        </div>
-        <img src="{{img}}" alt="{{alt}}" className="img-responsive"/>
-      </div>
-    </div>
-</script>
 
   <div className='otherArtist'>
     <h1 className='otherArtistRecommend'>Recommend</h1>
