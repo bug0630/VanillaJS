@@ -4,6 +4,8 @@ import BestArt from '../components/Main/BestArt';
 import New from '../components/Main/New';
 import '../styles/Main.scss';
 import '../styles/BestArt.scss';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 // import '../styles/Carousel.scss';
 
 export default function Main() {
@@ -17,19 +19,23 @@ export default function Main() {
   const comments = ['이달의 작가', '경매', '테마', '전시회', ''];
   const pageLinks = ['/artist', '/auction', '', '', ''];
   return (
-    <div className="mainLab">
-      <div className="mainCarousel">
-        {' '}
-        <Carousel
-          images={images}
-          comments={comments}
-          pageLinks={pageLinks}
-        ></Carousel>
+    <>
+      <Header />
+      <div className="mainLab">
+        <div className="mainCarousel">
+          {' '}
+          <Carousel
+            images={images}
+            comments={comments}
+            pageLinks={pageLinks}
+          ></Carousel>
+        </div>
+        <MonthArtist images={images}></MonthArtist>
+        <BestArt></BestArt>
+        <New></New>
+        <h2>this is Exhibition</h2>
       </div>
-      <MonthArtist images={images}></MonthArtist>
-      <BestArt></BestArt>
-      <New></New>
-      <h2>Exhibition</h2>
-    </div>
+      <Footer />
+    </>
   );
 }
