@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/auction.css';
-import './Bidding.jsx';
+// import './Bidding.jsx';
 // import BiddingForm from './Bidding';
 const AuctionPage = () => {
   const [artwork, setArtwork] = useState({

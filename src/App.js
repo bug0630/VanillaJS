@@ -26,6 +26,7 @@ function App() {
         <Route path="/artist" element={<ArtistInfo />}></Route>
         <Route path="/artdetail" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
+
       </Routes>
     </div>
   );

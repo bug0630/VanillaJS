@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateBidAmount, updateBidderName, submitBid } from './actions';
-import Auction from './Auction';
 
 const BiddingForm = ({ bidAmount, bidderName, updateBidAmount, updateBidderName, submitBid }) => {
 
