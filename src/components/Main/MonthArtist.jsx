@@ -37,25 +37,25 @@ export default function MonthArtist() {
             officiis eveniet cum voluptate numquam. Odit unde eum modi quia
             possimus pariatur fuga!
           </p>
-          <ul className="artMonthList">
-            <li>
-              <Link to="/">
-                <img src="images/art_img/img4.webp"></img>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img src="images/art_img/img5.webp"></img>
-              </Link>
-            </li>{' '}
-            <li>
-              <Link to="/">
-                <img src="images/art_img/img6.webp"></img>
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
+      <ul className="artMonthList">
+        <li>
+          <Link to="/">
+            <img src="images/art_img/img4.webp"></img>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <img src="images/art_img/img5.webp"></img>
+          </Link>
+        </li>{' '}
+        <li>
+          <Link to="/">
+            <img src="images/art_img/img6.webp"></img>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }

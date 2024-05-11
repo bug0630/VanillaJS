@@ -35,7 +35,7 @@ export default function Main() {
         <New></New>
         <h2>this is Exhibition</h2>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

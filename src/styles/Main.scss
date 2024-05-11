@@ -60,25 +60,25 @@ $main-color: #aa8453;
       text-align: center;
       margin-bottom: 100px;
     }
-    ul {
-      width: 100%;
-      margin-top: 100px;
+  }
+  .artMonthList {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    li {
       display: flex;
-      justify-content: center;
-      li {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        aspect-ratio: 1/1;
-        overflow: hidden;
-        margin: 5px;
-        img {
-          width: 120%;
-          transition: transform 0.3s ease;
-        }
-        img:hover {
-          transform: scale(1.1);
-        }
+      align-items: center;
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      margin: 5px;
+      img {
+        width: 120%;
+        transition: transform 0.3s ease;
+      }
+      img:hover {
+        transform: scale(1.1);
       }
     }
   }
