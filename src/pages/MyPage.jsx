@@ -4,9 +4,7 @@ export default function MyPage() {
   return (
     <>
       <Header />
-      <div>
-        <body>adada</body>
-      </div>
+
       <Footer />
     </>
   );
