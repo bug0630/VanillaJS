@@ -6,6 +6,7 @@
   line-height: 20px;
   margin: auto;
   height: 140px;
+  justify-content: center;
   max-width: 1200px;
 }
 footer {
