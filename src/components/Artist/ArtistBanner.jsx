@@ -3,7 +3,7 @@ import '../../styles/Artist.scss';
 
 
 
-const ArtistBanner = () => {
+const ArtistBanner = ({h1Text}) => {
   return (
     <div className='heroEffects'>
     <div className="bg">  
@@ -15,7 +15,7 @@ const ArtistBanner = () => {
         <div className="title centerV"> 
             <div>
                 <div className="text"> 
-                    <h1>이달의 작가</h1>
+                    <h1>{h1Text}</h1>
                     <p>There is no must in art because art is free</p>
                 </div>
             </div>
