@@ -1,65 +1,64 @@
-.auction-page {
+/* Apply font family to all elements */
+body {
+  font-family: 'Baskerville', 'Noto Serif KR', serif;
+}
+
+
+
+/* Auction page layout */
+/* .auction-page {
   display: flex;
-  align-items: flex-start; /* Align items at the start of the cross axis (top) */
-  background-color: #ffffff;
-  padding: 20px;
-}
+} */
 
-.artwork-container {
-  margin-right: 20px; /* Add margin to create space between artwork and details */
-}
-
-.artwork-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.artwork-image {
-  width: 300px;
-  height: auto;
-  border: 1px solid #ccc;
-}
-
+/* Artwork info styles */
 .artwork-info {
-  display: flex; /* Use flexbox to align artwork details horizontally */
-  flex-direction: column; /* Stack artwork details vertically */
-  align-items: flex-start; /* Align items at the start of the cross axis (left) */
-}
-
-/* Style for ArtworkDetails component */
-.artwork-details {
-  border: 1px solid #ccc;
+  flex: 1;
   padding: 20px;
-  width: 300px;
-}
-
-/* Style for individual artwork details */
-.artwork-details p {
-  margin: 0;
-}
-
-.artwork-details h2 {
-  margin-top: 0
-  
-  ;
-}
-.buttons-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px; /* Add margin for spacing */
+  /* flex-direction: column; */
+  justify-content: right;
 }
 
-.buttons-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.5); /* Dark transparent border */
-  background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  color: rgba(0, 0, 0, 0.7); /* Dark transparent text color */
+/* Artwork title styles */
+.auction-page h2 {
+  font-size: 24px;
+  align-self: center;
+}
+
+/* Artwork container styles */
+.artwork-container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Artwork image styles */
+.artwork-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+/* Button styles */
+.bid-button,
+.watchlist-button {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 0px;
+  background-color: white;
+  color: black;
+  border: solid black 4px;
+  font-size: 17px;
   cursor: pointer;
+  transition: background-color 0.3s;
+
 }
+.bid-button:hover,
+.watchlist-button:hover {
+  background-color: black;
+  color: white;
 
-.buttons-container button:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Slightly opaque on hover */
 }
-
-

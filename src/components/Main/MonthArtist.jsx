@@ -5,7 +5,7 @@ export default function MonthArtist() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300 && !showBoardSection) {
+      if (window.scrollY > 100 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };

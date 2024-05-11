@@ -1,3 +1,11 @@
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 export default function MyPage() {
-  return <div>hi </div>;
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }

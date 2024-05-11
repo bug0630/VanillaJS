@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 /* body {
   display: flex;
@@ -12,6 +12,9 @@
   background: #aa8453;
 } */
 
+.login-wrapper {
+  height: 1200px;
+}
 .wrapper {
   position: relative;
   width: 420px;
