@@ -3,7 +3,6 @@ import ArtistBanner from '../components/Artist/ArtistBanner'
 import ArtistDetails from '../components/Artist/ArtistDetails';
 import Artwork from '../components/Artist/Artwork';
 import Recommend from '../components/Artist/Recommend';
-import Footer from '../components/footer/Footer'
 
 
 
@@ -20,7 +19,6 @@ export default function Artist() {
       <ArtistDetails/>
       <Artwork/>
       <Recommend/>
-      <Footer />
     </div>
   );
 }
