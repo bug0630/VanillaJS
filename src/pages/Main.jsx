@@ -1,7 +1,7 @@
 import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import BestArt from '../components/Main/BestArt';
-import News from '../components/Main/News';
+import New from '../components/Main/New';
 import '../styles/Main.scss';
 import '../styles/BestArt.scss';
 import Header from '../components/header/Header';
@@ -32,7 +32,7 @@ export default function Main() {
         </div>
         <MonthArtist images={images}></MonthArtist>
         <BestArt></BestArt>
-        <News></News>
+        <New></New>
         <h2>this is Exhibition</h2>
       </div>
       <Footer />
