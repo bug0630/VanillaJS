@@ -42,7 +42,7 @@ const ArtistIntroduction = () => {
       <h1 className="artist">Artist</h1>
       {artistData && ( 
         <div className='artist-info'>
-          <div className='card card0'>
+          <div className='cardHeading card0'>
             <div className='border'>
               <h2 className="artist-name">{artistData[0].artist_name}</h2>
               <h2>{artistData[0].birthdate}</h2>
