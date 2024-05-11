@@ -6,7 +6,6 @@ import '../styles/Main.scss';
 import '../styles/BestArt.scss';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-// import '../styles/Carousel.scss';
 
 export default function Main() {
   const images = [

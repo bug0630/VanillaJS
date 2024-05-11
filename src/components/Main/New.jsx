@@ -17,7 +17,6 @@ export default function New() {
           <img src="images/art_img/img13.webp"></img>
         </li>
       </ul>
-      <h3>more</h3>
     </div>
   );
 }
