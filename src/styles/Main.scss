@@ -40,8 +40,8 @@ $main-color: #aa8453;
   .artistInfo {
     width: 100%;
     margin-top: 100px;
-    // height: 600px;
     display: flex;
+    padding: 0 20px;
   }
   .picture {
     width: 100%;
@@ -64,6 +64,7 @@ $main-color: #aa8453;
   .artMonthList {
     width: 100%;
     margin-top: 100px;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     li {

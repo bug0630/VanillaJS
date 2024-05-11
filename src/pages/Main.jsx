@@ -17,7 +17,7 @@ export default function Main() {
     require('../img/ai-24-05-pc.jpg'),
   ];
   const comments = ['이달의 작가', '경매', '테마', '전시회', ''];
-  const pageLinks = ['/artist', '/auction', '', '', ''];
+  const pageLinks = ['/artist', '/auctionlist', '', '', ''];
   return (
     <>
       <Header />
@@ -33,7 +33,7 @@ export default function Main() {
         <MonthArtist images={images}></MonthArtist>
         <BestArt></BestArt>
         <New></New>
-        <h2>this is Exhibition</h2>
+        <h2>Sell width C'Arte</h2>
       </div>
       {/* <Footer /> */}
     </>
