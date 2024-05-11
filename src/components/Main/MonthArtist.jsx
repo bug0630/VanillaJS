@@ -5,8 +5,8 @@ export default function MonthArtist() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300 && !showBoardSection) {
-        setShowBoardSection(true); // 스크롤 위치가 1000px 이상이고, 요소가 아직 나타나지 않았을 때만 보이기
+      if (window.scrollY > 100 && !showBoardSection) {
+        setShowBoardSection(true);
       }
     };
 
@@ -22,13 +22,15 @@ export default function MonthArtist() {
       <h2>Artist of the Month</h2>
       <div className="artistInfo">
         {' '}
-        <img
-          className="artistPhoto"
-          src="images/artist_img/artist1.webp"
-          alt="artist"
-        ></img>
+        <div className="picture">
+          <img
+            className="artistPhoto"
+            src="images/artist_img/artist1.webp"
+            alt="artist"
+          ></img>
+        </div>
         <div className="artistComment">
-          <h2>작가 comment</h2>
+          <h3>작가명</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
             architecto illum minus ratione tenetur corrupti ipsa, dolore

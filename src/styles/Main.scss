@@ -1,15 +1,28 @@
 $main-color: #aa8453;
+@mixin h2 {
+  font-size: 24px;
+  text-align: center;
+  color: $main-color;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $main-color;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 // 메인 랩
 .mainLab {
   width: 100%;
   margin: auto;
+  h2 {
+    @include h2();
+  }
 }
 .mainCarousel {
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  height: 700px;
-  // overflow: hidden;
+  aspect-ratio: 12/5;
+  overflow: hidden;
 }
 // 이 달의 작가
 .artMonth.show {
@@ -23,25 +36,30 @@ $main-color: #aa8453;
   overflow: hidden;
   opacity: 0; /* 초기에는 투명하게 설정 */
   transition: opacity 1s ease;
-  h2 {
-    font-size: 24px;
-    text-align: center;
-  }
 
   .artistInfo {
+    width: 100%;
     margin-top: 100px;
+    // height: 600px;
     display: flex;
+  }
+  .picture {
+    width: 100%;
+
     img {
-      width: 120%;
+      width: 100%;
     }
   }
-
   .artistComment {
     padding: 20px 20px 0 20px;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    h3 {
+      text-align: center;
+      margin-bottom: 100px;
+    }
     ul {
       width: 100%;
       margin-top: 100px;
@@ -54,17 +72,71 @@ $main-color: #aa8453;
         aspect-ratio: 1/1;
         overflow: hidden;
         margin: 5px;
+        img {
+          width: 120%;
+          transition: transform 0.3s ease;
+        }
+        img:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
 }
+// News
+.newsWrap {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  @media screen and (max-width: 720px) {
+    margin-top: 100px;
+  }
+}
+.newProduct {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  width: 100%;
+  @media screen and (max-width: 720px) {
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    @media screen and (max-width: 557px) {
+      max-width: 90%;
+      aspect-ratio: 3/2;
+    }
+    img {
+      width: 150%;
+      transition-duration: 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 720px) {
+  .artMonth {
+    padding-top: 100px;
+  }
   .artistInfo {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-  }
-  .artistPhoto {
-    aspect-ratio: 1/1;
+    .picture {
+      height: 400px;
+      overflow: hidden;
+    }
   }
 }

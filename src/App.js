@@ -10,6 +10,8 @@ import MyPage from './pages/MyPage';
 import Header from '../src/components/header/Header';
 import ArtDetail from './pages/ArtDetail';
 import AuctionList from './pages/AuctionList';
+import Artist from './pages/Artist';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<LoginRegister />} />
         <Route path="/header" element={<Header />}></Route>
+        <Route path="/footer" element={<Footer />}></Route>
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/artDetail/:artId" element={<Main />} />
         <Route path="*" element={<NotFound />} />
@@ -26,7 +29,6 @@ function App() {
         <Route path="/artist" element={<ArtistInfo />}></Route>
         <Route path="/artdetail" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
-
       </Routes>
     </div>
   );
