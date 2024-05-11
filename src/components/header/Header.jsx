@@ -39,13 +39,13 @@ export default function Header(isLoggedIn) {
           {handleClick ? (
             <ul id="text" style={{ display: isSearchOpen ? 'none' : '' }}>
               <li>
-                <Link to={'/auction'} className="link">
-                  경매 리스트
+                <Link to={'/auctionlist'} className="link">
+                  경매
                 </Link>
               </li>
               <li>
-                <Link to={'/auctionlist'} className="link">
-                  경매 상품
+                <Link to={'/auction'} className="link">
+                  판매
                 </Link>
               </li>
               <li>
