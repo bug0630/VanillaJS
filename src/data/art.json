@@ -2,7 +2,12 @@
     {
       "id": 1,
       "title": "Sunset on the Hill",
-      "art_img": "img1.webp",
+      "art_img": [
+        "https://wart.co.kr/web/product/extra/small/202210/914f80b4eb7ffffb88b40653f74e5299.jpg",
+        "https://wart.co.kr/web/product/extra/small/202210/ca5130c3f84c5fa379e92f005d22414a.jpg",
+        "https://wart.co.kr/web/product/extra/small/202210/623c3c23ebab3b4f650bc87f0808e95e.jpg",
+        "https://wart.co.kr/web/product/big/202210/1ab9a7fc6ec4d86edc572abe120790a0.jpg"
+      ],
       "description": "밤하늘을 묘사한 걸작.",
       "code": "SN001",
       "price": "180,000원",

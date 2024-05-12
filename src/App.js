@@ -12,6 +12,10 @@ import ArtDetail from './pages/ArtDetail';
 import AuctionList from './pages/AuctionList';
 import Artist from './pages/Artist';
 import Footer from './components/footer/Footer';
+import ProductDetail from './components/Art/ProductDetail'
+
+
+
 
 function App() {
   return (
@@ -30,6 +34,7 @@ function App() {
         <Route path="/artdetail" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
         <Route path='/artist' element={<Artist/>}></Route>
+        <Route path='/productdetail' element={<ProductDetail />}></Route>
       </Routes>
     </div>
   );
