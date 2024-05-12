@@ -12,7 +12,7 @@ const ArtistBanner = ({h1Text}) => {
                 <polygon points="0,0 25,10 50,0 25,25" fill="rgba(255,255,255,.5)" stroke-width="0" stroke="rgba(255,255,255,.3)"/>
             </svg>
         </div>  
-        <div className="title centerV"> 
+        <div className="titleBanner centerV"> 
             <div>
                 <div className="text"> 
                     <h1>{h1Text}</h1>
