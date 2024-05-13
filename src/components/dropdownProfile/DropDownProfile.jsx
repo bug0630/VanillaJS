@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const DropDownProfile = () => {
+const DropDownProfile = ({ setIsLoggedIn, setOpenProfile }) => {
   const navigate = useNavigate(); // Move useNavigate here
 
   const handleLogout = () => {
+    localStorage.setItem('isLoggedIn', '');
+    setIsLoggedIn(false);
+    setOpenProfile(false);
     navigate('/'); // Use navigate here to redirect
   };
 

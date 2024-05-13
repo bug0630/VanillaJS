@@ -5,7 +5,6 @@
   font-size: 16px;
   line-height: 20px;
   margin: auto;
-  height: 140px;
   justify-content: center;
   max-width: 1200px;
 }
@@ -14,7 +13,6 @@ footer {
   width: 100%;
   background-color: #fff;
   bottom: 0;
-  max-width: 1200px;
 }
 .row {
   margin: 10px 200px 0 200px;
@@ -55,6 +53,7 @@ footer {
   background: #aa8453;
   color: #fff;
   text-align: center;
+  width: 100%;
 }
 .copy-right-sec a {
   color: #fcd462;
@@ -101,6 +100,7 @@ a {
 @media screen and (max-width: 900px) {
   .container-footer {
     display: flex;
+    flex-direction: column;
     background: #fff;
     border-top: 2px solid black;
     font-size: 16px;
@@ -108,5 +108,17 @@ a {
     margin: auto;
     height: 140px;
     max-width: 1200px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .useful-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
   }
 }
