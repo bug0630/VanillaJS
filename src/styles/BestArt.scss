@@ -41,30 +41,24 @@
   opacity: 1; /* 나타나는 중에는 투명도를 1로 설정 */
 }
 .bestCarousel {
-  // border: 2px solid black;
   margin: 0 auto;
   width: 100%;
-  max-width: 400px;
   height: 250px;
-  @media screen and (max-width: 720px) {
-    max-width: 720px;
-    height: auto;
-    aspect-ratio: 8/5;
+  overflow: hidden;
+  .slide {
+    align-items: flex-start;
   }
-
   .slide img {
-    width: 80%;
-    height: 80%;
-    opacity: 0.2;
+    max-width: 400px;
+    opacity: 0.3;
+    transition: transform 0.3s ease;
+  }
+  .slide img:nth-of-type(2) {
+    opacity: 1;
     transition: transform 0.3s ease;
   }
   .slide img:hover {
     transform: scale(1.05);
-  }
-  .slide img:nth-of-type(3) {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
   }
 
   .prev,
@@ -72,6 +66,7 @@
     display: none;
     @media screen and (max-width: 720px) {
       display: block;
+      filter: opacity(60%);
     }
   }
 }

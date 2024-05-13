@@ -1,24 +1,7 @@
 import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
 export default function MonthArtist() {
-  const [showBoardSection, setShowBoardSection] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100 && !showBoardSection) {
-        setShowBoardSection(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [showBoardSection]); // showBoardSection 상태가 변경될 때마다 useEffect 재실행
-
   return (
-    <div className={`artMonth ${showBoardSection ? 'show' : ''}`}>
+    <div className="artMonth">
       <h2>Artist of the Month</h2>
       <div className="artistInfo">
         {' '}
@@ -48,17 +31,17 @@ export default function MonthArtist() {
       <ul className="artMonthList">
         <li>
           <Link to="/">
-            <img src="images/art_img/img4.webp"></img>
+            <img src="images/art_img/img4.webp" alt="arts"></img>
           </Link>
         </li>
         <li>
           <Link to="/">
-            <img src="images/art_img/img5.webp"></img>
+            <img src="images/art_img/img5.webp" alt="arts"></img>
           </Link>
         </li>{' '}
         <li>
           <Link to="/">
-            <img src="images/art_img/img6.webp"></img>
+            <img src="images/art_img/img6.webp" alt="arts"></img>
           </Link>
         </li>
       </ul>
