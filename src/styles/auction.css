@@ -3,8 +3,6 @@ body {
   font-family: 'Baskerville', 'Noto Serif KR', serif;
 }
 
-
-
 /* Auction page layout */
 /* .auction-page {
   display: flex;
@@ -18,17 +16,63 @@ body {
   /* flex-direction: column; */
   justify-content: right;
 }
+.artwork-details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.artist {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.price-section, .bid-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price-label, .bid-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.price-value, .bid-value {
+  font-size: 18px;
+  color: #009688; /* Green color for prices */
+}
+
+
 
 /* Artwork title styles */
 .auction-page h2 {
   font-size: 24px;
   align-self: center;
 }
-
+.artwork-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 /* Artwork container styles */
 .artwork-container {
-  width: 600px;
-  height: 600px;
+  max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+  max-height: 100%; /* Set a maximum height for the image container */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,9 +81,8 @@ body {
 
 /* Artwork image styles */
 .artwork-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  max-width: 80%;
+  height: auto;
 }
 /* Button styles */
 .bid-button,
@@ -54,11 +97,24 @@ body {
   font-size: 17px;
   cursor: pointer;
   transition: background-color 0.3s;
-
 }
+
 .bid-button:hover,
 .watchlist-button:hover {
   background-color: black;
   color: white;
+}
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.timer-frame {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
 }
