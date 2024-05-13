@@ -9,7 +9,6 @@ export default function Footer() {
       <footer>
         <div className="container-footer">
           <img src={logo} className="footerlogo" />
-
           <div className="row">
             <div className="useful-link">
               <h2>Useful Links</h2>

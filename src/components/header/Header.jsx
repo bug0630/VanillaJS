@@ -1,43 +1,58 @@
 import { Link } from 'react-router-dom';
 import '../../styles/header.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.svg';
-import { FaSearch, FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
+import { useMediaQuery } from 'react-responsive';
 
-export default function Header(isLoggedIn) {
+export default function Header() {
   //Search Toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
   const [openProfile, setOpenProfile] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isMenu, setIsMenu] = useState(false);
+  // console.log(isNavOpen);
+  useEffect(() => {
+    setIsLoggedIn(Boolean(localStorage.getItem('isLoggedIn')));
+  }, [isLoggedIn]);
 
   const handleClick = () => {
-    setIsShow(!isShow);
+    setIsNavOpen(!isNavOpen);
+    // setIsNavOpen(true);
   };
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
-    setIsSearchOpen(false); // Close search when opening nav
+    setIsSearchOpen(false);
   };
-
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     setIsNavOpen(false); // Close nav when opening search
   };
 
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 900px)',
+  });
+
   return (
     <>
       <header>
-        <div className={`nav ${isNavOpen ? 'openNav' : ''}`}>
+        <div className={`nav ${isNavOpen ? 'none' : ''}`}>
           {/* logo */}
           <Link to={'/'}>
             <img src={logo} alt="" className="logo" />
           </Link>
           {/* MenuList */}
-          {handleClick ? (
-            <ul id="text" style={{ display: isSearchOpen ? 'none' : '' }}>
+          {(isDesktop || isNavOpen) && (
+            <ul
+              id="text"
+              className="navbar active"
+              style={{ display: isSearchOpen ? 'none' : '' }}
+            >
               <li>
                 <Link to={'/auctionlist'} className="link">
                   경매
@@ -59,8 +74,6 @@ export default function Header(isLoggedIn) {
                 </Link>
               </li>
             </ul>
-          ) : (
-            ''
           )}
           <div className="search-login">
             {isSearchOpen && (
@@ -76,6 +89,7 @@ export default function Header(isLoggedIn) {
               {/* Search icon goes here */}
               <FaSearch />
             </div>
+            {isLoggedIn && <FaCartPlus className="Cart-plus" />}
             {isLoggedIn ? (
               <FaUser
                 className="profileImage"
@@ -86,15 +100,20 @@ export default function Header(isLoggedIn) {
                 로그인
               </Link>
             )}
-            {openProfile && <DropDownProfile />}
+            {openProfile && (
+              <DropDownProfile
+                setIsLoggedIn={setIsLoggedIn}
+                setOpenProfile={setOpenProfile}
+              />
+            )}
           </div>
           <div id="mobile" onClick={handleClick}>
-            {isShow ? (
+            {isNavOpen ? (
               <FaTimes className="mobileicon" />
             ) : (
               <FaBars className="mobileicon" />
             )}
-          </div>
+          </div>{' '}
         </div>
       </header>
     </>
