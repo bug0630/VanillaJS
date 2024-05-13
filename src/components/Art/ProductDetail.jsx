@@ -16,6 +16,7 @@ const ProductDetail = (props) => {
     setActiveImage(productData.art_img[0])
   }, [artistId]);
 
+
   return (
     <div className="product_detail">
       <div className="product_img">
@@ -35,31 +36,35 @@ const ProductDetail = (props) => {
           <table>
             <tbody>
               <tr className="product_artist_name">
-                <th>작가명</th>
-                <th>{product && product.artist_name}</th>
+                <th className="detail_text">작가명</th>
+                <th className="detail_info">{product && product.artist_name}</th>
               </tr>
               <tr className="published_year">
-                 <th>제작년도</th>
-                 <th>{product && product.published_year}</th>
+                 <th className="detail_text">제작년도</th>
+                 <th className="detail_info">{product && product.published_year}</th>
               </tr>
               <tr className="art_frame">
-                 <th>액자</th>
-                 <th>{product && product.frame}</th>
+                 <th className="detail_text">액자</th>
+                 <th className="detail_info">{product && product.frame}</th>
               </tr>
               <tr className="product_code">
-                 <th>작품 코드</th>
-                 <th>{product && product.code}</th>
+                 <th className="detail_text">작품 코드</th>
+                 <th className="detail_info">{product && product.code}</th>
               </tr>
               <tr className="material">
-                 <th>재료</th>
-                 <th>{product && product.material}</th>
+                 <th className="detail_text">재료</th>
+                 <th className="detail_info">{product && product.material}</th>
               </tr>
               <tr className="product_size">
-                 <th>호수</th>
-                 <th>{product && product.size}</th>
+                 <th className="detail_text">호수</th>
+                 <th className="detail_info">{product && product.size}</th>
+              </tr>
+              <tr className="product_description">
+                 <th className="detail_text">작품 소개</th>
+                 <th className="detail_info">{product && product.description}</th>
               </tr>
               <tr className="product_price">
-                 <th>가격</th>
+                 <th className="detail_text">가격</th>
                  <td>
                   <span id="span_product_price_text">{product && product.price}</span>
                  </td>
@@ -67,7 +72,6 @@ const ProductDetail = (props) => {
           </tbody>
           </table>
         </div>
-        <p className="product_description">{product && product.description}</p>
         <div className="product_btn">
           <button className="product_cart">Add to Cart</button>
         </div>
