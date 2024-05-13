@@ -16,6 +16,7 @@ const ProductDetail = (props) => {
     setActiveImage(productData.art_img[0])
   }, [artistId]);
 
+
   return (
     <div className="product_detail">
       <div className="product_img">
