@@ -2,6 +2,7 @@ import Carousel from '../components/Carousel';
 import MonthArtist from '../components/Main/MonthArtist';
 import BestArt from '../components/Main/BestArt';
 import New from '../components/Main/New';
+import Sell from '../components/Main/Sell';
 import '../styles/Main.scss';
 import '../styles/BestArt.scss';
 import Header from '../components/header/Header';
@@ -9,17 +10,16 @@ import Footer from '../components/footer/Footer';
 
 export default function Main() {
   const images = [
-    require('../img/am-24-04-pc-3.jpg'),
-    require('../img/am-24-05-pc.jpg'),
-    require('../img/ai-24-05-pc.jpg'),
-    require('../img/pc-mb-4.jpg'),
-    require('../img/ai-24-05-pc.jpg'),
+    require('../img/img13.webp'),
+    require('../img/MonthArtistbg.webp'),
+    require('../img/hammer-1707731_1280.jpg'),
+    require('../img/the_last_supper.webp'),
   ];
-  const comments = ['이달의 작가', '경매', '테마', '전시회', ''];
-  const pageLinks = ['/artist', '/auctionlist', '', '', ''];
+  const comments = ['이달의 작가', '경매', '테마', '신작'];
+  const pageLinks = ['/artist', '/auctionlist', '', ''];
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="mainLab">
         <div className="mainCarousel">
           {' '}
@@ -32,7 +32,7 @@ export default function Main() {
         <MonthArtist images={images}></MonthArtist>
         <BestArt></BestArt>
         <New></New>
-        <h2>Sell width C'Arte</h2>
+        <Sell></Sell>
       </div>
       {/* <Footer /> */}
     </>

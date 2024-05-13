@@ -25,7 +25,7 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
       <Link to={pageLinks[currentIndex]}>
         {' '}
         <div className="slide">
-          {[0, 1, 2, 3, 4].map((offset) => (
+          {[0, 1, 2].map((offset) => (
             <img
               key={currentIndex + offset}
               src={images[(currentIndex + offset) % images.length]}

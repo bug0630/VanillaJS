@@ -3,18 +3,17 @@ import Carousel from '../Carousel';
 
 export default function BestArt() {
   const images = [
-    require('./img/ai-24-05-pc.jpg'),
-    require('./img/am-24-04-pc-3.jpg'),
-    require('./img/am-24-05-pc.jpg'),
-    require('./img/am-24-04-pc-3.jpg'),
+    require('./img/sunset_in_venice.webp'),
+    require('./img/starry_night.webp'),
+    require('./img/mona_lisa.webp'),
   ];
-  const comments = ['작품1', '작품2', '작품3', '작품4'];
+  const comments = ['', '', '', ''];
   const pageLinks = ['/artist', '/auction', '', ''];
   const [showBoardSection, setShowBoardSection] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1200 && !showBoardSection) {
+      if (window.scrollY > 1500 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };
