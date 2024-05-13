@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './Result.scss';
 export default function Result() {
   // 상태 초기화
   const [artData, setArtData] = useState([]);
@@ -28,8 +28,7 @@ export default function Result() {
   };
   return (
     <div>
-      <h2>Art Data</h2>
-      <ul>
+      <ul className="resultCard">
         {artData.map((item) => (
           <li key={item.id}>
             <img

@@ -122,37 +122,42 @@ $main-color: #aa8453;
     justify-content: center;
     margin: 10px;
     position: relative;
+    img {
+      width: 150%;
+      transition-duration: 0.5s;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      p {
+        opacity: 1;
+        transform: translateY(-40px);
+        transition-duration: 1s;
+      }
+      h4 {
+        display: none;
+      }
+    }
     @media screen and (max-width: 557px) {
       max-width: 90%;
       aspect-ratio: 3/2;
     }
-    img {
-      width: 150%;
-      transition-duration: 0.5s;
-      &:hover {
-        transform: scale(1.2);
-        ~ p {
-          opacity: 1;
-          transform: translateY(-40px);
-          transition-duration: 1s;
-        }
-        ~ h4 {
-          display: none;
-        }
-      }
-    }
+
     p {
       position: absolute;
       color: white;
       top: 60%;
       left: 20%;
       opacity: 0;
+      transition-duration: 1s; // 추가
     }
     h4 {
       position: absolute;
       color: white;
       top: 70%;
       left: 20%;
+      transition-duration: 1s; // 추가
     }
   }
 }
