@@ -16,7 +16,7 @@ const ProductDetail = (props) => {
     setActiveImage(productData.art_img[0])
   }, [artistId]);
 
-
+  
   return (
     <div className="product_detail">
       <div className="product_img">
@@ -33,45 +33,45 @@ const ProductDetail = (props) => {
         <h1 className="product_name">{product && product.title}</h1>
 
         <div className="infoArea">
-          <table>
-            <tbody>
-              <tr className="product_artist_name">
-                <th className="detail_text">작가명</th>
-                <th className="detail_info">{product && product.artist_name}</th>
-              </tr>
-              <tr className="published_year">
-                 <th className="detail_text">제작년도</th>
-                 <th className="detail_info">{product && product.published_year}</th>
-              </tr>
-              <tr className="art_frame">
-                 <th className="detail_text">액자</th>
-                 <th className="detail_info">{product && product.frame}</th>
-              </tr>
-              <tr className="product_code">
-                 <th className="detail_text">작품 코드</th>
-                 <th className="detail_info">{product && product.code}</th>
-              </tr>
-              <tr className="material">
-                 <th className="detail_text">재료</th>
-                 <th className="detail_info">{product && product.material}</th>
-              </tr>
-              <tr className="product_size">
-                 <th className="detail_text">호수</th>
-                 <th className="detail_info">{product && product.size}</th>
-              </tr>
-              <tr className="product_description">
-                 <th className="detail_text">작품 소개</th>
-                 <th className="detail_info">{product && product.description}</th>
-              </tr>
-              <tr className="product_price">
-                 <th className="detail_text">가격</th>
-                 <td>
-                  <span id="span_product_price_text">{product && product.price}</span>
-                 </td>
-              </tr>
-          </tbody>
-          </table>
+
+          <div className="product_artist_name">
+            <div>작가명</div>
+            <div>{product && product.artist_name}</div>
+          </div>
+
+          <div className="published_year">
+            <div>제작년도</div>
+            <div>{product && product.published_year}</div>
+          </div>
+
+          <div className="art_frame">
+            <div>액자</div>
+            <div>{product && product.frame}</div>
+          </div>
+
+          <div>
+            <div>작품 코드</div>
+            <div>{product && product.code}</div>
+          </div>
+
+          <div className="material">
+            <div>재료</div>
+            <div>{product && product.material}</div>
+          </div>
+
+          <div className="product_size">
+            <div>호수</div>
+            <div>{product && product.size}</div>
+          </div>
+
+          <div className="product_price">
+            <div>가격</div>
+            <span id="span_product_price_text">{product && product.price}</span>
+          </div>
+          
+          <p className="product_description">{product && product.description}</p>
         </div>
+        
         <div className="product_btn">
           <button className="product_cart">Add to Cart</button>
         </div>
