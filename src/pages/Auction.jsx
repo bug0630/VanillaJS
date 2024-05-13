@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/auction.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap';
+import '../styles/auction.css';
 
 const AuctionPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -34,7 +34,7 @@ const AuctionPage = () => {
     auctionEndTime: new Date().getTime() + (7 * 24 * 60 * 60 * 1000)
   };
 
-  const [auctionEndTime, setAuctionEndTime] = useState(new Date().getTime() + (7 * 24 * 60 * 60 * 1000)); // Set initial auction end time
+  const [auctionEndTime, setAuctionEndTime] = useState(new Date().getTime() + (3 * 24 * 60 * 60 * 1000)); // Set initial auction end time
   const [remainingTime, setRemainingTime] = useState(calculateRemainingTime(auctionEndTime));
 
   // Calculate remaining time function
@@ -48,7 +48,7 @@ const AuctionPage = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setRemainingTime(calculateRemainingTime(auctionEndTime));
-    }, 1000);
+    }, 500);
 
     // Cleanup function to clear the interval when component unmounts
     return () => clearInterval(timer);
@@ -66,21 +66,19 @@ const AuctionPage = () => {
   
   return (
     <div className="auction-page">
-      <div className="rxWorld">
-      <section className="rnOuter">
-        <section className="aoTable">
-          <div className="aoTableCell">
-            <h1>vertical & horizontal centering with display:table</h1>
-            <p>With connected subline</p>
+      {/*------ curtain effect-------- */}
+      <div className="outer">
+      <div className="tcell">
+        <div className="curtain-wrapper">
+          {/* <div className="curtain-ratio-keeper"> */}
+            <div className="curtain">
+              <div className="panel-left"></div>
+              <div className="panel-right"></div>
+            {/* </div> */}
+            <div className="jacket" title="Play"></div>
           </div>
-        </section>
-        
-        <div className='rnInner'>
-          {[...Array(10)].map((_, index) => (
-            <div key={index} className='rnUnit'></div>
-          ))}
         </div>
-      </section>
+      </div>
     </div>
       <div className="artwork-container">
         <img className="artwork-image" src="https://media.mutualart.com/Images/2020_06/14/09/094726816/bb707499-9640-41bb-b511-848015876fb2.Jpeg?w=768" alt="Artwork" />
@@ -164,7 +162,7 @@ const AuctionPage = () => {
   </Modal.Body>
   <Modal.Footer>
     <Button variant="primary" onClick={handleCloseBidSubmittedModal}>
-      Close
+     닫기
     </Button>
   </Modal.Footer>
 </Modal>
