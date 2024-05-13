@@ -19,7 +19,7 @@ export default function Main() {
   const pageLinks = ['/artist', '/auctionlist', '', ''];
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="mainLab">
         <div className="mainCarousel">
           {' '}
@@ -34,7 +34,7 @@ export default function Main() {
         <New></New>
         <Sell></Sell>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
