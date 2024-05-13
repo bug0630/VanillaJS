@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import AuctionCountdown from '../components/Auction/AuctionCountdown';
 import AuctionItemList from '../components/Auction/AuctionItemList';
 import auctionData from '../data/auction.json';
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import '../styles/AuctionList.scss';
 
 export default function AuctionList() {
@@ -22,18 +24,24 @@ export default function AuctionList() {
   ];
   const formattedDate = `${months[today.getMonth()]} ${today.getDate()}`;
   return (
-    <div className="auctionList">
-      <div className="title">
-        <h3>today's auction</h3>
-        <span>{formattedDate}(10AM)</span>
-        <span> Open</span>
-        <AuctionCountdown />
+    <>
+      <Header />
+      <div className="auction-List">
+        <div className="auction-title">
+          <h3>today's auction</h3>
+          <span>{formattedDate}(10AM)</span>
+          <span> Open</span>
+          <AuctionCountdown />
+        </div>
+        <div>오늘의 특별한 작품들을 만나보세요.</div>
+        <AuctionItemList data={auctionData} type="bid" />
+        <div className="auction-button">
+          <Link to={'/auction'}>
+            <button>Place your bid</button>
+          </Link>
+        </div>
       </div>
-      <div>오늘의 특별한 작품들을 만나보세요.</div>
-      <AuctionItemList data={auctionData} type="bid" />
-      <div className="auction-button">
-        <button>Place your bid</button>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
