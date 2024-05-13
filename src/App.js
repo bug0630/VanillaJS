@@ -26,12 +26,11 @@ function App() {
         <Route path="/header" element={<Header />}></Route>
         <Route path="/footer" element={<Footer />}></Route>
         <Route path="/mypage" element={<MyPage />} />
-        <Route path="/artDetail/:artId" element={<Main />} />
         <Route path="*" element={<NotFound />} />
         <Route path="auction" element={<Auction />} />
         <Route path="/search" element={<Search></Search>}></Route>
         <Route path="/artistinfo" element={<ArtistInfo />}></Route>
-        <Route path="/artdetail" element={<ArtDetail />}></Route>
+        <Route path="/artdetail/:artistId" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
         <Route path='/artist' element={<Artist/>}></Route>
         <Route path='/productdetail' element={<ProductDetail />}></Route>
