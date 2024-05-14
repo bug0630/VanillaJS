@@ -1,33 +1,31 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // useHistory import 제거
+import { useHistory } from 'react-router-dom'; // useHistory 추가
 import '../../styles/header.css';
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.svg';
 import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
 import { useMediaQuery } from 'react-responsive';
-import { useNavigate } from 'react-router-dom/dist';
 
-export default function Header() {
+export default function SearchHeader() {
   //Search Toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
   const [openProfile, setOpenProfile] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState();
-  const navigate = useNavigate();
+  const history = useHistory(); // useHistory 추가
 
   const handleProfileClick = () => {
     setOpenProfile(!openProfile);
   };
 
-  // console.log(isNavOpen);
   useEffect(() => {
     setIsLoggedIn(Boolean(localStorage.getItem('isLoggedIn')));
   }, [isLoggedIn]);
 
   const handleClick = () => {
     setIsNavOpen(!isNavOpen);
-    // setIsNavOpen(true);
   };
 
   const toggleNav = () => {
@@ -40,8 +38,7 @@ export default function Header() {
   };
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      // 엔터를 눌렀을 때 검색 결과 페이지로 이동하고 입력된 검색어를 쿼리 문자열로 전달
-      navigate(`/search?query=${searchText}`);
+      history.push(`/search?query=${searchText}`); // history.push로 페이지 이동
     }
   };
 
