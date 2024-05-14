@@ -2,12 +2,19 @@ import React, { useState, useEffect } from "react";
 import '../../styles/ArtDetail.css'
 import productsData from "../../data/art.json";
 import { useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const ProductDetail = (props) => {
   const { artistId } = useParams();
   const [product, setProduct] = useState(null);
   const [images, setImages] = useState([])
   const [activeImg, setActiveImage] = useState('');
+
+  // addToCart 함수 수정
+  // const addToCart = () => {
+  //   setCartCount(prevCount => prevCount + 1);
+  //   props.onAddToCart(); // 부모 컴포넌트에 상품 추가 알림
+  // };
 
   useEffect(() => {
     const productData = productsData.find(product => product.id === parseInt(artistId));
