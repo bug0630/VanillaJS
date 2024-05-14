@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import '../../styles/ArtDetail.css'
 import productsData from "../../data/art.json";
+import { FaMailBulk, FaInstagram } from 'react-icons/fa';
 import { useParams } from "react-router-dom";
 
-const ProductDetail = (props) => {
+const ArtistInfo = (props) => {
   const { artistId } = useParams();
   const [product, setProduct] = useState(null);
   const [images, setImages] = useState([])
@@ -19,14 +20,10 @@ const ProductDetail = (props) => {
   
   return (
     <div className="product_detail">
-      <div className="product_img">
+     
         <img src={activeImg} alt="" className="artistInfo_img" />
-        <div className="product_art_img">
           {/* 여기서 art_img를 profile_img로 변경 */}
           <img src={images[0]} alt="" className="profile_img" onClick={() => setActiveImage(images[0])} />
-        </div>
-      </div>
-
       <div>
       <div className="infoItem">
             <div className="infoValue">{product && product.artist_name}</div>
@@ -34,18 +31,25 @@ const ProductDetail = (props) => {
 
           
 
-          <div className="infoItem">
-            <div className="infoValue">{product && product.email}</div>
+          <div className='Email'>
+            <p><FaMailBulk className="iconEmail" />{product && product.email}</p>
           </div>
 
-          <div className="infoItem">
-            <div className="infoValue">{product && product.insta_link}</div>
-          </div>
+          <div className='instagram-link'>
+                    <p> <FaInstagram className="icon" />
+                    <a
+                    href={product && product.insta_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram
+                    </a>
+                    </p>
+                   </div>
       </div>
 
     </div>
   );
 };
 
-export default ProductDetail;
+export default ArtistInfo;
 
