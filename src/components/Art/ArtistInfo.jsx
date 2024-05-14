@@ -12,31 +12,40 @@ const ProductDetail = (props) => {
   useEffect(() => {
     const productData = productsData.find(product => product.id === parseInt(artistId));
     setProduct(productData);
-    setImages(productData.art_img)
-    setActiveImage(productData.art_img[0])
+    setImages(productData.profile_img) // 변경된 부분
+    setActiveImage(productData.profile_img[0]) // 변경된 부분
   }, [artistId]);
 
+  
   return (
     <div className="product_detail">
       <div className="product_img">
-        <img src={activeImg} alt="" className="product_main_img" />
+        <img src={activeImg} alt="" className="artistInfo_img" />
         <div className="product_art_img">
-          <img src={images[0]} alt="" className="art_detail_img" onClick={() => setActiveImage(images[0])} />
+          {/* 여기서 art_img를 profile_img로 변경 */}
+          <img src={images[0]} alt="" className="profile_img" onClick={() => setActiveImage(images[0])} />
         </div>
       </div>
 
-      <div className="product_about">
-        <h1 className="product_name">{product && product.title}</h1>
+      <div>
+      <div className="infoItem">
+            <div className="infoValue">{product && product.artist_name}</div>
+          </div>
 
-        <div className="infoArea">
-        
-        </div>
-        <p className="product_description">{product && product.description}</p>
-        <div className="product_btn">
-          <button className="product_cart">Add to Cart</button>
-        </div>
+          
+
+          <div className="infoItem">
+            <div className="infoValue">{product && product.email}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoValue">{product && product.insta_link}</div>
+          </div>
       </div>
+
     </div>
-  )
-}
+  );
+};
+
 export default ProductDetail;
+

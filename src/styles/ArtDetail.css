@@ -39,23 +39,16 @@
     line-height: 1.5rem;
     justify-content: flex-start;
     /* margin-top: 1rem; */
-    align-items: baseline;
+    /* align-items: baseline; */
     width: 50%;
-    @media (min-width: 1024px) {
-        .lg\:w-2\/4 {
-          width: 50%;
-        }
- }
+    align-content: stretch;
 }
 .product_name {
     color: black;
     font-size: 1.875rem;
     font-weight: bold;
 }
-.infoArea {
-    display: flex;
-    justify-content: space-between;
-}
+
 .product_cart {
     background-color: #aa8453;
     color: #ffffff;
@@ -66,7 +59,7 @@
     padding-right: 4rem;
     border-radius: 1rem;
     height: 100%;
-    margin-left: 20px;
+    margin: 40px;
     border-color: white;
 }
 .product_cart:hover {
@@ -74,3 +67,34 @@
     color: #aa8453;
     border-color: #aa8453;
 }
+
+.infoArea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+  }
+  
+  .infoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .infoLabel {
+    font-weight: bold;
+    margin-right: 10px; /* 라벨과 값 사이의 간격 조절 */
+  }
+  
+  .infoValue {
+    margin-left: 100px;
+  }
+
+
+
+
+
+  .artistInfo_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
