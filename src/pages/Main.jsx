@@ -15,11 +15,16 @@ export default function Main() {
     require('../img/hammer-1707731_1280.jpg'),
     require('../img/the_last_supper.webp'),
   ];
-  const comments = ['이달의 작가', '경매', '테마', '신작'];
-  const pageLinks = ['/artist', '/auctionlist', '', ''];
+  const comments = ['이달의 작가', '경매', '르네상스 작품', '현대미술'];
+  const pageLinks = [
+    '/artist',
+    '/auctionlist',
+    '/search?query=르네상스',
+    '/search?query=현대미술',
+  ];
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="mainLab">
         <div className="mainCarousel">
           {' '}
@@ -34,7 +39,7 @@ export default function Main() {
         <New></New>
         <Sell></Sell>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

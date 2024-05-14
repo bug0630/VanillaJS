@@ -45,6 +45,7 @@ $main-color: #aa8453;
     display: flex;
     padding: 0 20px;
   }
+
   .picture {
     width: 100%;
 
@@ -58,12 +59,17 @@ $main-color: #aa8453;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #fdfaf5;
     h3 {
       text-align: center;
       margin: 20px 0;
     }
     p {
-      line-height: 1.5em;
+      line-height: 1.2em;
+      font-size: 1.2em;
+      @media screen and (max-width: 1000px) {
+        font-size: 1em;
+      }
     }
   }
   .artMonthList {
@@ -122,37 +128,42 @@ $main-color: #aa8453;
     justify-content: center;
     margin: 10px;
     position: relative;
+    img {
+      width: 150%;
+      transition-duration: 0.5s;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      p {
+        opacity: 1;
+        transform: translateY(-40px);
+        transition-duration: 1s;
+      }
+      h4 {
+        display: none;
+      }
+    }
     @media screen and (max-width: 557px) {
       max-width: 90%;
       aspect-ratio: 3/2;
     }
-    img {
-      width: 150%;
-      transition-duration: 0.5s;
-      &:hover {
-        transform: scale(1.2);
-        ~ p {
-          opacity: 1;
-          transform: translateY(-40px);
-          transition-duration: 1s;
-        }
-        ~ h4 {
-          display: none;
-        }
-      }
-    }
+
     p {
       position: absolute;
       color: white;
       top: 60%;
       left: 20%;
       opacity: 0;
+      transition-duration: 1s; // 추가
     }
     h4 {
       position: absolute;
       color: white;
       top: 70%;
       left: 20%;
+      transition-duration: 1s; // 추가
     }
   }
 }

@@ -115,7 +115,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style: none !important;
 }
 blockquote,
 q {
@@ -134,4 +134,8 @@ table {
 }
 * {
   box-sizing: border-box;
+}
+a {
+  color: black !important;
+  text-decoration: none !important;
 }

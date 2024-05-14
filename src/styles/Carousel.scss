@@ -25,11 +25,14 @@
 //   transform: scale(1.05); /* 마우스 호버 시 이미지를 1.05배 확대 필요시 사용 */
 // }
 .comment {
-  font-size: 24px;
+  font-size: 36px;
   color: white;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 20%;
+  @media screen and (max-width: 720px) {
+    font-size: 24px;
+  }
 }
 .prev,
 .next {
