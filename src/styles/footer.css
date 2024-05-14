@@ -15,9 +15,13 @@ footer {
   bottom: 0;
 }
 .row {
-  margin: 10px 200px 0 200px;
+  margin: 10px 200px 0 200px !important;
   color: black;
   height: 100%;
+}
+.address {
+  margin: 0 10px 15px -486px !important
+  ;
 }
 .row h2 {
   font-size: 24px;
@@ -43,9 +47,8 @@ footer {
 }
 .footerlogo {
   cursor: pointer;
-
-  height: 200px;
-  margin-top: -29px;
+  height: 70px;
+  margin: 40px;
 }
 
 .copy-right-sec {
@@ -60,11 +63,12 @@ footer {
   font-weight: 500;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: black !important;
 }
 
 .container h2 {
-  font-weight: 300px;
+  font-weight: 200px;
   font-size: 18px;
 }
 
