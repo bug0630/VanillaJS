@@ -8,7 +8,11 @@ export default function Footer() {
     <>
       <footer>
         <div className="container-footer">
-          <img src={logo} className="footerlogo" />
+          <div className="footerlogo">
+            {' '}
+            <img src={logo} />
+          </div>
+
           <div className="row">
             <div className="useful-link">
               <h2>Useful Links</h2>
@@ -23,9 +27,15 @@ export default function Footer() {
             <div className="social-links">
               <h2>Social</h2>
               <div className="social-icons">
-                <SiKakaotalk /> KakaoTalk
-                <SiFacebook /> Facebook
-                <SiInstagram /> Instagram
+                <div>
+                  <SiKakaotalk /> KakaoTalk
+                </div>
+                <div>
+                  <SiFacebook /> Facebook
+                </div>
+                <div>
+                  <SiInstagram /> Instagram
+                </div>
               </div>
             </div>
           </div>

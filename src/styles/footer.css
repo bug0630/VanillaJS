@@ -1,56 +1,66 @@
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: #fff;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+footer h2 {
+  color: #aa8453;
+}
+/* 푸터 넓이 맞추는 컨테이너 */
 .container-footer {
   display: flex;
   background: #fff;
   border-top: 2px solid black;
   font-size: 16px;
-  line-height: 20px;
-  margin: auto;
-  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
   max-width: 1200px;
 }
-footer {
-  height: 150px;
+/* ----------------------------------------------------- */
+/* 푸터로고 */
+.footerlogo {
+  cursor: pointer;
+  width: 150px;
+}
+.footerlogo img {
   width: 100%;
-  background-color: #fff;
-  bottom: 0;
 }
+/* ---------------------- */
+/* row */
 .row {
-  margin: 10px 200px 0 200px !important;
   color: black;
-  height: 100%;
-}
-.address {
-  margin: 0 10px 15px -486px !important
-  ;
+  width: 700px;
+  margin: 0 20px;
 }
 .row h2 {
   font-size: 24px;
+}
+.social-icons {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: space-around;
 }
-.row .social-links {
-  margin-top: 20px;
+.use-links {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
 }
-.logoBox {
-  width: 350px;
-  height: 100%;
-  overflow: hidden;
-}
-.menu {
-  height: 100%;
-}
-.col {
-  flex-basis: 25%;
-  padding: 10px;
-  height: 200px;
-}
-.footerlogo {
-  cursor: pointer;
-  height: 70px;
-  margin: 40px;
+/* adress */
+.address {
+  width: 200px;
 }
 
+.address-links {
+  list-style: none;
+  margin-top: 10px;
+}
+/* copy-right */
 .copy-right-sec {
   padding: 1.8rem;
   background: #aa8453;
@@ -62,67 +72,51 @@ footer {
   color: #fcd462;
   font-weight: 500;
 }
-a {
-  text-decoration: none !important;
-  color: black !important;
-}
-
-.container h2 {
-  font-weight: 200px;
-  font-size: 18px;
-}
-
-.use-links {
-  display: flex;
-  margin-top: 10px;
-  justify-content: space-between;
-  width: 400px;
-}
-
-.social-icons {
-  display: flex;
-  margin-top: 10px;
-  width: 400px;
-  justify-content: space-between;
-}
-.address-links {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.address h2 {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-}
-.address li {
-  margin-bottom: 15px;
-}
-
-/* responsive */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 720px) {
+  .footerlogo {
+    display: none;
+  }
   .container-footer {
     display: flex;
     flex-direction: column;
     background: #fff;
     border-top: 2px solid black;
     font-size: 16px;
-    line-height: 20px;
-    margin: auto;
-    height: 140px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     max-width: 1200px;
   }
   .row {
-    display: flex;
-    flex-direction: column;
+    color: black;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 20px;
+    padding-bottom: 20px;
   }
-  .useful-link {
+  .social-icons {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
   }
-  .social-links {
+  .use-links {
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .row h2 {
+    text-align: center;
+
+    padding-bottom: 20px;
+  }
+
+  .address h2 {
+    text-align: center;
   }
 }

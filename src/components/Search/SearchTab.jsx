@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import SelectBox from './SelectBox';
-import { useSearch } from '../../pages/Search'; // useSearch 추가
 
 const artSolt = [
   { value: 'new', name: '신작품' },
@@ -9,12 +8,19 @@ const artSolt = [
 ];
 
 export default function SearchTab() {
-  const searchQuery = useSearch(); // 검색어 상태 가져오기
+  // URL 쿼리스트링 값 가져오기
+  const [queryString, setQueryString] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query');
+    // 확인을 위한 console.log 추가
+    setQueryString(query || '');
+  }, []); // 이펙트가 한 번만 실행되도록 빈 배열 전달
 
   return (
     <div className="searchTab">
-      <p>{searchQuery ? `${searchQuery} 검색 결과` : '검색 결과'}</p>{' '}
-      {/* 검색어 출력 */}
+      <p>{queryString ? `${queryString} 검색 결과` : '검색 결과'}</p>
       <SelectBox options={artSolt}></SelectBox>
     </div>
   );
