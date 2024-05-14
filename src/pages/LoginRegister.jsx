@@ -5,14 +5,15 @@ import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
 import DaumPostcode from 'react-daum-postcode';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from 'react';
-import Main from '../pages/Main';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
+import CheckBox from '../../src/components/checkbox/Checkbox';
 
 export default function LoginRegister() {
   const [action, setAction] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
   const registerLink = () => {
     setAction('active');
   };
@@ -21,7 +22,7 @@ export default function LoginRegister() {
     setAction('');
   };
   const navigation = useNavigate();
-
+  const [service, setService] = React.useState(false);
   const id = useRef();
   const password = useRef();
   const name = useRef();
@@ -41,12 +42,21 @@ export default function LoginRegister() {
       setShowMain(true);
     }
   });
+
+  const handleRegisterButtonClick = () => {
+    if (!service) {
+      alert('서비스 이용약관에 동의해주세요!');
+    } else {
+      handleClick();
+    }
+  };
   const handleClick = () => {
     if (
       id.current.value &&
       password.current.value &&
       name.current.value &&
-      email.current.value
+      email.current.value &&
+      service
     ) {
       localStorage.setItem('id', id.current.value);
       localStorage.setItem('password', password.current.value);
@@ -54,8 +64,12 @@ export default function LoginRegister() {
       localStorage.setItem('email', email.current.value);
       localStorage.setItem('register', email.current.value);
       alert('회원 가입 완료되었습니다!🎉');
+      navigation('/login');
+    } else {
+      alert('모든 필드를 작성하고 서비스 이용약관에 동의해주세요!');
     }
   };
+
   const handleSignIn = () => {
     if (
       loginId.current.value == localStorage.getItem('id') &&
@@ -153,11 +167,16 @@ export default function LoginRegister() {
               </div>
               <div className="remember-forget">
                 <label>
-                  <input type="checkbox" />
-                  이용약관 동의
+                  <CheckBox checked={service} onChange={setService}>
+                    (필수) 서비스 이용약관
+                  </CheckBox>
                 </label>
               </div>
-              <button type="submit" className="reg-btn" onClick={handleClick}>
+              <button
+                type="button"
+                className="reg-btn"
+                onClick={handleRegisterButtonClick}
+              >
                 가입하기
               </button>
               <div className="register-link">

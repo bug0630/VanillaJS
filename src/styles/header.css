@@ -17,10 +17,10 @@
 }
 
 .logo {
-  width: 180px;
+  width: 70px;
   cursor: pointer;
   display: flex;
-  margin-top: 20px;
+  margin-left: 20px;
 }
 #text {
   display: flex;
@@ -51,10 +51,14 @@
     color: #fff;
   }
 }
+.profileIcon {
+  position: relative;
+}
 .search-login {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 .link:hover,
 link:focus {
@@ -139,6 +143,7 @@ header {
   margin-left: 20px;
   cursor: pointer;
   position: relative;
+  align-items: center;
 }
 
 #mobile {
@@ -183,14 +188,15 @@ header {
 
 .dropdown {
   position: absolute;
-  top: 95px;
-  right: 0px;
+  top: 120px;
+  right: 12px;
   width: 120px;
-  padding: 20px 10px 0 20px;
+  padding: 10px 30px 10px 5px;
   margin-bottom: 10px;
   border: 1px solid gray;
   border-radius: 15px;
   background-color: #fff;
+  color: red;
 }
 .dropdown li {
   margin-bottom: 20px;
