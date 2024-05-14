@@ -5,16 +5,21 @@ import logo from '../../assets/logo.svg';
 import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom/dist';
 
 export default function Header() {
   //Search Toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
-  const [isShow, setIsShow] = useState(true);
   const [openProfile, setOpenProfile] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState();
-  const [isMenu, setIsMenu] = useState(false);
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    setOpenProfile(!openProfile);
+  };
+
   // console.log(isNavOpen);
   useEffect(() => {
     setIsLoggedIn(Boolean(localStorage.getItem('isLoggedIn')));
@@ -32,6 +37,12 @@ export default function Header() {
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     setIsNavOpen(false); // Close nav when opening search
+  };
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      // 엔터를 눌렀을 때 검색 결과 페이지로 이동하고 입력된 검색어를 쿼리 문자열로 전달
+      navigate(`/search?q=${searchText}`);
+    }
   };
 
   const isDesktop = useMediaQuery({
@@ -83,6 +94,7 @@ export default function Header() {
                 placeholder="검색..."
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
+                onKeyPress={handleKeyPress} // 엔터 키 이벤트 처리
               />
             )}
             <div className="search-icon" onClick={toggleSearch}>
@@ -91,20 +103,19 @@ export default function Header() {
             </div>
             {isLoggedIn && <FaCartPlus className="Cart-plus" />}
             {isLoggedIn ? (
-              <FaUser
-                className="profileImage"
-                onClick={() => setOpenProfile((prev) => !prev)}
-              />
+              <div className="profileImage" onClick={handleProfileClick}>
+                <FaUser className="user-icon" />
+                {openProfile && (
+                  <DropDownProfile
+                    setIsLoggedIn={setIsLoggedIn}
+                    setOpenProfile={setOpenProfile}
+                  />
+                )}
+              </div>
             ) : (
-              <Link className="lab-btn" to={'/login'}>
+              <Link className="lab-btn" to="/login">
                 로그인
               </Link>
-            )}
-            {openProfile && (
-              <DropDownProfile
-                setIsLoggedIn={setIsLoggedIn}
-                setOpenProfile={setOpenProfile}
-              />
             )}
           </div>
           <div id="mobile" onClick={handleClick}>

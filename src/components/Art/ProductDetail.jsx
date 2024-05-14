@@ -2,12 +2,19 @@ import React, { useState, useEffect } from "react";
 import '../../styles/ArtDetail.css'
 import productsData from "../../data/art.json";
 import { useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const ProductDetail = (props) => {
   const { artistId } = useParams();
   const [product, setProduct] = useState(null);
   const [images, setImages] = useState([])
   const [activeImg, setActiveImage] = useState('');
+
+  // addToCart 함수 수정
+  // const addToCart = () => {
+  //   setCartCount(prevCount => prevCount + 1);
+  //   props.onAddToCart(); // 부모 컴포넌트에 상품 추가 알림
+  // };
 
   useEffect(() => {
     const productData = productsData.find(product => product.id === parseInt(artistId));
@@ -16,7 +23,7 @@ const ProductDetail = (props) => {
     setActiveImage(productData.art_img[0])
   }, [artistId]);
 
-
+  
   return (
     <div className="product_detail">
       <div className="product_img">
@@ -33,44 +40,48 @@ const ProductDetail = (props) => {
         <h1 className="product_name">{product && product.title}</h1>
 
         <div className="infoArea">
-          <table>
-            <tbody>
-              <tr className="product_artist_name">
-                <th className="detail_text">작가명</th>
-                <th className="detail_info">{product && product.artist_name}</th>
-              </tr>
-              <tr className="published_year">
-                 <th className="detail_text">제작년도</th>
-                 <th className="detail_info">{product && product.published_year}</th>
-              </tr>
-              <tr className="art_frame">
-                 <th className="detail_text">액자</th>
-                 <th className="detail_info">{product && product.frame}</th>
-              </tr>
-              <tr className="product_code">
-                 <th className="detail_text">작품 코드</th>
-                 <th className="detail_info">{product && product.code}</th>
-              </tr>
-              <tr className="material">
-                 <th className="detail_text">재료</th>
-                 <th className="detail_info">{product && product.material}</th>
-              </tr>
-              <tr className="product_size">
-                 <th className="detail_text">호수</th>
-                 <th className="detail_info">{product && product.size}</th>
-              </tr>
-              <tr className="product_description">
-                 <th className="detail_text">작품 소개</th>
-                 <th className="detail_info">{product && product.description}</th>
-              </tr>
-              <tr className="product_price">
-                 <th className="detail_text">가격</th>
-                 <td>
-                  <span id="span_product_price_text">{product && product.price}</span>
-                 </td>
-              </tr>
-          </tbody>
-          </table>
+
+          <div className="infoItem">
+            <div className="infoLabel">작가명</div>
+            <div className="infoValue">{product && product.artist_name}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">제작년도</div>
+            <div className="infoValue">{product && product.published_year}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">액자</div>
+            <div className="infoValue">{product && product.frame}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">작품 코드</div>
+            <div className="infoValue">{product && product.code}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">재료</div>
+            <div className="infoValue">{product && product.material}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">호수</div>
+            <div className="infoValue">{product && product.size}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">가격</div>
+            <div className="infoValue">{product && product.price}</div>
+          </div>
+
+          <div className="infoItem">
+            <div className="infoLabel">작품 소개</div>
+            <div className="infoValue">{product && product.description}</div>
+          </div>
+          
+          
         </div>
         <div className="product_btn">
           <button className="product_cart">Add to Cart</button>

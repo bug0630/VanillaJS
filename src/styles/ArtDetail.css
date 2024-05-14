@@ -25,6 +25,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 6rem;
+
 }
 .art_detail_img {
     width: 9rem;
@@ -35,34 +36,18 @@
 .product_about {
     display: flex;
     flex-direction: column;
-    line-height: 2rem;
+    line-height: 1.5rem;
     justify-content: flex-start;
     /* margin-top: 1rem; */
-    align-items: baseline;
+    /* align-items: baseline; */
     width: 50%;
-    @media (min-width: 1024px) {
-        .lg\:w-2\/4 {
-          width: 50%;
-        }
- }
+    align-content: stretch;
 }
-
 .product_name {
     color: black;
     font-size: 1.875rem;
     font-weight: bold;
 }
-
-.product_price {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-/* .product_btn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 30px;
-} */
 
 .product_cart {
     background-color: #aa8453;
@@ -74,7 +59,7 @@
     padding-right: 4rem;
     border-radius: 1rem;
     height: 100%;
-    margin-left: 20px;
+    margin: 40px;
     border-color: white;
 }
 .product_cart:hover {
@@ -83,24 +68,33 @@
     border-color: #aa8453;
 }
 
-.detail_text {
-    color: black;
+.infoArea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+  }
+  
+  .infoItem {
     display: flex;
     justify-content: space-between;
-}
-.detail_info {
-    color: #666666;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 10px;
-    
-    
-    
-}
-.infoArea {
-    margin-top: 10px;
-    padding: 10px;
-    
-    color: #aa8453;
-    
-}
+    align-items: center;
+  }
+  
+  .infoLabel {
+    font-weight: bold;
+    margin-right: 10px; /* 라벨과 값 사이의 간격 조절 */
+  }
+  
+  .infoValue {
+    margin-left: 100px;
+  }
+
+
+
+
+
+  .artistInfo_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
