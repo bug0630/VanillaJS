@@ -45,6 +45,7 @@ $main-color: #aa8453;
     display: flex;
     padding: 0 20px;
   }
+
   .picture {
     width: 100%;
 
@@ -58,12 +59,17 @@ $main-color: #aa8453;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #f0e8d7;
     h3 {
       text-align: center;
       margin: 20px 0;
     }
     p {
-      line-height: 1.5em;
+      line-height: 1.2em;
+      font-size: 1.2em;
+      @media screen and (max-width: 1000px) {
+        font-size: 1em;
+      }
     }
   }
   .artMonthList {

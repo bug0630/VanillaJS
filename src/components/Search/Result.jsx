@@ -31,10 +31,7 @@ export default function Result() {
       <ul className="resultCard">
         {artData.map((item) => (
           <li key={item.id}>
-            <img
-              src={process.env.PUBLIC_URL + './images/art_img/' + item.art_img}
-              alt={item.title}
-            ></img>
+            <img src={item.art_img[0]} alt={item.title}></img>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <p>Artist: {item.artist_name}</p>

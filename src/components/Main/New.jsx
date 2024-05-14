@@ -26,7 +26,7 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('현대미술'),
+              search: '?query=' + encodeURIComponent('고대미술'),
             }}
           >
             <img src="images/art_img/img4.webp" alt="productBanner"></img>
@@ -38,7 +38,7 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('현대미술'),
+              search: '?query=' + encodeURIComponent('중세미술'),
             }}
           >
             <img src="images/art_img/img11.webp" alt="productBanner"></img>
@@ -50,7 +50,7 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('현대미술'),
+              search: '?query=' + encodeURIComponent('르네상스'),
             }}
           >
             <img src="images/art_img/img12.webp" alt="productBanner"></img>
