@@ -38,19 +38,25 @@ $main-color: #aa8453;
   padding-top: 200px;
   overflow: hidden;
   transition: opacity 1s ease;
-
+  transform-origin: center center;
   .artistInfo {
     width: 100%;
     margin-top: 100px;
     display: flex;
     padding: 0 20px;
+    background: linear-gradient(to right, #f6f6f6, #e9e9e9);
+    box-shadow: 20px 0 20px 5px rgba(0, 0, 0, 0.3);
   }
 
   .picture {
     width: 100%;
+    &:hover img {
+      transform-origin: center center;
+    }
 
     img {
       width: 100%;
+      border: 5px solid $main-color;
     }
   }
   .artistComment {
@@ -59,10 +65,14 @@ $main-color: #aa8453;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fdfaf5;
+
     h3 {
+      background: linear-gradient(to right, #aa8453, #feb47b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-align: center;
       margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     p {
       line-height: 1.2em;
@@ -74,10 +84,12 @@ $main-color: #aa8453;
   }
   .artMonthList {
     width: 100%;
-    margin-top: 100px;
-    padding: 0 20px;
+    padding: 0;
+    // margin-top: 100px;
+    // padding: 0 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #f6f6f6, #e9e9e9);
     li {
       display: flex;
       align-items: center;
@@ -170,7 +182,6 @@ $main-color: #aa8453;
 .sellWrap {
   margin: 0 auto;
   width: 100%;
-
   max-width: 1200px;
   padding: 200px 0 50px 0;
 }
@@ -182,6 +193,11 @@ $main-color: #aa8453;
   background-size: cover;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.5s;
+  &:hover {
+    background: url(../img/request.jpg);
+    background-size: cover;
+  }
   @media screen and (max-width: 720px) {
     flex-direction: column;
   }
@@ -208,7 +224,15 @@ $main-color: #aa8453;
     }
   }
 }
-
+.selBtn:hover .sellbox {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  background: url(../img/isolated-2532037_1920.png);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
 .sellBtn {
   width: 200px;
   height: 30px;
@@ -221,6 +245,11 @@ $main-color: #aa8453;
   &:hover {
     color: #800020;
   }
+}
+
+.sellBtn:hover + .sellbox {
+  background: url('../img/ai-24-05-pc.jpg') no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 720px) {
   .artMonth {
