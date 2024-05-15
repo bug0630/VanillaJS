@@ -6,6 +6,7 @@ import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom/dist';
+import DarkMode from '../../components/darkmode/DarkMode';
 
 export default function Header() {
   //Search Toggle
@@ -80,7 +81,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to={'/artdetail'} className="link">
+                <Link to={'/artdetail/:artistId'} className="link">
                   작품 상세
                 </Link>
               </li>
@@ -101,7 +102,7 @@ export default function Header() {
               {/* Search icon goes here */}
               <FaSearch />
             </div>
-            {isLoggedIn && <FaCartPlus className="Cart-plus" />}
+            <DarkMode />
             {isLoggedIn ? (
               <div className="profileImage" onClick={handleProfileClick}>
                 <FaUser className="user-icon" />
