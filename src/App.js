@@ -15,6 +15,7 @@ import Footer from './components/footer/Footer';
 import ProductDetail from './components/Art/ProductDetail';
 import Cart from '../src/pages/Cart';
 import CartList from '../src/components/CartList/CartList';
+import AddressInput from '../src/components/AddressInput/AddressInput';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/productdetail" element={<ProductDetail />}></Route>
         <Route path="/cartlist" element={<CartList />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/address" element={<AddressInput />}></Route>
       </Routes>
     </div>
   );
