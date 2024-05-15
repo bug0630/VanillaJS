@@ -26,22 +26,10 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('고대미술'),
-            }}
-          >
-            <img src="images/art_img/img4.webp" alt="productBanner"></img>
-            <h4>고대미술</h4>
-            <p>예술의 탄생</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={{
-              pathname: 'search',
               search: '?query=' + encodeURIComponent('중세미술'),
             }}
           >
-            <img src="images/art_img/img11.webp" alt="productBanner"></img>
+            <img src="images/art_img/img4.webp" alt="productBanner"></img>
             <h4>중세미술</h4>
             <p>신앙과 권력의 상징</p>
           </Link>
@@ -50,12 +38,24 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('르네상스'),
+              search: '?query=' + encodeURIComponent('근세미술'),
+            }}
+          >
+            <img src="images/art_img/img11.webp" alt="productBanner"></img>
+            <h4>근세미술</h4>
+            <p>현실과 상상의 만남</p>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={{
+              pathname: 'search',
+              search: '?query=' + encodeURIComponent('근대미술'),
             }}
           >
             <img src="images/art_img/img12.webp" alt="productBanner"></img>
-            <h4>르네상스</h4>
-            <p>인간의 영감과 창의</p>
+            <h4>근대미술</h4>
+            <p>혁명적인 탐구와 다양성</p>
           </Link>
         </li>
         <li>
