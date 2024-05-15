@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/ArtDetail.css';
 import productsData from '../../data/art.json';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const ProductDetail = (props) => {
   const { artistId } = useParams();
   const [product, setProduct] = useState(null);
   const [images, setImages] = useState([]);
   const [activeImg, setActiveImage] = useState('');
-
+  const navigation = useNavigate();
   const [cart, setCart] = useState([]);
   console.log(cart);
   const addToCart = (product) => {
     setCart([...cart, product]);
+    navigation('/cartlist', { state: { product } });
+    console.log(addToCart);
   };
 
   useEffect(() => {
