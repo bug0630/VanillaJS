@@ -46,7 +46,7 @@ $main-color: #aa8453;
     height: 50px;
     border-radius: 3px;
     &:hover {
-      color: white;
+      color: #800020;
     }
   }
   .artistInfo2 {
@@ -249,6 +249,7 @@ $main-color: #aa8453;
   height: 30px;
   line-height: 30px;
   margin: 0 auto;
+  margin-bottom: 20px;
   text-align: center;
   background-color: $main-color;
   border-radius: 3px;
