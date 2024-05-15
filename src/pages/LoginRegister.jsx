@@ -8,6 +8,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
+import { SiKakaotalk, SiGmail, SiFacebook, SiNaver } from 'react-icons/si';
 import CheckBox from '../../src/components/checkbox/Checkbox';
 
 export default function LoginRegister() {
@@ -113,7 +114,6 @@ export default function LoginRegister() {
                   <input type="checkbox" />
                   사용자 기억하기
                 </label>
-                <a href="#">비밀번호 잊으셨나요?</a>
               </div>
               <button type="submit" onClick={handleSignIn}>
                 <Link to={'/'} />
@@ -126,6 +126,14 @@ export default function LoginRegister() {
                     가입하기
                   </a>
                 </p>
+                <hr />
+                <div>
+                  <div>SNS 로그인</div>
+                  <div className="snslogin">
+                    <SiKakaotalk size={30} /> <SiGmail size={30} />{' '}
+                    <SiFacebook size={30} /> <SiNaver size={30} />
+                  </div>
+                </div>
               </div>
             </form>
           </div>

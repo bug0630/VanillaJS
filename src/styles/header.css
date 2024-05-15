@@ -82,6 +82,7 @@ link:focus {
   color: #353842;
   font-size: 20px;
   cursor: pointer;
+  padding-right: 30px;
 }
 
 .nav .search-icon:hover {
