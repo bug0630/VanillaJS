@@ -39,6 +39,16 @@ $main-color: #aa8453;
   overflow: hidden;
   transition: opacity 1s ease;
   transform-origin: center center;
+  button {
+    background-color: $main-color;
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    &:hover {
+      color: white;
+    }
+  }
   .artistInfo2 {
     width: 100%;
     margin-top: 100px;

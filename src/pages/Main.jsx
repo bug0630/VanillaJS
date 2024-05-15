@@ -16,6 +16,7 @@ export default function Main() {
     require('../img/the_last_supper.webp'),
   ];
   const comments = ['이달의 작가', '경매', '르네상스 작품', '현대미술'];
+
   const pageLinks = [
     '/artist',
     '/auctionlist',
