@@ -68,6 +68,7 @@ $main-color: #aa8453;
 
     h3 {
       background: linear-gradient(to right, #aa8453, #feb47b);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
