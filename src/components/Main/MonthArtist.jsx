@@ -3,7 +3,7 @@ export default function MonthArtist() {
   return (
     <div className="artMonth">
       <h2>Artist of the Month</h2>
-      <div className="artistInfo">
+      <div className="artistInfo2">
         {' '}
         <div className="picture">
           <img
@@ -26,6 +26,9 @@ export default function MonthArtist() {
             자연과 소통하고자 하는 욕구를 자극하여 많은 이들에게 위안을 주고
             있습니다.
           </p>
+          <Link to="/artist">
+            <button>작품 보러가기</button>
+          </Link>
         </div>
       </div>
       <ul className="artMonthList">
