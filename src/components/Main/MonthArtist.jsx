@@ -3,7 +3,7 @@ export default function MonthArtist() {
   return (
     <div className="artMonth">
       <h2>Artist of the Month</h2>
-      <div className="artistInfo">
+      <div className="artistInfo2">
         {' '}
         <div className="picture">
           <img

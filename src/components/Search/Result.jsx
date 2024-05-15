@@ -49,7 +49,7 @@ export default function Result() {
     <div>
       <ul className="resultCard">
         {filteredArtData.map((item) => (
-          <Link to={`/productdetail/${item.id}`} key={item.id}>
+          <Link to={`/artdetail/${item.id}`} key={item.id}>
             {' '}
             <li key={item.id}>
               <img src={item.art_img[0]} alt={item.title}></img>
