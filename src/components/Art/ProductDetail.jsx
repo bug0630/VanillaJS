@@ -10,11 +10,6 @@ const ProductDetail = (props) => {
   const [images, setImages] = useState([])
   const [activeImg, setActiveImage] = useState('');
 
-  // addToCart 함수 수정
-  // const addToCart = () => {
-  //   setCartCount(prevCount => prevCount + 1);
-  //   props.onAddToCart(); // 부모 컴포넌트에 상품 추가 알림
-  // };
 
   useEffect(() => {
     const productData = productsData.find(product => product.id === parseInt(artistId));
@@ -75,13 +70,7 @@ const ProductDetail = (props) => {
             <div className="infoLabel">가격</div>
             <div className="infoValue">{product && product.price}</div>
           </div>
-
-          <div className="infoItem">
-            <div className="infoLabel">작품 소개</div>
-            <div className="infoValue">{product && product.description}</div>
-          </div>
-          
-          
+      
         </div>
         <div className="product_btn">
           <button className="product_cart">Add to Cart</button>
