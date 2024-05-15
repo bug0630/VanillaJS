@@ -12,10 +12,8 @@ import ArtDetail from './pages/ArtDetail';
 import AuctionList from './pages/AuctionList';
 import Artist from './pages/Artist';
 import Footer from './components/footer/Footer';
-import ProductDetail from './components/Art/ProductDetail'
-
-
-
+import ProductDetail from './components/Art/ProductDetail';
+import CartList from './components/CartList/CartList';
 
 function App() {
   return (
@@ -32,8 +30,9 @@ function App() {
         <Route path="/artistinfo" element={<ArtistInfo />}></Route>
         <Route path="/artdetail/:artistId" element={<ArtDetail />}></Route>
         <Route path="/auctionlist" element={<AuctionList />}></Route>
-        <Route path='/artist' element={<Artist/>}></Route>
-        <Route path='/productdetail' element={<ProductDetail />}></Route>
+        <Route path="/artist" element={<Artist />}></Route>
+        <Route path="/productdetail" element={<ProductDetail />}></Route>
+        <Route path="/cartlist" element={<CartList />}></Route>
       </Routes>
     </div>
   );
