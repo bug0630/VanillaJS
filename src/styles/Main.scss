@@ -201,13 +201,13 @@ $main-color: #aa8453;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  background: url(../img/isolated-2532037_1920.png);
+  background: url('../img/isolated-2532037_1920.png');
   background-size: cover;
   justify-content: center;
   align-items: center;
   transition-duration: 0.5s;
   &:hover {
-    background: url(../img/request.jpg);
+    background: url('../img/request.jpg');
     background-size: cover;
   }
   @media screen and (max-width: 720px) {

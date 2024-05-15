@@ -30,7 +30,7 @@ export default function New() {
             }}
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Hubert_van_Eyck_or_Jan_van_Eyck_or_both_-_The_Three_Marys_at_the_Tomb_-_Google_Art_Project.jpg/400px-Hubert_van_Eyck_or_Jan_van_Eyck_or_both_-_The_Three_Marys_at_the_Tomb_-_Google_Art_Project.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg/429px-Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg"
               alt="productBanner"
             ></img>
             <h4>중세미술</h4>
@@ -60,7 +60,7 @@ export default function New() {
             }}
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Van_Gogh_-_Le_Moulin_de_la_Galette8.jpeg/260px-Van_Gogh_-_Le_Moulin_de_la_Galette8.jpeg"
+              src="https://img.hankyung.com/photo/202207/01.30636853.1.jpg"
               alt="productBanner"
             ></img>
             <h4>근대미술</h4>
