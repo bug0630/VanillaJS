@@ -29,15 +29,22 @@ export default function Result() {
 
   const filteredArtData = artData.filter((item) => {
     if (
+      item.title &&
+      item.title.toLowerCase().includes(searchQuery.toLowerCase())
+    ) {
+      return true;
+    }
+
+    if (
       item.category &&
-      item.category.toLowerCase().includes(searchQuery.toLowerCase()) // queryString 대신 searchQuery로 변경
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())
     ) {
       return true;
     }
 
     if (
       item.artist_name &&
-      item.artist_name.toLowerCase().includes(searchQuery.toLowerCase()) // queryString 대신 searchQuery로 변경
+      item.artist_name.toLowerCase().includes(searchQuery.toLowerCase())
     ) {
       return true;
     }

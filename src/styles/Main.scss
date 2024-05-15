@@ -138,6 +138,7 @@ $main-color: #aa8453;
   margin-top: 100px;
   justify-content: center;
   width: 100%;
+  padding: 0;
   @media screen and (max-width: 720px) {
     flex-wrap: wrap;
   }
@@ -239,7 +240,7 @@ $main-color: #aa8453;
   width: 100%;
   margin: 0 auto;
   display: flex;
-  background: url(../img/isolated-2532037_1920.png);
+  background: url('../img/isolated-2532037_1920.png');
   background-size: cover;
   justify-content: center;
   align-items: center;
