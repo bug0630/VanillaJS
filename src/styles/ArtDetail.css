@@ -107,16 +107,16 @@
 /* artDetail page 작가 소개 */
 .artist_detail {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   gap: 16px;
-  margin: 10px 100px 0 100px;
+  margin: 70px 800px 100px 100px;
 }
 
 .artistInfo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   margin: 70px 0 0 100px;
 }
@@ -125,6 +125,9 @@
   height: 85px;
   margin: 40px 10px 0 100px;
   border-radius: 50%;
+  position: absolute;
+  top: 118%;
+  left: -1%;
 }
 .artistInfo_name {
   font-weight: 800;
@@ -137,7 +140,8 @@
   color: #666666;
 }
 .artistDescription {
-  margin: 50px 0 0 300px;
+  margin: 30px 20px 80px 30px;
+  text-align: justify;
 }
 .artistDescriptionVisible {
   /* product가 존재할 때 artistDescription에 적용할 스타일 */
