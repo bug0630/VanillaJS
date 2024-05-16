@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import '../../styles/header.css';
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.svg';
-import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
+import { FaSearch, FaUser, FaBars, FaTimes } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom/dist';
@@ -31,10 +31,10 @@ export default function Header() {
     // setIsNavOpen(true);
   };
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-    setIsSearchOpen(false);
-  };
+  // const toggleNav = () => {
+  //   setIsNavOpen(!isNavOpen);
+  //   setIsSearchOpen(false);
+  // };
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     setIsNavOpen(false); // Close nav when opening search

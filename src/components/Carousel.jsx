@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Carousel.scss';
 
 const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-  };
+  });
 
-  const goToPrevSlide = () => {
+  const goToPrevSlide = useCallback(() => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-  };
+  });
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, intervalTime);

@@ -7,8 +7,6 @@ import { useParams } from 'react-router-dom';
 const ArtistInfo = (props) => {
   const { artistId } = useParams();
   const [product, setProduct] = useState(null);
-  const [images, setImages] = useState([]);
-  const [activeImg, setActiveImage] = useState('');
 
   useEffect(() => {
     const productData = productsData.find(
