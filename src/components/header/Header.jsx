@@ -61,7 +61,6 @@ export default function Header() {
     <>
       <header>
         <div className={`nav ${isNavOpen ? 'none' : ''}`}>
-          {/* logo */}
           <Link to={'/'}>
             <img src={logo} alt="" className="logo" />
           </Link>
