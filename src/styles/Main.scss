@@ -43,8 +43,9 @@ $main-color: #aa8453;
     background-color: $main-color;
     border: none;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 3px;
+    margin-bottom: 10px;
     &:hover {
       color: #800020;
     }
@@ -96,11 +97,11 @@ $main-color: #aa8453;
   .artMonthList {
     width: 100%;
     padding: 0;
-    // margin-top: 100px;
-    // padding: 0 20px;
+    margin-top: 10px;
+
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to right, #f6f6f6, #e9e9e9);
+    // background: linear-gradient(to right, #f6f6f6, #e9e9e9);
     li {
       display: flex;
       align-items: center;
@@ -128,6 +129,7 @@ $main-color: #aa8453;
   transition: opacity 3s ease;
   @media screen and (max-width: 720px) {
     margin-top: 100px;
+    opacity: 1;
   }
 }
 .newWrap.show {
@@ -153,6 +155,7 @@ $main-color: #aa8453;
     margin: 10px;
     position: relative;
     img {
+      transform: scale(1.1);
       width: 150%;
       transition-duration: 0.5s;
     }
@@ -196,6 +199,14 @@ $main-color: #aa8453;
   width: 100%;
   max-width: 1200px;
   padding: 200px 0 50px 0;
+  opacity: 0;
+  transition: opacity 3s ease;
+  @media screen and (max-width: 720px) {
+    opacity: 1;
+  }
+}
+.sellWrap.show {
+  opacity: 1;
 }
 .sellbox {
   width: 100%;
@@ -260,13 +271,12 @@ $main-color: #aa8453;
   }
 }
 
-.sellBtn:hover + .sellbox {
-  background: url('../img/ai-24-05-pc.jpg') no-repeat;
-  background-size: cover;
-}
 @media screen and (max-width: 720px) {
   .artMonth {
     padding-top: 100px;
+    button {
+      margin-bottom: 20px;
+    }
   }
   .artistInfo2 {
     margin-top: 100px;
