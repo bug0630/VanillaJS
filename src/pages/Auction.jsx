@@ -98,6 +98,7 @@ const AuctionPage = () => {
                 <img
                   src={selectedArt.bid_art_img ? selectedArt.bid_art_img : ''}
                   className="artwork-image"
+                  alt=" artwork"
                 />
               </div>
               <div className="artwork-info">
