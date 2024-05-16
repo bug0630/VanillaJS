@@ -13,16 +13,16 @@ const ArtistInfo = (props) => {
       (product) => product.id === parseInt(artistId)
     );
     setProduct(productData);
-    // setImages(productData.profile_img);
-    // setActiveImage(productData.profile_img[0]);
   }, [artistId]);
 
   return (
     <div className="artist_detail">
-      <div className="infoItem">
+      <div className="infoItemArt">
         <div className="infoLabel">작품 소개</div>
         <div className="infoValue">{product && product.description}</div>
       </div>
+
+      <div className='artistInfoSession'>
       <img
         src={product && product.profile_img}
         alt=""
@@ -55,6 +55,7 @@ const ArtistInfo = (props) => {
             </a>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
