@@ -9,7 +9,6 @@ export default function ArtDetail(props) {
     <div>
       <Header />
       <ProductDetail />
-      <ArtistInfo />
       <Recommend />
       <Footer />
     </div>
