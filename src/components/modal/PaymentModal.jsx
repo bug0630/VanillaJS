@@ -40,22 +40,46 @@ const PaymentModal = ({ isOpen, onClose }) => {
           <label>카트 정보:</label>
           <input type="text" value={cartInfo} onChange={handleCartInfoChange} />
         </div>
-        <div className="modal-field">
+        <div className="modal-field1">
           <label>카드 번호:</label>
           <input
-            type="text"
-            value={cardNumber}
+            type="num"
+            className="cardnumber"
+            maxLength={4}
+            onChange={handleCardNumberChange}
+          />
+          <input
+            type="num"
+            className="cardnumber"
+            maxLength={4}
+            onChange={handleCardNumberChange}
+          />
+          <input
+            type="num"
+            className="cardnumber"
+            maxLength={4}
+            onChange={handleCardNumberChange}
+          />
+          <input
+            type="num"
+            className="cardnumber"
+            maxLength={4}
             onChange={handleCardNumberChange}
           />
         </div>
         <div className="modal-field">
           <label>CVV:</label>
-          <input type="text" value={cvv} onChange={handleCvvChange} />
+          <input
+            type="num"
+            maxLength={3}
+            value={cvv}
+            onChange={handleCvvChange}
+          />
         </div>
         <div className="modal-field">
           <label>유효기간:</label>
           <input
-            type="text"
+            type="month"
             value={expiryDate}
             onChange={handleExpiryDateChange}
           />
