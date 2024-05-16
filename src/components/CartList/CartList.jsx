@@ -8,7 +8,6 @@ import Footer from '../footer/Footer';
 import '../../styles/Cartlist.css';
 import PaymentModal from '../modal/PaymentModal';
 const CartList = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { state } = location;
   const product = state && state.product;
