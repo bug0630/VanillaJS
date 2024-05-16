@@ -41,7 +41,7 @@ const AuctionPage = () => {
   const { artId } = useParams();
   const [selectedArt, setSelectedArt] = useState(null);
   const handleSelectArt = (artId) => {
-    const auction = artData.find((item) => item.id == artId);
+    const auction = artData.find((item) => item.id === Number(artId));
     setSelectedArt(auction);
   };
   useEffect(() => {
