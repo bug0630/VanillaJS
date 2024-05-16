@@ -109,6 +109,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 20px;
+}
+.infoItemArt {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 20px;
+  @media screen and (max-width: 720px) {
+    margin-top: 0;
+  }
 }
 
 .infoLabel {
@@ -128,7 +137,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    margin: 100px;
+    margin-bottom: -170px;
   }
 }
 
@@ -139,7 +148,7 @@
   justify-content: space-between;
   align-items: left;
   gap: 16px;
-  margin: 70px 800px 100px 100px;
+  margin: 0 53px 100px 95px;
   @media screen and (max-width: 720px) {
     flex-direction: column;
   }
@@ -149,16 +158,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 70px 0 0 100px;
+  margin-left: 50px;
 }
 .artistInfo_img {
-  width: 85px;
+  width: 83px;
   height: 85px;
-  margin: 40px 10px 0 100px;
   border-radius: 50%;
-  position: absolute;
   top: 118%;
-  left: -1%;
 }
 .artistInfo_name {
   font-weight: 800;
@@ -177,4 +183,8 @@
 .artistDescriptionVisible {
   display: flex;
   flex-direction: row;
+}
+.artistInfoSession {
+  display: flex;
+  margin-top: 20px;
 }
