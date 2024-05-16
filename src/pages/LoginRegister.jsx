@@ -2,9 +2,8 @@
 import '../styles/reset.css';
 import '../styles/LoginRegister.css';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
-import DaumPostcode from 'react-daum-postcode';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ import CheckBox from '../../src/components/checkbox/Checkbox';
 export default function LoginRegister() {
   const [action, setAction] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userInfo, setUserInfo] = useState(null);
+  // const [userInfo, setUserInfo] = useState(null);
   const registerLink = () => {
     setAction('active');
   };
@@ -31,18 +30,18 @@ export default function LoginRegister() {
   const loginId = useRef();
   const loginPassword = useRef();
 
-  const [showMain, setShowMain] = useState(false);
-  const localRegister = localStorage.getItem('register');
-  const localId = localStorage.getItem('id');
-  const localPassword = localStorage.getItem('password');
-  const localName = localStorage.getItem('name');
-  const localEmail = localStorage.getItem('email');
+  // const [showMain, setShowMain] = useState(false);
+  // const localRegister = localStorage.getItem('register');
+  // const localId = localStorage.getItem('id');
+  // const localPassword = localStorage.getItem('password');
+  // const localName = localStorage.getItem('name');
+  // const localEmail = localStorage.getItem('email');
 
-  useEffect(() => {
-    if (localRegister) {
-      setShowMain(true);
-    }
-  });
+  // // useEffect(() => {
+  // //   if (localRegister) {
+  // //     setShowMain(true);
+  // //   }
+  // // });
 
   const handleRegisterButtonClick = () => {
     if (!service) {
@@ -64,6 +63,7 @@ export default function LoginRegister() {
       localStorage.setItem('name', name.current.value);
       localStorage.setItem('email', email.current.value);
       localStorage.setItem('register', email.current.value);
+      setIsLoggedIn(true);
       alert('회원 가입 완료되었습니다!🎉');
       navigation('/login');
     } else {
@@ -73,8 +73,8 @@ export default function LoginRegister() {
 
   const handleSignIn = () => {
     if (
-      loginId.current.value == localStorage.getItem('id') &&
-      loginPassword.current.value == localStorage.getItem('password')
+      loginId.current.value === localStorage.getItem('id') &&
+      loginPassword.current.value === localStorage.getItem('password')
     ) {
       localStorage.setItem('isLoggedIn', true);
 
@@ -122,9 +122,7 @@ export default function LoginRegister() {
               <div className="register-link">
                 <p>
                   계정이 없으신가요?
-                  <a href="#" onClick={registerLink}>
-                    가입하기
-                  </a>
+                  <div onClick={registerLink}>가입하기</div>
                 </p>
                 <hr />
                 <div>
@@ -190,9 +188,7 @@ export default function LoginRegister() {
               <div className="register-link">
                 <p>
                   이미 계정 있으신가요?
-                  <a href="#" onClick={loginLink}>
-                    로그인하기
-                  </a>
+                  <div onClick={loginLink}>로그인하기</div>
                 </p>
               </div>
             </form>

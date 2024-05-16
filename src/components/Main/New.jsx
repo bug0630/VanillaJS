@@ -29,7 +29,10 @@ export default function New() {
               search: '?query=' + encodeURIComponent('중세미술'),
             }}
           >
-            <img src="images/art_img/img4.webp" alt="productBanner"></img>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg/429px-Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg"
+              alt="productBanner"
+            ></img>
             <h4>중세미술</h4>
             <p>신앙과 권력의 상징</p>
           </Link>
@@ -41,7 +44,10 @@ export default function New() {
               search: '?query=' + encodeURIComponent('근세미술'),
             }}
           >
-            <img src="images/art_img/img11.webp" alt="productBanner"></img>
+            <img
+              src="https://i.namu.wiki/i/lcl9V7cptudXHbazYE-Ks-ZFI84JHsfuFRD3tji3vV4GSgANiKPVnLM4wZJwZ6cGguZtNeFXNaqEHFKzzv7MtreQzs7ZcS2WjXVTfn0G8sLxTfagY2rX5zYh3n_-K5l6cQwksRqeregY16tlRVAMmg.jpg"
+              alt="productBanner"
+            ></img>
             <h4>근세미술</h4>
             <p>현실과 상상의 만남</p>
           </Link>
@@ -53,7 +59,10 @@ export default function New() {
               search: '?query=' + encodeURIComponent('근대미술'),
             }}
           >
-            <img src="images/art_img/img12.webp" alt="productBanner"></img>
+            <img
+              src="https://img.hankyung.com/photo/202207/01.30636853.1.jpg"
+              alt="productBanner"
+            ></img>
             <h4>근대미술</h4>
             <p>혁명적인 탐구와 다양성</p>
           </Link>

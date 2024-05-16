@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import Recommend from '../components/Artist/Recommend';
