@@ -3,7 +3,6 @@ body {
   font-family: 'Baskerville', 'Noto Serif KR', serif;
 }
 
-
 /* Artwork info styles */
 .artwork-info {
   flex: 1;
@@ -31,25 +30,26 @@ body {
   margin-bottom: 15px;
 }
 
-.price-section, .bid-section {
+.price-section,
+.bid-section {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.price-label, .bid-label {
+.price-label,
+.bid-label {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   margin-right: 10px;
 }
 
-.price-value, .bid-value {
+.price-value,
+.bid-value {
   font-size: 18px;
   color: #009688; /* Green color for prices */
 }
-
-
 
 /* Artwork title styles */
 .auction-page h2 {
@@ -119,7 +119,6 @@ html,
 body {
   height: 100%;
   /* background: #000000; */
-
 }
 
 .outer {
@@ -144,7 +143,7 @@ body {
 /* .curtain-ratio-keeper {
   position: relative;
   padding-top: 56.25%;
-  /* overflow: hidden; */
+  overflow: hidden;
 */
 
 .curtain {
@@ -161,7 +160,6 @@ body {
   overflow: hidden;
   background: transparent;
   animation-delay: 3000ms;
-
 }
 
 .panel-left,
@@ -171,29 +169,21 @@ body {
   width: 50%;
   top: 0%;
   transition: all 8s ease;
-
-  /*transition-delay: 300ms;* fade is in place/
-  /*background-image: url("https://picsum.photos/600");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;*/
   overflow: hidden;
 }
 
 .panel-left {
   left: 0;
   animation-delay: 3000ms;
-  /*background-color: rgb(91, 96, 106);*/
 }
 
 .panel-right {
   right: 0;
-  /*background-color: rgb(229, 211, 211);*/
 }
 
 .panel-left::before,
 .panel-right::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 100%;
   width: 200%;
@@ -212,36 +202,26 @@ body {
 }
 
 .curtain .panel-left {
-  /* transform: translateX(-100%);*/
-  /*transform: translateX(calc(-100% - 1px));*/
   animation: slideLeft 8s forwards;
   animation-delay: 300ms;
 }
 
 @keyframes slideLeft {
   to {
-    transform: translateX(calc(-100% - 1px))
+    transform: translateX(calc(-100% - 1px));
   }
 }
 
-/*.panel-left::before {
-  background: rgba(0, 0, 0, 0.5);
-}*/
-
 .curtain .panel-right {
-  /*transform: translateX(100%);*/
-  /*transform: translateX(calc(100% + 1px));*/
   animation: slideRight 8s forwards;
   animation-delay: 300ms;
-
 }
 
 @keyframes slideRight {
   to {
-    transform: translateX(calc(100% + 1px))
+    transform: translateX(calc(100% + 1px));
   }
 }
-
 
 .jacket {
   position: absolute;
@@ -249,11 +229,8 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  /*width: 100%;
-  height: 100%;*/
   margin: auto;
   cursor: pointer;
-  /* background: red;*/
   cursor: pointer;
 }
 
