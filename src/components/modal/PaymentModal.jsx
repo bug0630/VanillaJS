@@ -11,10 +11,6 @@ const PaymentModal = ({ isOpen, onClose }) => {
     setCartInfo(event.target.value);
   };
 
-  const handleCardNumberChange = (event) => {
-    setCardNumber(event.target.value);
-  };
-
   const handleCvvChange = (event) => {
     setCvv(event.target.value);
   };
