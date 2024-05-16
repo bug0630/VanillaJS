@@ -8,12 +8,12 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   const goToNextSlide = useCallback(() => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-  });
+  }, []);
 
   const goToPrevSlide = useCallback(() => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-  });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, intervalTime);
@@ -35,10 +35,10 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
         </div>
       </Link>
       <button className="prev" onClick={goToPrevSlide}>
-        <img src="images/arrow_icon.svg"></img>
+        <img src="images/arrow_icon.svg" alt="arrow-icon"></img>
       </button>
       <button className="next" onClick={goToNextSlide}>
-        <img src="images/arrow_icon.svg"></img>
+        <img src="images/arrow_icon.svg" alt="arrow-icon"></img>
       </button>
       <div className="comment">{comments[currentIndex]}</div>
     </div>

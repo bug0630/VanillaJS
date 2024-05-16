@@ -37,7 +37,7 @@ export default function MyPage() {
             {image ? (
               <img
                 src={URL.createObjectURL(image)}
-                alt="user-image"
+                alt="user"
                 className="img-display-after"
               />
             ) : (

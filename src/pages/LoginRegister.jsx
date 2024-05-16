@@ -2,9 +2,8 @@
 import '../styles/reset.css';
 import '../styles/LoginRegister.css';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
-import DaumPostcode from 'react-daum-postcode';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
