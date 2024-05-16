@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
-import { Link } from 'react-router-dom';
 import { SiKakaotalk, SiGmail, SiFacebook, SiNaver } from 'react-icons/si';
 import CheckBox from '../../src/components/checkbox/Checkbox';
 
