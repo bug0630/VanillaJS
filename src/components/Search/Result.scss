@@ -6,7 +6,7 @@
   padding: 0;
 
   li {
-    width: 200px;
+    width: 240px;
     overflow: hidden;
     @media screen and (max-width: 720px) {
       width: calc(100% - 20px);
