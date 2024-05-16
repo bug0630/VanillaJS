@@ -1,0 +1,20 @@
+.auction-List {
+  padding: 100px 20px;
+}
+
+.auction-title {
+  height: 100px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.auction-button {
+  display: flex;
+  justify-content: center;
+
+  button {
+    width: 200px;
+    height: 65px;
+    border-radius: 50px;
+  }
+}

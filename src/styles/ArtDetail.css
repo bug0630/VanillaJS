@@ -1,0 +1,150 @@
+/* artDetail page 작품 소개 */
+.product_detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 100px 100px 0 100px;
+}
+
+.product_img {
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+.product_main_img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.product_art_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 6rem;
+}
+.art_detail_img {
+  width: 9rem;
+  height: 7rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.product_about {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+  justify-content: flex-start;
+  width: 50%;
+  margin-bottom: 210px;
+}
+.product_name {
+  display: flex;
+  color: black;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 10%;
+}
+.product_cart {
+  background-color: #aa8453;
+  color: #ffffff;
+  font-weight: 600;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 100%;
+  margin: 40px;
+  border-color: white;
+}
+.product_cart:hover {
+  background-color: white;
+  color: #aa8453;
+  border-color: #aa8453;
+}
+
+.product_btn {
+  text-align: center;
+}
+
+.infoArea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.infoValue {
+  margin-left: 100px;
+  color: #666666;
+}
+
+@media screen and (max-width: 900px) {
+  .product_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 100px;
+  }
+}
+
+/* artDetail page 작가 소개 */
+.artist_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  gap: 16px;
+  margin: 70px 800px 100px 100px;
+}
+
+.artistInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 70px 0 0 100px;
+}
+.artistInfo_img {
+  width: 85px;
+  height: 85px;
+  margin: 40px 10px 0 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 118%;
+  left: -1%;
+}
+.artistInfo_name {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.artInfo_text {
+  margin-right: 50px;
+}
+.artInfo_value {
+  color: #666666;
+}
+.artistDescription {
+  margin: 30px 20px 80px 30px;
+  text-align: justify;
+}
+.artistDescriptionVisible {
+  /* product가 존재할 때 artistDescription에 적용할 스타일 */
+  display: flex;
+  flex-direction: row;
+}
