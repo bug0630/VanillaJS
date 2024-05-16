@@ -9,8 +9,7 @@ export default function Footer() {
       <footer>
         <div className="container-footer">
           <div className="footerlogo">
-            {' '}
-            <img src={logo} />
+            <img src={logo} alt="logo" />
           </div>
 
           <div className="row">

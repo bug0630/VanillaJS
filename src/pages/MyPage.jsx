@@ -18,7 +18,7 @@ export default function MyPage() {
     inputRef.current.click();
   };
   const handleImageChange = (event) => {
-    const file = event.target.files[0];
+    // const file = event.target.files[0];
     setImage(event.target.files[0]);
   };
   const handleDataClick = () => {
@@ -37,6 +37,7 @@ export default function MyPage() {
             {image ? (
               <img
                 src={URL.createObjectURL(image)}
+                alt="user"
                 className="img-display-after"
               />
             ) : (
