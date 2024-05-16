@@ -233,14 +233,11 @@
     "id": 11,
     "title": "물랭 드 라 갈레트",
     "art_img": [
-      "https://wart.co.kr/web/product/big/202210/6121bde5c4648458d2c21b0e120e7617.jpg",
-      "https://wart.co.kr/web/product/extra/big/202210/72340cd746478a5774e27073bc3afd4a.jpg",
-      "https://wart.co.kr/web/product/extra/big/202210/2a11a7a57bc73a2784c58e473f251923.jpg",
-      "https://wart.co.kr/web/product/extra/big/202210/a27423de91e21d6f352820a7cde53ac4.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Van_Gogh_-_Le_Moulin_de_la_Galette8.jpeg/260px-Van_Gogh_-_Le_Moulin_de_la_Galette8.jpeg"
     ],
     "description": "작품은 아가시의 평온하고 안정된 모습을 담아냄으로써, 그의 주변 환경과의 조화를 시도한 반 고흐의 노력을 보여줍니다. ",
     "code": "CW011",
-    "price": "190,000원",
+    "price": "경매 예정",
     "artist_name": "빈센트 반 고흐",
     "published_year": 1886,
     "material": "유화",
@@ -249,7 +246,7 @@
     "artist_info": "반 고흐의 작품은 감정적이고 표현주의적인 스타일로 잘 알려져 있습니다. 그의 화풍은 강렬한 색채, 두꺼운 붓질, 독특한 조형 등으로 특징지어집니다. 그의 작품은 종종 그의 내적 갈등과 불안한 정신상태를 반영하고 있습니다.",
     "email": "",
     "insta_link": "",
-    "profile_img": "http://lh3.googleusercontent.com/AM8HcED32TpFsOLQtjljBkwQ7KcsyCZOLG-H75tBZ9Q83bFduLus29lGZpdIAueEcA=w246-h300-n-l64",
+    "profile_img": "artist11.webp",
     "category": "근대미술"
   },
   {
@@ -260,7 +257,7 @@
     ],
     "description": "세 마리아의 삶의 한 장면을 묘사하고 있습니다.",
     "code": "BR012",
-    "price": "250,000원",
+    "price": "판매불가",
     "artist_name": "후베르트 판 에이크",
     "published_year": 1426,
     "material": "유화",
@@ -269,21 +266,18 @@
     "artist_info": "플랑드르파의 핵심 화가였다고 칭송받은 작가이며 섬세한 명암 묘사가 가능한 유화기법을 개발하기도 하였습니다",
     "email": "",
     "insta_link": "",
-    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Eyck%2C_Hubert_van_-_Jan_Wierix_%28attr.%29.jpg/268px-Eyck%2C_Hubert_van_-_Jan_Wierix_%28attr.%29.jpg",
+    "profile_img": "artist12.webp",
     "category": "중세미술"
   },
   {
     "id": 13,
     "title": "모나리자",
     "art_img": [
-      "https://wart.co.kr/web/product/big/202206/6d589c6af7e7e8500228d6e122a9cd3c.jpg",
-      "https://wart.co.kr/web/product/extra/big/202207/ebfe60d2ecf6e1ff11d0993db77f92c4.jpg",
-      "https://wart.co.kr/web/product/extra/big/202207/5eb4eb7be050dd7ea15eec080f3f4ee6.jpg",
-      "https://wart.co.kr/web/product/extra/big/202207/2e20b1b4551692170e767c3c773e389c.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg/300px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_natural_color.jpg"
     ],
     "description": "성 모델인 리사 델 지콘도의 초상화입니다. 그녀의 정면을 향한 미소와 신비로운 시선이 특징적이며, 그 미소는 관람자들에게 여러 가지 해석을 남깁니다",
     "code": "SS013",
-    "price": "80,000원",
+    "price": "판매 불가",
     "artist_name": "레오나르도 다 빈치",
     "published_year": 1506,
     "material": "캔버스에 유화",
@@ -292,7 +286,7 @@
     "artist_info": "레오나르도 다 빈치는 예술가로서만이 아니라 천재적인 발명가와 연구자로서도 유명합니다. 그의 예술적 재능과 과학적 지식을 결합하여 창조되었습니다.",
     "email": "",
     "insta_link": "",
-    "profile_img": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSn9ASPssbShveAIP6lPRx9FqqQFcSOfMgbR4HwVpkm5qdof7PUUmRbCsaFpCRGhnbJ",
+    "profile_img": "artist13.webp",
     "category": "근세미술"
   },
   {
@@ -303,7 +297,7 @@
     ],
     "description": "풍요와 재생의 상징으로 해석되며, 보티첼리의 아름다운 색채와 우아한 신체 비례로 유명합니다..",
     "code": "MW014",
-    "price": "120,000원",
+    "price": "판매 불가",
     "artist_name": "산드로 보티첼리",
     "published_year": 1485,
     "material": "목판 유채법",
@@ -312,7 +306,7 @@
     "artist_info": "보티첼리의 주요 작품으로는 봄(Primavera)과 위너스의 탄생(The Birth of Venus)등이 있습니다. 이러한 작품들은 그의 아름다운 색채와 우아한 신체 비례, 그리고 신화적인 주제로 유명합니다.",
     "email": "",
     "insta_link": "",
-    "profile_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sandro_Botticelli_083.jpg/270px-Sandro_Botticelli_083.jpg",
+    "profile_img": "botticelli.webp",
     "category": "근세미술"
   },
   {
@@ -323,7 +317,7 @@
     ],
     "description": " 마리아의 죽음은 그녀가 조용하고 평화롭게 숨을 거두는 모습으로 묘사되어 있습니다. 마리아의 성직적이고 신성한 존재에 대한 애도를 보여줍니다",
     "code": "SH015",
-    "price": "110,000원",
+    "price": "경매 예정",
     "artist_name": "안드레아 만테냐",
     "published_year": 1464,
     "material": "패널 유화",

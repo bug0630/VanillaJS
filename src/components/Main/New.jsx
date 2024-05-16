@@ -6,7 +6,7 @@ export default function New() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2300 && !showBoardSection) {
+      if (window.scrollY > 2500 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };
@@ -45,7 +45,7 @@ export default function New() {
             }}
           >
             <img
-              src="https://i.namu.wiki/i/lcl9V7cptudXHbazYE-Ks-ZFI84JHsfuFRD3tji3vV4GSgANiKPVnLM4wZJwZ6cGguZtNeFXNaqEHFKzzv7MtreQzs7ZcS2WjXVTfn0G8sLxTfagY2rX5zYh3n_-K5l6cQwksRqeregY16tlRVAMmg.jpg"
+              src="https://i.namu.wiki/i/XEZDuTPW4bfTdxtBgo0Z_F7j1vyixV20b0rdhEGGRxRWgypje49XB_uDg0NB7AGul5PeyNimHWPAo_E13h1dEkRUx_UGUop41J9Hf2RE_WNUKFQxvC--PiKOkAEtHkKd8x679uvindy8wj6w2rlGKw.jpg"
               alt="productBanner"
             ></img>
             <h4>근세미술</h4>

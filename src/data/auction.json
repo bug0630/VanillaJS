@@ -1,101 +1,110 @@
 [
   {
     "id": 1,
-    "bid_art_img": "sunset_in_venice.webp",
+    "bid_art_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAUV6KsyVH9Uw7mMNuCMVYbYREViBC3DEm-zJknHJZQw&s",
     "bid_art_title": "Sunset in Venice",
     "published_year": 2020,
     "artist": "John Doe",
-    "bid_starting_price": 500,
-    "bid_estimate_price": 1500,
+    "description": "유명한 화가 존 도의 작품으로, 저녁노을에 빛나는 베니스의 평화로운 아름다움을 환상적으로 담아냈습니다.",
+    "bid_starting_price": 500000,
+    "bid_estimate_price": 1500000,
     "bid_code": "A001",
-    "bid_date": "2024-05-17T10:00:00"
+    "bid_date": "2024-05-17"
   },
   {
     "id": 2,
-    "bid_art_img": "starry_night.webp",
+    "bid_art_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1135px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?20121101035929",
     "bid_art_title": "Starry Night",
     "published_year": 1889,
     "artist": "Vincent van Gogh",
-    "bid_starting_price": 1000,
-    "bid_estimate_price": 5000,
+    "description": "빈센트 반 고흐의 상징적인 걸작인 '별이 빛나는 밤'은 고요한 마을 위에 솟아오른 소용돌이치는 밤하늘을 그린 것으로, 작가의 독특한 스타일과 감정적인 심미안이 돋보입니다.",
+    "bid_starting_price": 1000000,
+    "bid_estimate_price": 5000000,
     "bid_code": "A002",
-    "bid_date": "2024-05-17T10:00:00"
+    "bid_date": "2024-05-17"
   },
   {
     "id": 3,
-    "bid_art_img": "mona_lisa.webp",
+    "bid_art_img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg",
     "bid_art_title": "Mona Lisa",
     "published_year": 1503,
     "artist": "Leonardo da Vinci",
-    "bid_starting_price": 2000,
-    "bid_estimate_price": 10000,
+    "description": "레오나르도 다 빈치의 '모나 리자'는 세계에서 가장 유명하고 알 수 없는 초상 중 하나로, 신비로운 미소와 매혹적인 시선으로 유명합니다.",
+    "bid_starting_price": 2000000,
+    "bid_estimate_price": 10000000,
     "bid_code": "A003",
-    "bid_date": "2024-05-17T10:00:00"
+    "bid_date": "2024-05-17"
   },
   {
     "id": 4,
-    "bid_art_img": "the_scream.webp",
+    "bid_art_img": "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg",
     "bid_art_title": "The Scream",
     "published_year": 1893,
     "artist": "Edvard Munch",
-    "bid_starting_price": 1500,
-    "bid_estimate_price": 7000,
+    "description": "에드바르드 뭉크의 '절규'는 존재적 고뇌를 표현한 환상적인 작품으로, 고통받는 인물과 소용돌이치는 하늘이 인간의 영혼의 격동을 잘 담아냈습니다.",
+    "bid_starting_price": 1500000,
+    "bid_estimate_price": 7000000,
     "bid_code": "A004",
-    "bid_date": "2024-05-16T10:00:00"
+    "bid_date": "2024-05-16"
   },
   {
     "id": 5,
-    "bid_art_img": "the_persistence_of_memory.webp",
+    "bid_art_img": "https://www.arthistoryproject.com/site/assets/files/20340/salvador-dali-the-persistence-of-memory-1931-trivium-art-history.jpg",
     "bid_art_title": "The Persistence of Memory",
     "published_year": 1931,
     "artist": "Salvador Dalí",
-    "bid_starting_price": 1800,
-    "bid_estimate_price": 8000,
+    "description": "살바도르 달리의 '시간의 불멸'은 녹아내리는 시계와 광경 속에 나타난 이상한 모습으로, 시간의 흐름과 인간의 삶에 대한 미스터리를 다루고 있습니다.",
+    "bid_starting_price": 1800000,
+    "bid_estimate_price": 8000000,
     "bid_code": "A005",
-    "bid_date": "2024-05-16T10:00:00"
+    "bid_date": "2024-05-16"
   },
   {
     "id": 6,
-    "bid_art_img": "girl_with_a_pearl_earring.webp",
+    "bid_art_img": "https://www.arthistoryproject.com/site/assets/files/15397/johannes-vermeer-girl-with-a-pearl-earring-1665-obelisk-art-history.jpg",
     "bid_art_title": "Girl with a Pearl Earring",
     "published_year": 1665,
     "artist": "Johannes Vermeer",
+    "description": "요한네스 베르미어의 '진주 귀걸이를 한 소녀'는 화가의 특유한 화풍으로 1665년에 그려진 작품으로, 소녀의 차분한 표정과 빛나는 진주 귀걸이가 인상적입니다.",
     "bid_starting_price": 2200,
     "bid_estimate_price": 9000,
     "bid_code": "A006",
-    "bid_date": "2024-05-16T10:00:00"
+    "bid_date": "2024-05-16"
   },
   {
     "id": 7,
-    "bid_art_img": "the_last_supper.webp",
+    "bid_art_img": "https://upload.wikimedia.org/wikipedia/commons/4/47/Painting-The-Last-Supper-by-Leonardo-Da-Vinci-Oil-Painting.webp",
     "bid_art_title": "The Last Supper",
     "published_year": 1498,
     "artist": "Leonardo da Vinci",
+    "description": "레오나르도 다 빈치의 '마지막 만찬'은 예수 그리스도와 그의 제자들의 식사 장면을 그린 작품으로, 그의 놀라운 세부 사항과 신비로움으로 유명합니다.",
     "bid_starting_price": 2500,
     "bid_estimate_price": 12000,
     "bid_code": "A007",
-    "bid_date": "2024-05-18T10:00:00"
+    "bid_date": "2024-05-18"
   },
   {
     "id": 8,
-    "bid_art_img": "viva_la_vida.webp",
+    "bid_art_img": "https://i.namu.wiki/i/QyQ-jjAFouUnhsC70e9-0g6guzosELxNKG-F34xtFC-AEFpgspcNuO04nfGazhaHLTpLCx7M8pmK2-pMHnziK-bRJLb05SV4L3xmtGgra5bCEqFdc2izenuhNLLqqCuck8d5-aScXoZlAKkPuMgmyA.webp",
     "bid_art_title": "Viva la Vida",
     "published_year": 1954,
-    "artist": "프리디칼로",
+    "artist": "Frida Kahlo",
+    "description": "프리디칼로의 '비바 라 비다'는 그녀의 자화상 중 하나로, 화가의 생동감 넘치는 스타일과 감성적인 주제가 돋보입니다.",
     "bid_starting_price": 2000,
     "bid_estimate_price": 4000,
     "bid_code": "A008",
-    "bid_date": "2024-05-18T10:00:00"
+    "bid_date": "2024-05-18"
   },
   {
     "id": 9,
-    "bid_art_img": "sunflowers.webp",
+    "bid_art_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/800px-Vincent_Willem_van_Gogh_127.jpg",
     "bid_art_title": "sunflowers",
     "published_year": 1888,
     "artist": "Vincent van Gogh",
+    "description": "빈센트 반 고흐의 '해바라기'는 화가의 유명한 시리즈 중 하나로, 풍부한 색채와 화려한 표현으로 인상적인 작품입니다.",
     "bid_starting_price": 3000,
     "bid_estimate_price": 6000,
     "bid_code": "A009",
-    "bid_date": "2024-05-18T10:00:00"
+    "bid_date": "2024-05-18"
   }
 ]

@@ -33,11 +33,14 @@
   opacity: 0; /* 초기에는 투명하게 설정 */
   transition: opacity 3s ease;
   overflow: hidden;
+  @media screen and (max-width: 720px) {
+    opacity: 1;
+  }
   .bidBtn {
     background-color: $main-color;
     border: none;
     width: 300px;
-    height: 50px;
+    height: 40px;
     border-radius: 3px;
     &:hover {
       color: #800020;
