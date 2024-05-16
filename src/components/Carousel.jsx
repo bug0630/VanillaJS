@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Carousel.scss';
 
 const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, images.length]);
 
-  const goToPrevSlide = () => {
+  const goToPrevSlide = useCallback(() => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, images.length]);
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, intervalTime);
@@ -35,10 +35,10 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
         </div>
       </Link>
       <button className="prev" onClick={goToPrevSlide}>
-        <img src="images/arrow_icon.svg"></img>
+        <img src="images/arrow_icon.svg" alt="arrow-icon"></img>
       </button>
       <button className="next" onClick={goToNextSlide}>
-        <img src="images/arrow_icon.svg"></img>
+        <img src="images/arrow_icon.svg" alt="arrow-icon"></img>
       </button>
       <div className="comment">{comments[currentIndex]}</div>
     </div>

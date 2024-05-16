@@ -8,10 +8,10 @@ import Carousel from '../Carousel';
 const ArtistIntroduction = () => {
   const [artistData] = useState(jsonData);
   const images = [
-    require('../Main/img/ai-24-05-pc.jpg'),
-    require('../Main/img/am-24-04-pc-3.jpg'),
-    require('../Main/img/am-24-05-pc.jpg'),
-    require('../Main/img/pc-mb-4.jpg'),
+    require('../Main/img/carousel1.jpg'),
+    require('../Main/img/carousel2.jpg'),
+    require('../Main/img/carousel3.jpg'),
+    require('../Main/img/carousel4.jpg'),
   ];
   const comments = ['', '', '', ''];
   const pageLinks = ['/artist', '/auction', '', ''];

@@ -34,7 +34,7 @@ const AuctionPage = () => {
     amount: '',
     name: '',
     email: '',
-    phone: ''
+    phone: '',
   });
   const [curtainOpen, setCurtainOpen] = useState(false); // State for curtain
  const [selectedArt, setSelectedArt] = useState(null);
@@ -60,10 +60,6 @@ const AuctionPage = () => {
     // You can perform additional actions here, such as sending bid details to the server
   };
 
-
-  // const [auctionEndTime] = useState(new Date().getTime() + (3 * 24 * 60 * 60 * 1000)); // Set initial auction end time
-  // const [remainingTime, setRemainingTime] = useState(calculateRemainingTime(auctionEndTime));
-
   // Calculate remainingche time function
   // function calculateRemainingTime(endTime) {
   //   const currentTime = new Date().getTime();
@@ -78,22 +74,6 @@ const AuctionPage = () => {
   //   }, 500);
 
     // Cleanup function to clear the interval when component unmounts
-  //   return () => clearInterval(timer);
-  // }, [auctionEndTime]);
-
-  // Convert remaining milliseconds to human-readable format
-  // function formatRemainingTime(remaining) {
-  //   const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-  //   const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //   const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-  //   const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-  //   return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-  // }
-  const toggleCurtain = () => {
-    setCurtainOpen(!curtainOpen);
-  };
-
   return (
     <>
     <Header/>
@@ -177,7 +157,6 @@ const AuctionPage = () => {
     </>
   )}
 </div>
-
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>

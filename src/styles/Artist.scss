@@ -16,9 +16,7 @@ $heroHeight: 100vh;
     -moz-background-size: cover;
     background-size: cover;
     background-position: center center;
-    transform: scale(
-      1
-    ); //need this (to set the start) for some cross-browser issues
+    transform: scale(1);
   }
   .shade {
     opacity: 0;
@@ -76,7 +74,6 @@ h1 {
   letter-spacing: 0.015em;
   display: block;
   color: #eee;
-  // font-size: 25px;
 }
 
 .content {
@@ -85,7 +82,7 @@ h1 {
   width: 100%;
   p {
     color: black;
-    font-size: 1.5em;
+    font-size: 16px;
   }
 }
 

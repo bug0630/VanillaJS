@@ -2,6 +2,7 @@ import Available from '../components/Search/Available';
 import SearchTab from '../components/Search/SearchTab';
 import Result from '../components/Search/Result';
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import '../styles/Search.scss';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -23,12 +24,13 @@ export default function Search() {
 
   return (
     <SearchContext.Provider value={searchQuery}>
+      <Header />
       <div className="searchLab">
-        <Header />
         <SearchTab />
         <Available></Available>
         <Result></Result>
       </div>
+      <Footer></Footer>
     </SearchContext.Provider>
   );
 }

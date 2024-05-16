@@ -2,11 +2,10 @@ import { Link } from 'react-router-dom';
 import '../../styles/header.css';
 import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo.svg';
-import { FaSearch, FaUser, FaBars, FaTimes, FaCartPlus } from 'react-icons/fa';
+import { FaSearch, FaUser, FaBars, FaTimes } from 'react-icons/fa';
 import DropDownProfile from '../dropdownProfile/DropDownProfile';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom/dist';
-import DarkMode from '../../components/darkmode/DarkMode';
 
 export default function Header() {
   //Search Toggle
@@ -31,10 +30,10 @@ export default function Header() {
     // setIsNavOpen(true);
   };
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-    setIsSearchOpen(false);
-  };
+  // const toggleNav = () => {
+  //   setIsNavOpen(!isNavOpen);
+  //   setIsSearchOpen(false);
+  // };
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     setIsNavOpen(false); // Close nav when opening search
@@ -81,7 +80,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to={'/artdetail/:artistId'} className="link">
+                <Link to={'/artdetail/1'} className="link">
                   작품 상세
                 </Link>
               </li>
@@ -102,7 +101,7 @@ export default function Header() {
               {/* Search icon goes here */}
               <FaSearch />
             </div>
-            <DarkMode />
+
             {isLoggedIn ? (
               <div className="profileImage" onClick={handleProfileClick}>
                 <FaUser className="user-icon" />

@@ -6,7 +6,7 @@ export default function New() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2300 && !showBoardSection) {
+      if (window.scrollY > 2500 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };
@@ -26,22 +26,13 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('고대미술'),
-            }}
-          >
-            <img src="images/art_img/img4.webp" alt="productBanner"></img>
-            <h4>고대미술</h4>
-            <p>예술의 탄생</p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={{
-              pathname: 'search',
               search: '?query=' + encodeURIComponent('중세미술'),
             }}
           >
-            <img src="images/art_img/img11.webp" alt="productBanner"></img>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg/429px-Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria_%28ca._1571%29_-_Google_Art_Project.jpg"
+              alt="productBanner"
+            ></img>
             <h4>중세미술</h4>
             <p>신앙과 권력의 상징</p>
           </Link>
@@ -50,12 +41,30 @@ export default function New() {
           <Link
             to={{
               pathname: 'search',
-              search: '?query=' + encodeURIComponent('르네상스'),
+              search: '?query=' + encodeURIComponent('근세미술'),
             }}
           >
-            <img src="images/art_img/img12.webp" alt="productBanner"></img>
-            <h4>르네상스</h4>
-            <p>인간의 영감과 창의</p>
+            <img
+              src="https://i.namu.wiki/i/XEZDuTPW4bfTdxtBgo0Z_F7j1vyixV20b0rdhEGGRxRWgypje49XB_uDg0NB7AGul5PeyNimHWPAo_E13h1dEkRUx_UGUop41J9Hf2RE_WNUKFQxvC--PiKOkAEtHkKd8x679uvindy8wj6w2rlGKw.jpg"
+              alt="productBanner"
+            ></img>
+            <h4>근세미술</h4>
+            <p>현실과 상상의 만남</p>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={{
+              pathname: 'search',
+              search: '?query=' + encodeURIComponent('근대미술'),
+            }}
+          >
+            <img
+              src="https://img.hankyung.com/photo/202207/01.30636853.1.jpg"
+              alt="productBanner"
+            ></img>
+            <h4>근대미술</h4>
+            <p>혁명적인 탐구와 다양성</p>
           </Link>
         </li>
         <li>

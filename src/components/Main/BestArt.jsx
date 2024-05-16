@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from '../Carousel';
 
 export default function BestArt() {
@@ -8,12 +9,12 @@ export default function BestArt() {
     require('./img/mona_lisa.webp'),
   ];
   const comments = ['', '', '', ''];
-  const pageLinks = ['/artist', '/auction', '', ''];
+  const pageLinks = ['', '', '', ''];
   const [showBoardSection, setShowBoardSection] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1500 && !showBoardSection) {
+      if (window.scrollY > 1600 && !showBoardSection) {
         setShowBoardSection(true);
       }
     };
@@ -37,6 +38,9 @@ export default function BestArt() {
               pageLinks={pageLinks}
             />
           </div>
+          <Link to="./auctionlist">
+            <button className="bidBtn">입찰하러 가기</button>
+          </Link>
         </div>
       </div>
     </div>
