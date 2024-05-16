@@ -37,30 +37,10 @@ const PaymentModal = ({ isOpen, onClose }) => {
         </div>
         <div className="modal-field1">
           <label>카드 번호:</label>
-          <input
-            type="num"
-            className="cardnumber"
-            maxLength={4}
-            onChange={handleCardNumberChange}
-          />
-          <input
-            type="num"
-            className="cardnumber"
-            maxLength={4}
-            onChange={handleCardNumberChange}
-          />
-          <input
-            type="num"
-            className="cardnumber"
-            maxLength={4}
-            onChange={handleCardNumberChange}
-          />
-          <input
-            type="num"
-            className="cardnumber"
-            maxLength={4}
-            onChange={handleCardNumberChange}
-          />
+          <input type="num" className="cardnumber" maxLength={4} />
+          <input type="num" className="cardnumber" maxLength={4} />
+          <input type="num" className="cardnumber" maxLength={4} />
+          <input type="num" className="cardnumber" maxLength={4} />
         </div>
         <div className="modal-field">
           <label>CVV:</label>
