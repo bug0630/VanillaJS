@@ -2,10 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from '../../styles/Item.module.scss';
 
 export default function Item({ item, type }) {
-  const imagePath =
-    type === 'bid'
-      ? `auction_img/${item.bid_art_img}`
-      : `art_img/${item.art_img}`;
+  const imagePath = type === 'bid' ? `${item.bid_art_img}` : `${item.art_img}`;
 
   const linkPath =
     type === 'bid' ? `/auction/${item.id}` : `/artDetail/${item.id}`;
@@ -16,7 +13,7 @@ export default function Item({ item, type }) {
         <div className={styles.imgSection}>
           <img
             className={styles.img}
-            src={`${process.env.PUBLIC_URL}/images/${imagePath}`}
+            src={`${imagePath}`}
             alt={type === 'bid' ? item.bid_art_title : item.title}
           />
         </div>
