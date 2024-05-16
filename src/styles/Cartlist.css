@@ -1,0 +1,22 @@
+.CartTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.cart_item img {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  border: 1px solid black;
+}
+.cart_list {
+  max-width: 1200px;
+  height: 720px;
+  margin: auto;
+}
+.Cartinfo {
+  position: absolute;
+  top: 180px;
+  left: 43%;
+}

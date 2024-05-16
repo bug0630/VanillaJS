@@ -58,7 +58,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
 }
 .link:hover,
 link:focus {
@@ -165,9 +164,9 @@ header {
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
-    right: 0;
+    left: 0;
     top: 100px;
-    width: 300px;
+    width: 150px;
     height: 100vh;
     background: #fff;
     padding: 40px 0 0 10px;
@@ -184,9 +183,58 @@ header {
   #mobile .mobileicon {
     cursor: pointer;
     font-size: 24px;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    left: 1%;
+    top: 31px;
+  }
+  .logo {
+    width: 70px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 20px;
+    position: absolute;
+    top: 5px;
+    left: 30%;
+  }
+  .lab-btn {
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 40px;
+    margin-left: 20px;
+    position: absolute;
+    right: 1%;
+  }
+  .nav .search-icon {
+    color: #353842;
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 30px;
+    position: absolute;
+    right: 27%;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .search-login input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 80%;
+    top: 100px;
+    margin: 10px;
+    background-color: white;
+  }
+}
 .dropdown {
   position: absolute;
   top: 120px;

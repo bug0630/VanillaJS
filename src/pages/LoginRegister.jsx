@@ -30,19 +30,6 @@ export default function LoginRegister() {
   const loginId = useRef();
   const loginPassword = useRef();
 
-  // const [showMain, setShowMain] = useState(false);
-  // const localRegister = localStorage.getItem('register');
-  // const localId = localStorage.getItem('id');
-  // const localPassword = localStorage.getItem('password');
-  // const localName = localStorage.getItem('name');
-  // const localEmail = localStorage.getItem('email');
-
-  // // useEffect(() => {
-  // //   if (localRegister) {
-  // //     setShowMain(true);
-  // //   }
-  // // });
-
   const handleRegisterButtonClick = () => {
     if (!service) {
       alert('서비스 이용약관에 동의해주세요!');

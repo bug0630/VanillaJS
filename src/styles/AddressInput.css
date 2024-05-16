@@ -1,0 +1,80 @@
+/* AddressSearch.css */
+.address-search-container {
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.payment-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover,
+.payment-button:hover {
+  background-color: #45a049;
+}
+
+.postcode-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  z-index: 1000;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.address-info {
+  margin-top: 20px;
+}
+
+.address-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.address-field label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.address-field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search-button {
+  display: block;
+  width: 250px;
+  height: 42px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.PostCode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
