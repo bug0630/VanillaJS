@@ -122,9 +122,7 @@ export default function LoginRegister() {
               <div className="register-link">
                 <p>
                   계정이 없으신가요?
-                  <a href="#" onClick={registerLink}>
-                    가입하기
-                  </a>
+                  <div onClick={registerLink}>가입하기</div>
                 </p>
                 <hr />
                 <div>
@@ -190,9 +188,7 @@ export default function LoginRegister() {
               <div className="register-link">
                 <p>
                   이미 계정 있으신가요?
-                  <a href="#" onClick={loginLink}>
-                    로그인하기
-                  </a>
+                  <div onClick={loginLink}>로그인하기</div>
                 </p>
               </div>
             </form>

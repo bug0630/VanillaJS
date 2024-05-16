@@ -8,12 +8,12 @@ const Carousel = ({ images, comments, pageLinks, intervalTime = 5000 }) => {
   const goToNextSlide = useCallback(() => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-  }, []);
+  }, [currentIndex, images.length]);
 
   const goToPrevSlide = useCallback(() => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-  }, []);
+  }, [currentIndex, images.length]);
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, intervalTime);
