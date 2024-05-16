@@ -13,8 +13,8 @@ const ArtistInfo = (props) => {
       (product) => product.id === parseInt(artistId)
     );
     setProduct(productData);
-    setImages(productData.profile_img);
-    setActiveImage(productData.profile_img[0]);
+    // setImages(productData.profile_img);
+    // setActiveImage(productData.profile_img[0]);
   }, [artistId]);
 
   return (
