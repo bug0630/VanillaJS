@@ -21,11 +21,11 @@
 }
 
 .artist-info {
-  height: 800px;
+  /* height: 800px; */
   display: flex;
   margin-bottom: 200px;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .details {
@@ -282,7 +282,6 @@
   position: relative;
 }
 
-
 .card0 {
   background: url('../../public/images/artist_img/artist1.webp') center center
     no-repeat;
@@ -310,9 +309,9 @@
   height: 250px;
   overflow: hidden;
 }
-.carouselContainer {
-  width:500px;
-  height:100%;
+.artworksCarousel .carouselContainer {
+  width: 500px;
+  height: 100%;
 }
 
 #columns {
