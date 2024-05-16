@@ -25,7 +25,10 @@ export default function Item({ item, type }) {
             <span className={styles.code}>No.{item.bid_code}</span>
             <div>{item.bid_art_title}</div>
             <div className={styles.artist}>{item.artist}</div>
-            <div>Starting Price: {item.bid_starting_price}</div>
+            <div className="auction-price">{item.bid_estimate_price}</div>
+            <div className="auction-button">
+              <button>작품 보러 가기</button>
+            </div>
           </>
         ) : (
           <>
