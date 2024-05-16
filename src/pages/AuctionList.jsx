@@ -29,7 +29,7 @@ export default function AuctionList() {
         <div className="auction-title">
           <h3>today's auction</h3>
           <span>{formattedDate}(14PM)</span>
-          <span> Open</span>
+          <span className="auction-open"> Open</span>
           <AuctionCountdown />
         </div>
         <div>오늘의 특별한 작품들을 만나보세요.</div>
