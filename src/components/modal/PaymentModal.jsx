@@ -36,7 +36,6 @@ const PaymentModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>결제 정보 입력</h2>
         <div className="modal-field">
           <label>카트 정보:</label>
           <input type="text" value={cartInfo} onChange={handleCartInfoChange} />

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import '../../styles/Cart.css';
+
 import AddressInput from '../AddressInput/AddressInput';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
