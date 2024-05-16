@@ -4,7 +4,6 @@ import '../../styles/PaymentModal.css';
 
 const PaymentModal = ({ isOpen, onClose }) => {
   const [cartInfo, setCartInfo] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
   const [cvv, setCvv] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
 
