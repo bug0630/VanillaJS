@@ -2,6 +2,7 @@
   "name": "sesac-c-arte-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bug0630.github.io/portfolio/",
   "dependencies": {
     "@coreui/icons": "^3.0.1",
     "@coreui/icons-react": "^2.2.1",
@@ -12,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
@@ -35,7 +37,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
