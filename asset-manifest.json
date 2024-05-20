@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a376ba4c.css",
+    "main.js": "/portfolio/static/js/main.e30d8002.js",
+    "static/media/request.jpg": "/portfolio/static/media/request.22284a6b66b1e203c4d4.jpg",
+    "static/media/MonthArtistbg.webp": "/portfolio/static/media/MonthArtistbg.31ee6a31a1dd83d120aa.webp",
+    "static/media/isolated-2532037_1920.png": "/portfolio/static/media/isolated-2532037_1920.2daf2f74d342fbae5584.png",
+    "static/media/img13.webp": "/portfolio/static/media/img13.fe2a5a08b3c53fa3745d.webp",
+    "static/media/the_last_supper.webp": "/portfolio/static/media/the_last_supper.2537493db44b264bb20e.webp",
+    "static/media/ai-24-05-pc.jpg": "/portfolio/static/media/ai-24-05-pc.dae6e20b2c668ca60a19.jpg",
+    "static/media/am-24-04-pc-3.jpg": "/portfolio/static/media/am-24-04-pc-3.b71b3ef772c5c5865433.jpg",
+    "static/media/am-24-05-pc.jpg": "/portfolio/static/media/am-24-05-pc.2af8783396a7daa571aa.jpg",
+    "static/media/woman-1283009_1920.jpg": "/portfolio/static/media/woman-1283009_1920.2879e68d1f7bd74afe39.jpg",
+    "static/media/carousel4.jpg": "/portfolio/static/media/carousel4.b7ae128200d60855f952.jpg",
+    "static/media/mona_lisa.webp": "/portfolio/static/media/mona_lisa.c2d806bb27fffcab673d.webp",
+    "static/media/hammer-1707731_1280.jpg": "/portfolio/static/media/hammer-1707731_1280.f2af5f5d5f34e6d9aff3.jpg",
+    "static/media/pc-mb-4.jpg": "/portfolio/static/media/pc-mb-4.d7c43e48df18fd99bca8.jpg",
+    "static/media/sunset_in_venice.webp": "/portfolio/static/media/sunset_in_venice.f3b163c68de27d574424.webp",
+    "static/media/carousel1.jpg": "/portfolio/static/media/carousel1.dc0c9e6ec5a00e9852c3.jpg",
+    "static/media/starry_night.webp": "/portfolio/static/media/starry_night.d29d83fd79e36938fc5e.webp",
+    "static/media/carousel2.jpg": "/portfolio/static/media/carousel2.37850be6ce942b041922.jpg",
+    "static/media/carousel3.jpg": "/portfolio/static/media/carousel3.36b0f25058d00ba8a0bb.jpg",
+    "static/media/artist1.webp": "/portfolio/static/media/artist1.6801f92d5566a5728cce.webp",
+    "static/media/logo.svg": "/portfolio/static/media/logo.8b78d8d0a59d9caeecd13ca47e9bfb48.svg",
+    "index.html": "/portfolio/index.html",
+    "main.a376ba4c.css.map": "/portfolio/static/css/main.a376ba4c.css.map",
+    "main.e30d8002.js.map": "/portfolio/static/js/main.e30d8002.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a376ba4c.css",
+    "static/js/main.e30d8002.js"
+  ]
+}
