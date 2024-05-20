@@ -1,0 +1,118 @@
+.Mypage {
+  width: 900px;
+  height: 700px;
+  background-color: #aa8453;
+  position: relative;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background-repeat: no-repeat;
+}
+
+.Mypage colgroup {
+  display: table-column-group;
+  unicode-bidi: isolate;
+}
+.Mypage h2 {
+  border-bottom: 1px solid black;
+  height: 70px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.Mypage col {
+  display: table-column;
+  unicode-bidi: isolate;
+}
+
+.Mypage tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.Mypage table {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 50%;
+  margin-top: 40px;
+}
+
+.Mypage th {
+  color: white;
+  font-size: 16px;
+}
+
+.Mypage .input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+}
+.Mypage input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 30px;
+  &:hover {
+    border-color: #bd7777;
+  }
+
+  &:focus {
+    border-color: #bd7777;
+  }
+}
+
+.Mypage input::placeholder {
+  color: #fff;
+}
+.UserImg {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-display-after {
+  height: 200px;
+  width: 200px;
+  margin-left: 35%;
+  border-radius: 100%;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  border: 1px solid white;
+}
+
+.img-display-before {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.img-display-before:hover {
+  background-color: grey;
+}
+
+.Mypage button {
+  width: 150px;
+  height: 45px;
+  position: absolute;
+  top: 80%;
+  background-color: orange;
+  border-color: white;
+  border-radius: 10px;
+}

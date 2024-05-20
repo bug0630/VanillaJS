@@ -1,0 +1,30 @@
+.CartTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.cart_item img {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  border: 1px solid black;
+}
+.cart_list {
+  max-width: 1200px;
+  height: 720px;
+  margin: auto;
+}
+.Cartinfo {
+  position: absolute;
+  top: 150px;
+  left: 43%;
+  width: 500px;
+  height: 500px;
+  margin: 45px auto;
+  padding: 20px;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
