@@ -1,1 +1,0 @@
-# Sesac-C-Arte-Project
